@@ -23,13 +23,13 @@ const Banner = () => {
               growth.
             </p>
 
-            <div className="flex">
+            <div className="lg:flex">
               <button className="btn btn-sm btn-success text-white rounded-2xl">
                 About us <p className="text-lg"><FcAbout></FcAbout></p>
               </button>
-              <div className="flex items-center justify-center font-bold hover:text-green-400">
+              <div className="flex items-center font-bold hover:text-green-400">
                 <a
-                  className="text-lg font-serif ml-10"
+                  className="text-lg font-serif lg:ml-10"
                   href="">
                   More on morden revenue
                 </a>
@@ -63,13 +63,13 @@ const Banner = () => {
               growth.
             </p>
 
-            <div className="flex">
+            <div className="lg:flex">
               <button className="btn btn-sm btn-success text-white rounded-2xl">
                 About us <p className="text-lg"><FcAbout></FcAbout></p>
               </button>
-              <div className="flex items-center justify-center font-bold hover:text-green-400">
+              <div className="flex items-center font-bold hover:text-green-400">
                 <a
-                  className="text-lg font-serif ml-10"
+                  className="text-lg font-serif lg:ml-10"
                   href="">
                   More on morden revenue
                 </a>
@@ -103,13 +103,13 @@ const Banner = () => {
               growth.
             </p>
 
-            <div className="flex">
+            <div className="lg:flex">
               <button className="btn btn-sm btn-success text-white rounded-2xl">
                 About us <p className="text-lg"><FcAbout></FcAbout></p>
               </button>
-              <div className="flex items-center justify-center font-bold hover:text-green-400">
+              <div className="flex items-center font-bold hover:text-green-400">
                 <a
-                  className="text-lg font-serif ml-10"
+                  className="text-lg font-serif lg:ml-10"
                   href="">
                   More on morden revenue
                 </a>
@@ -143,13 +143,13 @@ const Banner = () => {
               growth.
             </p>
 
-            <div className="flex">
-              <button className="btn btn-sm btn-success rounded-2xl text-white">
+            <div className="lg:flex">
+              <button className="btn btn-sm btn-success text-white rounded-2xl">
                 About us <p className="text-lg"><FcAbout></FcAbout></p>
               </button>
-              <div className="flex items-center justify-center font-bold hover:text-green-400">
+              <div className="flex items-center font-bold hover:text-green-400">
                 <a
-                  className="text-lg font-serif ml-10"
+                  className="text-lg font-serif lg:ml-10"
                   href="">
                   More on morden revenue
                 </a>
