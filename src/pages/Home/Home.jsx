@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div>
@@ -9,6 +11,8 @@ const Home = () => {
       <button className="btn btn-active btn-accent">Accent</button>
       <button className="btn btn-active btn-ghost">Ghost</button>
       <button className="btn btn-active btn-link">Link</button>
+      <Link to={'/login'}><button className="btn btn-active btn-primary">Login</button></Link>
+      <Link to={'/register'}><button className="btn btn-active btn-secondary">Register</button></Link>  
     </div>
   );
 };
