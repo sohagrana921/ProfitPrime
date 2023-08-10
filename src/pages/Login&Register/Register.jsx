@@ -9,8 +9,8 @@ const Register = () => {
     }
 
     return (
-        <div className="h-screen">
-            <div className='py-10 md:w-1/2 md:h- mx-auto border-2 shadow-2xl'>
+        <div className="md:h-100vh md:mt-14">
+            <div className='py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl'>
                 <h1 className='text-2xl font-bold text-center uppercase'>Register an Account</h1>
                 <h1 className='text-sm mt-2 text-center'>Sign up now to start your free trial</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">

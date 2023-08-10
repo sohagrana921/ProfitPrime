@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import Reviews from "../../Components/Review";
+import Contact from "../../Components/Contact";
+import Team from "../../Components/Team";
 
 const Home = () => {
   return (
@@ -12,7 +15,11 @@ const Home = () => {
       <button className="btn btn-active btn-ghost">Ghost</button>
       <button className="btn btn-active btn-link">Link</button>
       <Link to={'/login'}><button className="btn btn-active btn-primary">Login</button></Link>
-      <Link to={'/register'}><button className="btn btn-active btn-secondary">Register</button></Link>  
+      <Link to={'/register'}><button className="btn btn-active btn-secondary">Register</button></Link> 
+
+      <Reviews></Reviews> 
+      <Contact></Contact>
+      <Team></Team>
     </div>
   );
 };
