@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { useState } from "react";
-
+// changed
 const Navbar = () => {
   const { user, logOut, loading } = {};
   const [toggle, setToggle] = useState(false);
@@ -31,10 +31,14 @@ const Navbar = () => {
     <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center border-b border-gray-300">
       <style>{subMenuStyle}</style>
       <div className="flex items-center gap-2 lg:gap-3 col-span-2">
-        <span className="text-white"><img className="lg:h-10 lg:w-10 w-6 h-6 ml-3 lg:ml-5" src="/profit-up.png" alt="logo" /></span>
-        <h1 className="text-2xl font-bold pb-2 lg:pb-0">
-          ProfitPrime
-        </h1>
+        <span className="text-white">
+          <img
+            className="lg:h-10 lg:w-10 w-6 h-6 ml-3 lg:ml-5"
+            src="/profit-up.png"
+            alt="logo"
+          />
+        </span>
+        <h1 className="text-2xl font-bold pb-2 lg:pb-0">ProfitPrime</h1>
       </div>
       <ul
         className={`${
