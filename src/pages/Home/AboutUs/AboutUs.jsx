@@ -4,10 +4,10 @@ const AboutUs = () => {
       <div className="container mx-auto md:flex items-center">
         <div className="md:w-1/2 px-5 md:ml-10 mt-5 md:mt-0">
           <h2 className="text-3xl font-semibold mb-4">About Us</h2>
-          <p className="text-gray-700 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
-            ante ut ex volutpat finibus. Sed non tortor vitae nisi dignissim
-            lacinia.
+          <p className="text-gray-700 mb-6 text-justify">
+            Maximize profits effortlessly with our Revenue Generation Platform.
+            Harness data-driven insights, optimize strategies, and elevate
+            customer engagement for exponential growth.
           </p>
           <div className="flex space-x-4">
             <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300">
