@@ -10,7 +10,7 @@ const AboutUs = () => {
             customer engagement for exponential growth.
           </p>
           <div className="flex space-x-4">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300">
+            <button className="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-900 transition duration-300">
               Learn More
             </button>
             <button className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300">
