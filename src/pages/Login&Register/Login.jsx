@@ -14,7 +14,7 @@ const Login = () => {
     }
 
     return (
-        <div className='md:h-100vh md:mt-14'>
+        <div className='md:h-100vh mt-32'>
             <div className='md:px-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl'>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <img src={logo} alt="" className='h-24 w-44 rounded-2xl mx-auto bg-green-900' />

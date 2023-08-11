@@ -1,6 +1,6 @@
 import logo1 from "../../../assets/banner/img45.jpg";
-import logo2 from "../../../assets/banner/img2.jpeg";
-import logo3 from "../../../assets/banner/img4.jpg";
+import logo2 from "../../../assets/banner/dfdfdf.jpg";
+import logo3 from "../../../assets/banner/img23d.jpg";
 import logo4 from "../../../assets/banner/img23.jpeg";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FcAbout } from "react-icons/fc";
@@ -8,7 +8,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="carousel max-w-screen-2xl mx-auto w-full md:h-[100vh]">
+    <div className="carousel max-w-screen-2xl mx-auto w-full md:h-[100vh] mt-16">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={logo1} className="w-full" />
         <div className="absolute h-full flex items-center left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
