@@ -50,7 +50,7 @@ const Register = () => {
             )}
           </div>
           <div className="md:flex">
-            <div className="form-control">
+            <div className="form-control w-full">
               <label className="label">
                 <span className="label-text">Company Name</span>
               </label>
@@ -61,7 +61,7 @@ const Register = () => {
                 className="input input-bordered"
               />
             </div>
-            <div className="form-control md:ml-3">
+            <div className="form-control md:ml-3 w-full">
               <label className="label">
                 <span className="label-text">Country</span>
               </label>
