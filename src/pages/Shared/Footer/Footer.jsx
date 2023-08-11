@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#123426] text-white text-center mt-12 rounded-t-sm lg:text-left">
@@ -14,7 +14,7 @@ const Footer = () => {
               />
               <Link
                 to="/"
-                className=" mb-4 flex items-center justify-center font-bold text-2xl lg:justify-start"
+                className=" flex items-center justify-center font-bold text-2xl lg:justify-start"
               >
                 ProfitPrime
               </Link>
@@ -27,20 +27,13 @@ const Footer = () => {
           </div>
 
           <div className="flex lg:flex-none flex-col items-center">
-            <div className="-ml-[70px] lg:-ml-0">
+            <div>
               <h6 className="mb-4 flex font-semibold uppercase lg:justify-start">
                 Follow Us
               </h6>
               <div className="flex flex-col gap-5">
                 <a href="#" className="mr-6 flex gap-2 items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19.7 0H4.3C1.9 0 0 1.9 0 4.3v15.3C0 22.1 1.9 24 4.3 24h15.3c2.4 0 4.3-1.9 4.3-4.3V4.3C24 1.9 22.1 0 19.7 0zM8.3 19.7H5V9h3.3v10.7zM6.6 7.7c-1.1 0-1.9-.8-1.9-1.9s.8-1.9 1.9-1.9c1 0 1.8.8 1.8 1.9s-.8 1.9-1.8 1.9zm13.2 12h-3.3v-5c0-1-.4-2-2-2s-2 .4-2 2v5H9V9h3v1c0 .5-.2 1-.6 1 .8-.5 2-.6 2-.6s2-.2 2-.2c2 .5 3 .8 3 .8s1 .5 1 .5v7z" />
-                  </svg>
+                  <FaLinkedinIn className="h-4 w-4" />
                   LinkedIn
                 </a>
 
@@ -86,12 +79,12 @@ const Footer = () => {
               <h6 className="mb-4 flex font-semibold uppercase lg:justify-start">
                 Contact
               </h6>
-              <p className="mb-4 flex lg:items-center  lg:justify-start">
+              <p className="mb-4 flex items-center text-left">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="mr-3 h-5 w-5"
+                  className="mr-3 h-[35px] w-[35px]"
                 >
                   <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                   <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
