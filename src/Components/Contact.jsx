@@ -1,5 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import Lottie from "lottie-react";
+import email from '../../animation_ll61reax.json'
 
 const Contact = () => {
 
@@ -20,9 +22,12 @@ const Contact = () => {
     return (
         <div className='lg:px-24 h-full'>
             <div>
-            <h1 className='lg:text-4xl text-2xl uppercase font-bold pt-10 md:py-20 text-sky-950 text-center'>Ask a question</h1>
+                <h1 className='hero lg:text-4xl text-2xl uppercase font-bold pt-10 md:py-20 text-sky-950 text-center'>Ask a question</h1>
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <form ref={form} onSubmit={sendEmail} className="card flex-shrink-0 w-full max-w-xl bg-orange-100">
+                    <div className="text-center lg:text-left">
+                        <Lottie animationData={email} loop={true} />
+                    </div>
+                    <form ref={form} onSubmit={sendEmail} className="card flex-shrink-0 w-full max-w-xl bg-base-100">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -48,7 +53,7 @@ const Contact = () => {
                                 </label>
                                 <textarea type="text" name="message" className="textarea textarea-bordered textarea-lg w-full max-w-xl" />
                             </div>
-                            <input className='bg-orange-700 text-white hover:bg-orange-900 p-3 rounded-lg mt-5 hover:text-white' type="submit" value="Send" />
+                            <input className='bg-green-700 text-white hover:bg-green-900 uppercase p-3 rounded-lg mt-5 hover:text-white' type="submit" value="Send" />
                         </div>
                     </form>
                 </div>
