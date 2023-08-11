@@ -99,7 +99,7 @@ const Navbar = () => {
         ) : (
           !loading && (
             <Link
-              to="/"
+              to="/login"
               className="lg:ml-auto px-2 py-1 lg:px-4 lg:py-2 text-lg font-bold rounded-lg"
             >
               Login
