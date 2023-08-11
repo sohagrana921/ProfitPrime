@@ -29,7 +29,7 @@ console.log(toggle)
   }
 `;
   return (
-    <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center z-10">
+    <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center h-10 lg:h-20 z-10">
       <style>{subMenuStyle}</style>
       <div className="flex items-center gap-2 lg:gap-3 col-span-2">
         <span className="text-white">
@@ -39,7 +39,7 @@ console.log(toggle)
             alt="logo"
           />
         </span>
-        <h1 className="text-2xl font-bold pb-2 lg:pb-0">ProfitPrime</h1>
+        <h1 className="text-2xl font-bold">ProfitPrime</h1>
       </div>
       <ul
         className={`${
