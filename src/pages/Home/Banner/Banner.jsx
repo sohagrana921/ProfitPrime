@@ -1,6 +1,6 @@
 import logo1 from "../../../assets/banner/img45.jpg";
-import logo2 from "../../../assets/banner/img2.jpeg";
-import logo3 from "../../../assets/banner/img4.jpg";
+import logo2 from "../../../assets/banner/dfdfdf.jpg";
+import logo3 from "../../../assets/banner/img23d.jpg";
 import logo4 from "../../../assets/banner/img23.jpeg";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FcAbout } from "react-icons/fc";
