@@ -28,7 +28,7 @@ const Navbar = () => {
   }
 `;
   return (
-    <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center border-b border-gray-300">
+    <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center border-b border-gray-300 lg:border-none">
       <style>{subMenuStyle}</style>
       <div className="flex items-center gap-2 lg:gap-3 col-span-2">
         <span className="text-white">
