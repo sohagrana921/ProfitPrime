@@ -16,7 +16,7 @@ const Banner = () => {
             <h1 className="lg:text-5xl font-bold font-serif">
               Unleash Growth with <br /> Our Revenue <br /> Generation Platform!
             </h1>
-            <p className="hidden font-mono sm:block">
+            <p className="hidden  sm:block">
               Maximize profits effortlessly with our Revenue Generation
               Platform. <br /> Harness data-driven insights, optimize
               strategies, and elevate <br /> customer engagement for exponential
@@ -57,7 +57,7 @@ const Banner = () => {
             <h1 className="lg:text-5xl font-bold font-serif">
               Unleash Growth with <br /> Our Revenue <br /> Generation Platform!
             </h1>
-            <p className="hidden font-mono sm:block">
+            <p className="hidden  sm:block">
               Maximize profits effortlessly with our Revenue Generation
               Platform. <br /> Harness data-driven insights, optimize
               strategies, and elevate <br /> customer engagement for exponential
@@ -98,7 +98,7 @@ const Banner = () => {
             <h1 className="lg:text-5xl font-bold font-serif">
               Unleash Growth with <br /> Our Revenue <br /> Generation Platform!
             </h1>
-            <p className="hidden font-mono sm:block">
+            <p className="hidden  sm:block">
               Maximize profits effortlessly with our Revenue Generation
               Platform. <br /> Harness data-driven insights, optimize
               strategies, and elevate <br /> customer engagement for exponential
@@ -139,7 +139,7 @@ const Banner = () => {
             <h1 className="lg:text-5xl font-bold font-serif">
               Unleash Growth with <br /> Our Revenue <br /> Generation Platform!
             </h1>
-            <p className="hidden font-mono sm:block">
+            <p className="hidden  sm:block">
               Maximize profits effortlessly with our Revenue Generation
               Platform. <br /> Harness data-driven insights, optimize
               strategies, and elevate <br /> customer engagement for exponential
@@ -164,7 +164,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
+        <div className="absolute  flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
           <a href="#slide3" className="btn btn-circle">
             ❮
           </a>
