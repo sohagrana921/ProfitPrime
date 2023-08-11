@@ -25,12 +25,13 @@ const Banner = () => {
 
             <div className="lg:flex">
               <button className="btn btn-sm btn-success text-white rounded-2xl">
-                About us <p className="text-lg"><FcAbout></FcAbout></p>
+                About us{" "}
+                <p className="text-lg">
+                  <FcAbout></FcAbout>
+                </p>
               </button>
               <div className="flex items-center font-bold hover:text-green-400">
-                <a
-                  className="text-lg font-serif lg:ml-4"
-                  href="">
+                <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
@@ -38,9 +39,7 @@ const Banner = () => {
                 </p>
               </div>
             </div>
-            <div>
-              
-            </div>
+            <div></div>
           </div>
         </div>
         <div className="absolute flex justify-center gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
@@ -67,13 +66,14 @@ const Banner = () => {
             </p>
 
             <div className="lg:flex">
-              <button className="btn btn-sm btn-success text-white rounded-2xl">
-                About us <p className="text-lg"><FcAbout></FcAbout></p>
+              <button className="btn btn-sm bg-[#123426] text-white rounded-2xl">
+                About us{" "}
+                <p className="text-lg">
+                  <FcAbout></FcAbout>
+                </p>
               </button>
               <div className="flex items-center font-bold hover:text-green-400">
-                <a
-                  className="text-lg font-serif lg:ml-4"
-                  href="">
+                <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
@@ -108,12 +108,13 @@ const Banner = () => {
 
             <div className="lg:flex">
               <button className="btn btn-sm btn-success text-white rounded-2xl">
-                About us <p className="text-lg"><FcAbout></FcAbout></p>
+                About us{" "}
+                <p className="text-lg">
+                  <FcAbout></FcAbout>
+                </p>
               </button>
               <div className="flex items-center font-bold hover:text-green-400">
-                <a
-                  className="text-lg font-serif lg:ml-4"
-                  href="">
+                <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
@@ -148,12 +149,13 @@ const Banner = () => {
 
             <div className="lg:flex">
               <button className="btn btn-sm btn-success text-white rounded-2xl">
-                About us <p className="text-lg"><FcAbout></FcAbout></p>
+                About us{" "}
+                <p className="text-lg">
+                  <FcAbout></FcAbout>
+                </p>
               </button>
               <div className="flex items-center font-bold hover:text-green-400">
-                <a
-                  className="text-lg font-serif lg:ml-4"
-                  href="">
+                <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
