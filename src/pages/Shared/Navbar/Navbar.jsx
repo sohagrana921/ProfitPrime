@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { FaAngleDown } from "react-icons/fa";
+import { FaBars ,FaAngleDown} from "react-icons/fa";
 import Swal from "sweetalert2";
 import { useState } from "react";
+
 const Navbar = () => {
   const { user, logOut, loading } = {};
   const [toggle, setToggle] = useState(false);
+console.log(toggle)
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -27,7 +29,7 @@ const Navbar = () => {
   }
 `;
   return (
-    <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center border-b border-gray-300 lg:border-none">
+    <div className="bg-[#123426] text-white relative lg:grid lg:grid-cols-7 lg:justify-between lg:items-center flex items-center z-10">
       <style>{subMenuStyle}</style>
       <div className="flex items-center gap-2 lg:gap-3 col-span-2">
         <span className="text-white">
@@ -44,17 +46,17 @@ const Navbar = () => {
           toggle
             ? "top-9 lg:top-0 ease-in-out duration-500 lg:duration-0"
             : "-top-52 ease-in duration-500 lg:top-0 lg:duration-0"
-        } text-lg font-medium lg:grid lg:grid-cols-5 gap-5 justify-between items-center lg:text-center lg:h-20 px-5 py-2 lg:py-0 lg:pb-0 absolute lg:relative -z-20 lg:z-20 bg-[#123426] w-full col-span-4`}
+        } text-lg font-medium lg:grid lg:grid-cols-5 gap-5 justify-between items-center lg:text-center lg:h-20 px-5 py-2 lg:py-0 lg:pb-0 absolute lg:relative bg-[#123426] w-full col-span-4`}
       >
         <li>
           <Link>Home</Link>
         </li>
         <li className="relative">
           <Link className="flex items-center">
-            Products <FaAngleDown />
+            Products <FaAngleDown className="mt-[2px]"/>
           </Link>
           <ul className="absolute hidden hover:block bg-[#123426] w-[200px] lg:top-[25px] left-24 lg:left-0 -mt-7 lg:-mt-0 pl-5 pb-3 lg:pt-10 -ml-2 text-left z-20">
-            <li>
+          <li>
               <Link>Billing</Link>
             </li>
             <li>
@@ -69,10 +71,42 @@ const Navbar = () => {
           </ul>
         </li>
         <li className="relative">
-          <Link className="flex items-center">Pricing</Link>
+        <Link className="flex items-center">
+            Pricing <FaAngleDown className="mt-[2px]"/>
+          </Link>
+          <ul className="absolute hidden hover:block bg-[#123426] w-[200px] lg:top-[25px] left-20 lg:left-0 -mt-7 lg:-mt-0 pl-5 pb-3 lg:pt-10 -ml-2 text-left z-20">
+            <li>
+              <Link>Items 1</Link>
+            </li>
+            <li>
+              <Link>Items 2</Link>
+            </li>
+            <li>
+              <Link>Items 3</Link>
+            </li>
+            <li>
+              <Link>Items 4</Link>
+            </li>
+          </ul>
         </li>
         <li className="relative">
-          <Link className="flex items-center">Customers</Link>
+        <Link className="flex items-center">
+            Customers <FaAngleDown className="mt-[2px]"/>
+          </Link>
+          <ul className="absolute hidden hover:block bg-[#123426] w-[200px] lg:top-[25px] left-28 lg:left-0 -mt-7 lg:-mt-0 pl-5 pb-3 lg:pt-10 -ml-2 text-left z-20">
+            <li>
+              <Link>Items 1</Link>
+            </li>
+            <li>
+              <Link>Items 2</Link>
+            </li>
+            <li>
+              <Link>Items 3</Link>
+            </li>
+            <li>
+              <Link>Items 4</Link>
+            </li>
+          </ul>
         </li>
         <li>
           <Link>Contact</Link>
@@ -99,7 +133,7 @@ const Navbar = () => {
         ) : (
           !loading && (
             <Link
-              to="/login"
+              to="/"
               className="lg:ml-auto px-2 py-1 lg:px-4 lg:py-2 text-lg font-bold rounded-lg"
             >
               Login
@@ -111,10 +145,11 @@ const Navbar = () => {
         onClick={() => setToggle(!toggle)}
         className="absolute top-3 right-4 lg:hidden"
       >
-        <FaAngleDown />
+        <FaBars />
       </span>
     </div>
   );
 };
 
 export default Navbar;
+
