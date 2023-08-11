@@ -12,7 +12,7 @@ const Register = () => {
   };
 
   return (
-    <div className="md:h-100vh md:mt-14">
+    <div className="md:h-100vh mt-32">
       <div className="py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
         <h1 className="text-2xl font-bold text-center uppercase">
           Register an Account
