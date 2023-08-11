@@ -42,7 +42,7 @@ const Login = () => {
                         <input className="btn w-11/12 bg-green-600 font-bold text-white hover:bg-green-900 border-none" type="submit" value="Login" />
                     </div>
                     <div className='mb-10 mt-2'>
-                        <Link to={'/signup'}><p className='text-orange-800'>New here?? Create an Account</p></Link>
+                        <Link to={'/register'}><p className='text-orange-800'>New here?? Create an Account</p></Link>
                     </div>
                 </form>
             </div>
