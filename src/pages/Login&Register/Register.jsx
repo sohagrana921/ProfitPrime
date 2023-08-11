@@ -102,7 +102,7 @@ const Register = () => {
           </div>
           <div className="form-control mt-6">
             <input
-              className="btn bg-green-600 font-bold text-white hover:bg-green-900 border-none w-full"
+              className="btn bg-green-700 text-white hover:bg-green-900 uppercase border-none w-full"
               type="submit"
               value="Sign Up"
             />
