@@ -39,7 +39,7 @@ const Login = () => {
                     <button className='text-start text-red-800'>Forget Password? Reset</button>
 
                     <div className="form-control mt-6">
-                        <input className="btn w-11/12 bg-green-600 font-bold text-white hover:bg-green-900 border-none" type="submit" value="Login" />
+                        <input className="btn w-11/12 bg-green-700 text-white hover:bg-green-900 uppercase border-none" type="submit" value="Login" />
                     </div>
                     <div className='mb-10 mt-2'>
                         <Link to={'/register'}><p className='text-orange-800'>New here?? Create an Account</p></Link>
