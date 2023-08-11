@@ -4,7 +4,7 @@ import logo from '../../../assets/profit-up.png'
 const Navbar = () => {
 
   return (
-    <div className="navbar bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
+    <div className="navbar  bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
