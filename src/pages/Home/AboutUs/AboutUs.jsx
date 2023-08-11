@@ -20,9 +20,9 @@ const AboutUs = () => {
         </div>
         <div className="md:w-1/2 py-12">
           <img
-            src="./src/assets/AboutUs/revenue.webp"
+            src="https://img.freepik.com/premium-vector/profit-money-budget-cash-rising-graph-arrow-up-concept-business-success-capital-earnings-benefit-stock-illustration_100456-1704.jpg?w=2000"
             alt="About Us Image"
-            className="w-full h-auto md:max-w-lg mx-auto rounded-lg shadow-lg"
+            className="w-full h-auto md:max-w-lg mx-auto rounded-lg shadow-lg px-10"
           />
         </div>
       </div>

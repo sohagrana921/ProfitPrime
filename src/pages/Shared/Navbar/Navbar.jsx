@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import { HiOutlineArrowSmRight } from "react-icons/hi";
+import { FaAngleDown } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { useState } from "react";
-// changed
 const Navbar = () => {
   const { user, logOut, loading } = {};
   const [toggle, setToggle] = useState(false);
@@ -53,60 +51,28 @@ const Navbar = () => {
         </li>
         <li className="relative">
           <Link className="flex items-center">
-            Products <HiOutlineArrowSmRight className="mt-[2px]"/>
+            Products <FaAngleDown />
           </Link>
           <ul className="absolute hidden hover:block bg-[#123426] w-[200px] lg:top-[25px] left-24 lg:left-0 -mt-7 lg:-mt-0 pl-5 pb-3 lg:pt-10 -ml-2 text-left z-20">
             <li>
-              <Link>Items 1</Link>
+              <Link>Billing</Link>
             </li>
             <li>
-              <Link>Items 2</Link>
+              <Link>Revenue</Link>
             </li>
             <li>
-              <Link>Items 3</Link>
+              <Link>Payments</Link>
             </li>
             <li>
-              <Link>Items 4</Link>
+              <Link>Monetization</Link>
             </li>
           </ul>
         </li>
         <li className="relative">
-        <Link className="flex items-center">
-            Pricing <HiOutlineArrowSmRight className="mt-[2px]"/>
-          </Link>
-          <ul className="absolute hidden hover:block bg-[#123426] w-[200px] lg:top-[25px] left-20 lg:left-0 -mt-7 lg:-mt-0 pl-5 pb-3 lg:pt-10 -ml-2 text-left z-20">
-            <li>
-              <Link>Items 1</Link>
-            </li>
-            <li>
-              <Link>Items 2</Link>
-            </li>
-            <li>
-              <Link>Items 3</Link>
-            </li>
-            <li>
-              <Link>Items 4</Link>
-            </li>
-          </ul>
+          <Link className="flex items-center">Pricing</Link>
         </li>
         <li className="relative">
-        <Link className="flex items-center">
-            Customers <HiOutlineArrowSmRight className="mt-[2px]"/>
-          </Link>
-          <ul className="absolute hidden hover:block bg-[#123426] w-[200px] lg:top-[25px] left-28 lg:left-0 -mt-7 lg:-mt-0 pl-5 pb-3 lg:pt-10 -ml-2 text-left z-20">
-            <li>
-              <Link>Items 1</Link>
-            </li>
-            <li>
-              <Link>Items 2</Link>
-            </li>
-            <li>
-              <Link>Items 3</Link>
-            </li>
-            <li>
-              <Link>Items 4</Link>
-            </li>
-          </ul>
+          <Link className="flex items-center">Customers</Link>
         </li>
         <li>
           <Link>Contact</Link>
@@ -145,7 +111,7 @@ const Navbar = () => {
         onClick={() => setToggle(!toggle)}
         className="absolute top-3 right-4 lg:hidden"
       >
-        <FaBars />
+        <FaAngleDown />
       </span>
     </div>
   );
