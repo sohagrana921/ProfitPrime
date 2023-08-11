@@ -24,19 +24,15 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-white rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-white rounded-box w-52  "
           >
-            <Link to={"/"}>
-              <li>
-                <a>Home</a>
-              </li>
-            </Link>
+            <Link to={"/"}>Home</Link>
             <li tabIndex={0}>
               <details>
                 <summary className="hover:text-white hover:bg-green-700">
                   Products
                 </summary>
-                <ul className="p-2 bg-green-900">
+                <ul className="p-2 bg-green-900 ">
                   <li>
                     <Link>Billing</Link>
                   </li>
