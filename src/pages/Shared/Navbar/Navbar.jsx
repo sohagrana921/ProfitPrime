@@ -17,16 +17,16 @@ const Navbar = () => {
                 <summary className="hover:text-white hover:bg-green-700">Products</summary>
                 <ul className="p-2 bg-green-900">
                   <Link>
-                    <li className="hover:bg-green-700 p-2 rounded-lg">Billing</li>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">Data Analysis & Insights</li>
                   </Link>
                   <Link>
-                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Revenue</li>
+                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Consulting Services</li>
                   </Link>
                   <Link>
-                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Payments</li>
+                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Business optimization</li>
                   </Link>
                   <Link>
-                    <li className="hover:bg-green-700 p-2 rounded-lg">Monetization</li>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">Customer Relationship Management (CRM)</li>
                   </Link>
                 </ul>
               </details>
@@ -46,17 +46,17 @@ const Navbar = () => {
             <details>
               <summary className="hover:text-white hover:bg-green-700">Products</summary>
               <ul className="p-2 bg-green-900">
-                <Link>
-                  <li className="hover:bg-green-700 p-2 rounded-lg">Billing</li>
+                <Link to={'/dataAnalysis'}>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">Data Analysis & Insights</li>
                 </Link>
                 <Link>
-                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Revenue</li>
+                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Consulting Services</li>
                 </Link>
                 <Link>
-                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Payments</li>
+                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Business optimization</li>
                 </Link>
                 <Link>
-                  <li className="hover:bg-green-700 p-2 rounded-lg">Monetization</li>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">Customer Relationship Management (CRM)</li>
                 </Link>
               </ul>
             </details>
