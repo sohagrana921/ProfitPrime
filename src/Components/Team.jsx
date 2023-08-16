@@ -17,7 +17,7 @@ const Team = () => {
           <h2>Vice Leader</h2>
         </div>
         <div>
-          <img src={image1} alt="" className="w-32 h-32 rounded-full mx-auto" />
+          <img src={image1} alt="" className="w-32 h-32 rounded-full mx-auto md:mt-40" />
           <h1 className=" font-bold">Sohag Rana</h1>
           <h2>Team Leader</h2>
         </div>
