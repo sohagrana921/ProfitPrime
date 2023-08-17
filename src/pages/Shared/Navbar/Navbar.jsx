@@ -33,7 +33,7 @@ const Navbar = () => {
             </li>
             <Link><li><a className="hover:text-white hover:bg-green-700">Pricing</a></li></Link>
             <Link><li><a className="hover:text-white hover:bg-green-700">Customers</a></li></Link>
-            <Link><li><a className="hover:text-white hover:bg-green-700">Contact</a></li></Link>
+            <li><a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a></li>
           </ul>
         </div>
         <img src={logo} alt="" className="h-10 w-10" />
@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
           <Link><li><a className="hover:text-white hover:bg-green-700">Pricing</a></li></Link>
           <Link><li><a className="hover:text-white hover:bg-green-700">Customers</a></li></Link>
-          <Link><li><a className="hover:text-white hover:bg-green-700">Contact</a></li></Link>
+          <li><a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">
