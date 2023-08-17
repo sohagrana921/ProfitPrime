@@ -22,6 +22,22 @@ const Navbar = () => {
               />
             </svg>
           </label>
+          <label tabIndex={1} className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-white hover:text-white rounded-box w-52"
@@ -65,11 +81,32 @@ const Navbar = () => {
                 <a className="hover:text-white hover:bg-green-700">Pricing</a>
               </li>
             </Link>
-            <Link>
-              <li>
-                <a className="hover:text-white hover:bg-green-700">Customers</a>
-              </li>
-            </Link>
+
+            <li tabIndex={1}>
+              <details>
+                <summary className="hover:text-white hover:bg-green-700">
+                  Customers
+                </summary>
+                <ul className="p-2 bg-green-900">
+                  <Link>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">
+                      Limited Service Hotel
+                    </li>
+                  </Link>
+                  <Link>
+                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                      Hybrid Accommodation
+                    </li>
+                  </Link>
+                  <Link>
+                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                      Upscale & Luxury Hotel
+                    </li>
+                  </Link>
+                </ul>
+              </details>
+            </li>
+
             <Link>
               <li>
                 <a className="hover:text-white hover:bg-green-700">Contact</a>
@@ -121,11 +158,32 @@ const Navbar = () => {
               <a className="hover:text-white hover:bg-green-700">Pricing</a>
             </li>
           </Link>
-          <Link>
-            <li>
-              <a className="hover:text-white hover:bg-green-700">Customers</a>
-            </li>
-          </Link>
+
+          <li tabIndex={1}>
+            <details>
+              <summary className="hover:text-white hover:bg-green-700">
+                Customers
+              </summary>
+              <ul className="p-2 bg-green-900">
+                <Link to='/customerService'>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">
+                    Limited Service Hotel
+                  </li>
+                </Link>
+                <Link>
+                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                    Hybrid Accommodation
+                  </li>
+                </Link>
+                <Link>
+                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                    Upscale & Luxury Hotel
+                  </li>
+                </Link>
+              </ul>
+            </details>
+          </li>
+
           <Link>
             <li>
               <a className="hover:text-white hover:bg-green-700">Contact</a>

@@ -5,6 +5,7 @@ import Login from "../pages/Login&Register/Login";
 import Register from "../pages/Login&Register/Register";
 import DataAnalysis from "../pages/Products/DataAnalysis";
 import ConsultingProducts from "../pages/Home/ConsultingProducts/ConsultingProducts";
+import CustomerService from "../pages/Home/CustomerService/CustomerService";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/consulting',
         element: <ConsultingProducts></ConsultingProducts>
+      },
+      {
+        path: '/customerService',
+        element: <CustomerService></CustomerService>
       }
     ],
   },
