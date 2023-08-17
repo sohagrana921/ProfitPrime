@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex items-center">
               <img
                 className="w-12 h-12 rounded-full mr-3"
-                src="../../../../public/profit-up.png"
+                src="./profit-up.png"
                 alt=""
               />
               <Link
