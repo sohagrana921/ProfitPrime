@@ -25,8 +25,8 @@ const Navbar = () => {
                   <Link>
                     <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Business optimization</li>
                   </Link>
-                  <Link>
-                    <li className="hover:bg-green-700 p-2 rounded-lg">Customer Relationship Management (CRM)</li>
+                  <Link to={'/competitor'}>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">Competitor Solution</li>
                   </Link>
                 </ul>
               </details>
@@ -55,8 +55,8 @@ const Navbar = () => {
                 <Link>
                   <li className="my-2 hover:bg-green-700 p-2 rounded-lg">Business optimization</li>
                 </Link>
-                <Link>
-                  <li className="hover:bg-green-700 p-2 rounded-lg">Customer Relationship Management (CRM)</li>
+                <Link to={'/competitor'}>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">Competitor Solution</li>
                 </Link>
               </ul>
             </details>
