@@ -32,19 +32,27 @@ const Navbar = () => {
                 <summary className="hover:text-white hover:bg-green-700">
                   Products
                 </summary>
-                <ul className="p-2 bg-green-900 ">
-                  <li>
-                    <Link>Billing</Link>
-                  </li>
-                  <li>
-                    <Link>Revenue</Link>
-                  </li>
-                  <li>
-                    <Link>Payments</Link>
-                  </li>
-                  <li>
-                    <Link>Monetization</Link>
-                  </li>
+                <ul className="p-2 bg-green-900">
+                  <Link>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">
+                      Billing
+                    </li>
+                  </Link>
+                  <Link>
+                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                      Revenue
+                    </li>
+                  </Link>
+                  <Link>
+                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                      Payments
+                    </li>
+                  </Link>
+                  <Link>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">
+                      Monetization
+                    </li>
+                  </Link>
                 </ul>
               </details>
             </li>
@@ -81,18 +89,24 @@ const Navbar = () => {
                 Products
               </summary>
               <ul className="p-2 bg-green-900">
-                <li>
-                  <Link>Billing</Link>
-                </li>
-                <li>
-                  <Link>Revenue</Link>
-                </li>
-                <li>
-                  <Link>Payments</Link>
-                </li>
-                <li>
-                  <Link>Monetization</Link>
-                </li>
+                <Link>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">Billing</li>
+                </Link>
+                <Link>
+                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                    Revenue
+                  </li>
+                </Link>
+                <Link>
+                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                    Payments
+                  </li>
+                </Link>
+                <Link>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">
+                    Monetization
+                  </li>
+                </Link>
               </ul>
             </details>
           </li>
