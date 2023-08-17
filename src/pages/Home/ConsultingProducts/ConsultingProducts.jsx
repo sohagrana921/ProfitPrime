@@ -26,6 +26,8 @@ const ConsultingProducts = () => {
             </div>
             <figure>
               <img src={p.pimg} alt="Image" />
+
+              
             </figure>
           </div>
         </div>
