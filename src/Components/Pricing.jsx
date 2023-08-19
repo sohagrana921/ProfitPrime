@@ -8,6 +8,7 @@ const Pricing = () => {
       <h1 className="lg:text-4xl text-2xl uppercase font-bold pt-10 md:pt-3 text-sky-950 text-center">
         Pricing Plans
       </h1>
+      <h2>Hello Changed </h2>
       <p className="text-gray-500 mb-4">
         Choose the plan that fits your needs.
       </p>
