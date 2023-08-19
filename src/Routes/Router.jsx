@@ -5,6 +5,7 @@ import Login from "../pages/Login&Register/Login";
 import Register from "../pages/Login&Register/Register";
 import DataAnalysis from "../pages/Products/DataAnalysis";
 import CompetitorSolution from "../Components/CompetitorSolution";
+import Pricing from "../Components/Pricing";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/competitor",
-        element: <CompetitorSolution/>
+        element: <CompetitorSolution />,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing></Pricing>,
       },
     ],
   },

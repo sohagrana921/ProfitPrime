@@ -5,7 +5,6 @@ import Team from "../../Components/Team";
 import Customer from "./Customers/Customer";
 import AboutUs from "./AboutUs/AboutUs";
 import WebData from "./WebData/WebData";
-import Pricing from "../../Components/Pricing";
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
       <Team></Team>
       <WebData></WebData>
       <Reviews></Reviews>
-      <Pricing/>
       <Contact></Contact>
     </div>
   );

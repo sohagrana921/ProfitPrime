@@ -47,12 +47,12 @@ const Navbar = () => {
                       Consulting Services
                     </li>
                   </Link>
-                  <Link to={'/businessoption'}>
+                  <Link to={"/businessoption"}>
                     <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                       Business optimization
                     </li>
                   </Link>
-                  <Link to='/competitor'>
+                  <Link to="/competitor">
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Competitor Solution
                     </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </ul>
               </details>
             </li>
-            <Link to='/pricing'>
+            <Link to="/pricing">
               <li>
                 <a className="hover:text-white hover:bg-green-700">Pricing</a>
               </li>
@@ -71,7 +71,7 @@ const Navbar = () => {
                   Customers
                 </summary>
                 <ul className="p-2 bg-green-900">
-                  <Link to='/customerService'>
+                  <Link to="/customerService">
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Limited Service Hotel
                     </li>
@@ -90,7 +90,12 @@ const Navbar = () => {
               </details>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a>
+              <a
+                href="#contact"
+                className="hover:text-white hover:bg-green-700"
+              >
+                Contact
+              </a>
             </li>
           </ul>
         </div>
@@ -120,12 +125,12 @@ const Navbar = () => {
                     Consulting Services
                   </li>
                 </Link>
-                <Link to={'/businessoption'}>
+                <Link to={"/businessoption"}>
                   <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                     Business optimization
                   </li>
                 </Link>
-                <Link to='/competitor'>
+                <Link to="/competitor">
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Competitor Solution
                   </li>
@@ -133,7 +138,7 @@ const Navbar = () => {
               </ul>
             </details>
           </li>
-          <Link to='/pricing'>
+          <Link to="/pricing">
             <li>
               <a className="hover:text-white hover:bg-green-700">Pricing</a>
             </li>
@@ -144,7 +149,7 @@ const Navbar = () => {
                 Customers
               </summary>
               <ul className="p-2 bg-green-900">
-                <Link to='/customerService'>
+                <Link to="/customerService">
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Limited Service Hotel
                   </li>
@@ -163,7 +168,9 @@ const Navbar = () => {
             </details>
           </li>
           <li>
-            <a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a>
+            <a href="#contact" className="hover:text-white hover:bg-green-700">
+              Contact
+            </a>
           </li>
         </ul>
       </div>
