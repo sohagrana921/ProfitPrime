@@ -4,6 +4,7 @@ import MainLayout from "../pages/Layout/MainLayout";
 import Login from "../pages/Login&Register/Login";
 import Register from "../pages/Login&Register/Register";
 import DataAnalysis from "../pages/Products/DataAnalysis";
+import CompetitorSolution from "../Components/CompetitorSolution";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/competitor",
+        element: <CompetitorSolution/>
       },
     ],
   },

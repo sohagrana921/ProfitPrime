@@ -50,29 +50,12 @@ const Navbar = () => {
                       Payments
                     </li>
                   </Link>
-                  <Link>
-                    <li className="hover:bg-green-700 p-2 rounded-lg">
-                      Monetization
-                    </li>
+
                   </Link>
                 </ul>
               </details>
             </li>
-            <Link>
-              <li>
-                <a className="hover:text-white hover:bg-green-700">Pricing</a>
-              </li>
-            </Link>
-            <Link>
-              <li>
-                <a className="hover:text-white hover:bg-green-700">Customers</a>
-              </li>
-            </Link>
-            <Link>
-              <li>
-                <a className="hover:text-white hover:bg-green-700">Contact</a>
-              </li>
-            </Link>
+
           </ul>
         </div>
         <img src={logo} alt="" className="h-10 w-10" />
@@ -104,29 +87,11 @@ const Navbar = () => {
                     Payments
                   </li>
                 </Link>
-                <Link>
-                  <li className="hover:bg-green-700 p-2 rounded-lg">
-                    Monetization
-                  </li>
                 </Link>
               </ul>
             </details>
           </li>
-          <Link>
-            <li>
-              <a className="hover:text-white hover:bg-green-700">Pricing</a>
-            </li>
-          </Link>
-          <Link>
-            <li>
-              <a className="hover:text-white hover:bg-green-700">Customers</a>
-            </li>
-          </Link>
-          <Link>
-            <li>
-              <a className="hover:text-white hover:bg-green-700">Contact</a>
-            </li>
-          </Link>
+
         </ul>
       </div>
       <div className="navbar-end">
