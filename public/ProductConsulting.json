@@ -1,0 +1,30 @@
+[
+  {
+      "id": 1,
+      "pname": "Strategy consulting",
+      "pdescribtion": "Starting with one of the broadest types of consulting, strategic consultants assist with the upper-level decision-making in a business.This is definitely a big-picture-thinking type of job, generally advising at the highest level within a company (think C-Suite, Directors, and Senior Managers).",
+      "Experience": "Depending on what task or issues a strategy consultant is tackling, the prerequisites will vary. Having an MBA or Bachelor of Commerce/Business is a great first step, along with 5+ years of strategy experience.",
+      "pimg": "https://cdn.logojoy.com/wp-content/uploads/20191021105609/AdobeStock_235481860-min-1024x683.jpeg"
+  },
+  {
+      "id": 2,
+      "pname": "Operations consulting",
+      "pdescribtion": "Helping businesses manage their finances more effectively is a highly sought out service. People in this role might be tasked with identifying cutbacks to improve profit, or simply protecting, restructuring, or maximizing a company’s bottom line. Often, small businesses won’t have the need, or budget, to hire a full-time finance manager, and thus require a professional financial consultant to fill in the gap. On the flip side, larger corporations may get into a sticky situation and need outside finance advice to help set them on the right path.",
+      "Experience": "Unlike some of the other roles mentioned above, anyone in financial consulting will need to have some sort of educational foundation, such as a Bachelor’s or Masters’s in Finance, or their CFA accreditation.",
+      "pimg": "https://cdn.logojoy.com/wp-content/uploads/20191021112348/AdobeStock_135545491-min-1024x578.jpeg"
+  },
+  {
+      "id": 3,
+      "pname": "Technology / IT consulting",
+      "pdescribtion": "A technology consultant is hired to ensure a company’s software and technology aren’t hindering its productivity in any way. If it is, the consultant will recommend and implement changes to improve things. IT consultants could be hired for anything from software management to data analytics.",
+      "Experience": "Since IT and technology consulting is a technical field, those in this line of work have educational backgrounds in computer technology. Overall, these consultants need to have vast experience and knowledge of computers and software.",
+      "pimg": "https://cdn.logojoy.com/wp-content/uploads/20191021105702/AdobeStock_164622575-min-1024x770.jpeg"
+  },
+  {
+      "id": 4,
+      "pname": "Social media consultant",
+      "pdescribtion": "A part of the larger marketing category, social media consultants are a relatively new area of consultancy. A social media consultant ensures a business is doing all it can to drive potential customers to its website via its social media channels.Unlike some of the other roles mentioned above, social media consultants are often self-made or have gained their experience from work.",
+      "Experience": "Since the social media landscape—and the algorithms that define it— are constantly changing, someone looking to get into this line of consulting should always have their finger on the pulse of each platform. In other words, they need to keep informed of the newest updates and strategies.",
+      "pimg": "https://cdn.logojoy.com/wp-content/uploads/20191021105743/AdobeStock_168285892-min-1024x683.jpeg"
+  }
+]
