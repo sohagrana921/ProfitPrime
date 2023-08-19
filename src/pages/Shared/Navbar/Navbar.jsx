@@ -1,12 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/profit-up.png";
+import logo from "../../../assets/profit-up.png";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
+    <div className="navbar bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -104,6 +120,11 @@ const Navbar = () => {
               <a className="hover:text-white hover:bg-green-700">Home</a>
             </li>
           </Link>
+          <Link to={"/"}>
+            <li>
+              <a className="hover:text-white hover:bg-green-700">Home</a>
+            </li>
+          </Link>
           <li tabIndex={0}>
             <details>
               <summary className="hover:text-white hover:bg-green-700">
@@ -168,6 +189,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <Link to={"/login"}>
+          <button className="hover:bg-green-700 p-3 rounded-md">Login</button>
+        </Link>
         <Link to={"/login"}>
           <button className="hover:bg-green-700 p-3 rounded-md">Login</button>
         </Link>
