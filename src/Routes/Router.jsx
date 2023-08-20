@@ -9,6 +9,7 @@ import CustomerService from "../pages/Home/CustomerService/CustomerService";
 import BussinessOption from "../pages/Products/BussinessOption";
 import CompetitorSolution from "../pages/Products/CompetitorSolution";
 import Pricing from "../Components/Pricing";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -26,15 +27,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/businessoption",
-        element: <BussinessOption/>
+        element: <BussinessOption />,
       },
       {
         path: "/pricing",
-        element: <Pricing/>
+        element: <Pricing />,
       },
       {
         path: "/competitor",
-        element: <CompetitorSolution/>
+        element: <CompetitorSolution />,
       },
       {
         path: "/login",
@@ -45,13 +46,17 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/consulting',
-        element: <ConsultingProducts></ConsultingProducts>
+        path: "/resetPassword",
+        element: <ResetPassword></ResetPassword>,
       },
       {
-        path: '/customerService',
-        element: <CustomerService></CustomerService>
-      }
+        path: "/consulting",
+        element: <ConsultingProducts></ConsultingProducts>,
+      },
+      {
+        path: "/customerService",
+        element: <CustomerService></CustomerService>,
+      },
     ],
   },
 ]);

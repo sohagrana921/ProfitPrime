@@ -1,4 +1,9 @@
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
+import Swal from "sweetalert2";
+import { Link, useNavigate } from "react-router-dom";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Register = () => {
   const {
@@ -6,9 +11,24 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const onSubmit = (data) => {
     console.log(data);
+
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "User created successfully.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
+      navigate("/login");
+    });
   };
 
   return (
@@ -23,7 +43,7 @@ const Register = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Full Name</span>
+              <span className="label-text">Company Name</span>
             </label>
             <input
               type="text"
@@ -49,30 +69,7 @@ const Register = () => {
               <span className="text-red-500">Email is required</span>
             )}
           </div>
-          <div className="md:flex">
-            <div className="form-control w-full">
-              <label className="label">
-                <span className="label-text">Company Name</span>
-              </label>
-              <input
-                type="text"
-                {...register("company")}
-                placeholder="Company Name"
-                className="input input-bordered"
-              />
-            </div>
-            <div className="form-control md:ml-3 w-full">
-              <label className="label">
-                <span className="label-text">Country</span>
-              </label>
-              <input
-                type="text"
-                {...register("country")}
-                placeholder="Country"
-                className="input input-bordered"
-              />
-            </div>
-          </div>
+
           <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
@@ -85,7 +82,7 @@ const Register = () => {
                 maxLength: 20,
                 pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*\d]+$/,
               })}
-              placeholder="password"
+              placeholder="Password"
               className="input input-bordered"
             />
             {errors.password?.type === "required" && (
@@ -108,6 +105,15 @@ const Register = () => {
             />
           </div>
         </form>
+        <p className="text-center mb-4">
+          <small>
+            Already have an account ?
+            <Link to="/login">
+              <span className="text-blue-600"> Login</span>
+            </Link>
+          </small>
+        </p>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );
