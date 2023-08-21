@@ -10,6 +10,8 @@ import BussinessOption from "../pages/Products/BussinessOption";
 import CompetitorSolution from "../pages/Products/CompetitorSolution";
 import Pricing from "../Components/Pricing";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import Dashboard from "../Dashboard/Dashboard/Dashboard"
+import DashHome from "../Dashboard/DashHome/DashHome"
 
 const router = createBrowserRouter([
   {
@@ -59,5 +61,15 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "dashhome",
+        element: <DashHome></DashHome>
+      }
+    ]
+  }
 ]);
 export default router;

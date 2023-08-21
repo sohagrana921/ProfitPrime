@@ -165,6 +165,11 @@ const Navbar = () => {
           <li>
             <a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a>
           </li>
+          <Link to='/dashboard/dashhome'>
+            <li>
+              <a className="hover:text-white hover:bg-green-700">Dashboard</a>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="navbar-end">
