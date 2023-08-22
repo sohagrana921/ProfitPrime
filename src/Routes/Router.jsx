@@ -12,6 +12,7 @@ import Pricing from "../Components/Pricing";
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Dashboard from "../Dashboard/Dashboard/Dashboard"
 import DashHome from "../Dashboard/DashHome/DashHome"
+import Payment from "../pages/Payment/Payment";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/payment/:plan/:billingOption",
+        element: <Payment/>,
       },
       {
         path: "/competitor",
