@@ -37,7 +37,7 @@ const Pricing = () => {
           </p>
           <div className="mt-2">
           <Link
-            to={`/payment/${encodeURIComponent('Basic Plan')}/${isYearly ? 'yearly' : 'monthly'}`}
+            to={`/payment/${encodeURIComponent('Basic')}/${isYearly ? 'yearly' : 'monthly'}`}
             className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
           >
             Select
@@ -52,7 +52,7 @@ const Pricing = () => {
           </p>
           <div className="mt-2">
           <Link
-            to={`/payment/${encodeURIComponent('Prime Plan')}/${isYearly ? 'yearly' : 'monthly'}`}
+            to={`/payment/${encodeURIComponent('Prime')}/${isYearly ? 'yearly' : 'monthly'}`}
             className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
           >
             Select
