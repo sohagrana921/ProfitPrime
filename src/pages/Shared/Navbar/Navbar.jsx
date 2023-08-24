@@ -73,7 +73,7 @@ const Navbar = () => {
               )}
             </li>
 
-            <Link>
+            <Link to="/pricing">
               <li>
                 <a className="hover:text-white hover:bg-green-700">Pricing</a>
               </li>
@@ -85,7 +85,7 @@ const Navbar = () => {
               </summary>
               {showLinks && (
                 <ul className="p-2 bg-white absolute top-full right-0">
-                  <Link>
+                  <Link to="/pricing">
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Limited Service Hotel
                       <a className="hover:text-white hover:bg-green-700">
@@ -153,7 +153,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <Link>
+          <Link to="/pricing">
             <li>
               <a className="hover:text-white hover:bg-green-700">Pricing</a>
             </li>
@@ -170,7 +170,7 @@ const Navbar = () => {
                     Limited Service Hotel
                   </li>
                 </Link>
-                <Link to='hybridcustomer'>
+                <Link to="hybridcustomer">
                   <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                     Hybrid Accommodation
                   </li>

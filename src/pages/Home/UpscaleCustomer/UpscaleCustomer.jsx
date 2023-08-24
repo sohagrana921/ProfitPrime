@@ -21,7 +21,7 @@ const UpscaleCustomer = () => {
   });
 
   return (
-    <div className="">
+    <div className="my-container">
       {product.map((p) => (
         <div key={p.id}>
           <div className="hero mt-52 mb-52">
