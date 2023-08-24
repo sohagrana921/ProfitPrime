@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/profit-up.png";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+  const [showLinks1, setShowLinks1] = useState(false);
+
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
+  const toggleLinks1 = () => {
+    setShowLinks1(!showLinks1);
+  };
+
   return (
-    <div className="navbar bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
+    <div className="navbar bg-white text-black font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -22,6 +33,7 @@ const Navbar = () => {
               />
             </svg>
           </label>
+
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-white hover:text-white rounded-box w-52"
@@ -31,49 +43,54 @@ const Navbar = () => {
                 <a className="hover:text-white hover:bg-green-700">Home</a>
               </li>
             </Link>
-            <li tabIndex={0}>
-              <details>
-                <summary className="hover:text-white hover:bg-green-700">
-                  Products
-                </summary>
-                <ul className="p-2 bg-green-900">
-                  <Link to={"/dataAnalysis"}>
+            <li onMouseEnter={toggleLinks1} onMouseLeave={toggleLinks1}>
+              <summary className="hover:text-white hover:bg-green-700">
+                Products
+              </summary>
+              {showLinks1 && (
+                <ul className="p-2 bg-white absolute top-full right-0">
+                  <Link>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Data Analysis & Insights
                     </li>
                   </Link>
-                  <Link to={"/consulting"}>
-                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                  <Link>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">
                       Consulting Services
                     </li>
                   </Link>
-                  <Link to={'/businessoption'}>
-                    <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                  <Link>
+                    <li className="hover:bg-green-700 p-2 rounded-lg">
                       Business optimization
                     </li>
                   </Link>
-                  <Link to='/competitor'>
+                  <Link>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Competitor Solution
                     </li>
                   </Link>
                 </ul>
-              </details>
+              )}
             </li>
-            <Link to='/pricing'>
+
+            <Link>
               <li>
                 <a className="hover:text-white hover:bg-green-700">Pricing</a>
               </li>
             </Link>
-            <li tabIndex={1}>
-              <details>
-                <summary className="hover:text-white hover:bg-green-700">
-                  Customers
-                </summary>
-                <ul className="p-2 bg-green-900">
-                  <Link to='/customerService'>
+
+            <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
+              <summary className="hover:text-white hover:bg-green-700">
+                Customers
+              </summary>
+              {showLinks && (
+                <ul className="p-2 bg-white absolute top-full right-0">
+                  <Link>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Limited Service Hotel
+                      <a className="hover:text-white hover:bg-green-700">
+                        Pricing
+                      </a>
                     </li>
                   </Link>
                   <Link>
@@ -87,14 +104,12 @@ const Navbar = () => {
                     </li>
                   </Link>
                 </ul>
-              </details>
+              )}
             </li>
-            <li>
-              <a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a>
-            </li>
-            <Link to='/dashboard/dashhome'>
+
+            <Link>
               <li>
-                <a className="hover:text-white hover:bg-green-700">Dashboard</a>
+                <a className="hover:text-white hover:bg-green-700">Contact</a>
               </li>
             </Link>
           </ul>
@@ -109,70 +124,69 @@ const Navbar = () => {
               <a className="hover:text-white hover:bg-green-700">Home</a>
             </li>
           </Link>
-          <li tabIndex={0}>
-            <details>
-              <summary className="hover:text-white hover:bg-green-700">
-                Products
-              </summary>
-              <ul className="p-2 bg-green-900">
-                <Link to={"/dataAnalysis"}>
+          <li onMouseEnter={toggleLinks1} onMouseLeave={toggleLinks1}>
+            <summary className="hover:text-white hover:bg-green-700">
+              Products
+            </summary>
+            {showLinks1 && (
+              <ul className="p-2 bg-white absolute top-full right-0">
+                <Link>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Data Analysis & Insights
                   </li>
                 </Link>
-                <Link to="/consulting">
-                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                <Link>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">
                     Consulting Services
                   </li>
                 </Link>
-                <Link to={'/businessoption'}>
-                  <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
+                <Link>
+                  <li className="hover:bg-green-700 p-2 rounded-lg">
                     Business optimization
                   </li>
                 </Link>
-                <Link to='/competitor'>
+                <Link>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Competitor Solution
                   </li>
                 </Link>
               </ul>
-            </details>
+            )}
           </li>
-          <Link to='/pricing'>
+          <Link>
             <li>
               <a className="hover:text-white hover:bg-green-700">Pricing</a>
             </li>
           </Link>
-          <li tabIndex={1}>
-            <details>
-              <summary className="hover:text-white hover:bg-green-700">
-                Customers
-              </summary>
-              <ul className="p-2 bg-green-900">
-                <Link to='/customerService'>
+
+          <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
+            <summary className="hover:text-white hover:bg-green-700">
+              Customers
+            </summary>
+            {showLinks && (
+              <ul className="p-2 bg-white absolute top-full right-0">
+                <Link to="/customerService">
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Limited Service Hotel
                   </li>
                 </Link>
-                <Link>
+                <Link to='hybridcustomer'>
                   <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                     Hybrid Accommodation
                   </li>
                 </Link>
-                <Link>
+                <Link to="/upscale">
                   <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                     Upscale & Luxury Hotel
                   </li>
                 </Link>
               </ul>
-            </details>
+            )}
           </li>
-          <li>
-            <a href="#contact" className="hover:text-white hover:bg-green-700">Contact</a>
-          </li>
-          <Link to='/dashboard/dashhome'>
+
+          <Link>
             <li>
-              <a className="hover:text-white hover:bg-green-700">Dashboard</a>
+              <a className="hover:text-white hover:bg-green-700">Contact</a>
             </li>
           </Link>
         </ul>

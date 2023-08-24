@@ -1,0 +1,8 @@
+/* CSS */
+ul.menu ul {
+  display: none;
+}
+
+ul.menu li:hover ul {
+  display: block;
+}
