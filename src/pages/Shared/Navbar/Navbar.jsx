@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-white text-black font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
+    <div className="navbar bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,23 +48,23 @@ const Navbar = () => {
                 Products
               </summary>
               {showLinks1 && (
-                <ul className="p-2 bg-white absolute top-full right-0">
-                  <Link>
+                <ul className="p-2 bg-green-900 text-white rounded-xl absolute top-0 left-32">
+                  <Link to={'/dataAnalysis'}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Data Analysis & Insights
                     </li>
                   </Link>
-                  <Link>
+                  <Link to={'/consulting'}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Consulting Services
                     </li>
                   </Link>
-                  <Link>
+                  <Link to={'/businessoption'}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Business optimization
                     </li>
                   </Link>
-                  <Link>
+                  <Link to={'/competitor'}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Competitor Solution
                     </li>
@@ -84,21 +84,18 @@ const Navbar = () => {
                 Customers
               </summary>
               {showLinks && (
-                <ul className="p-2 bg-white absolute top-full right-0">
-                  <Link to="/pricing">
+                <ul className="p-2 bg-green-900 text-white rounded-xl absolute top-0 left-32">
+                  <Link to="/customerService">
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Limited Service Hotel
-                      <a className="hover:text-white hover:bg-green-700">
-                        Pricing
-                      </a>
                     </li>
                   </Link>
-                  <Link>
+                  <Link to="/hybridcustomer">
                     <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                       Hybrid Accommodation
                     </li>
                   </Link>
-                  <Link>
+                  <Link to="/upscale">
                     <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                       Upscale & Luxury Hotel
                     </li>
@@ -106,10 +103,14 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-
-            <Link>
+            <Link to={'/contact'}>
               <li>
                 <a className="hover:text-white hover:bg-green-700">Contact</a>
+              </li>
+            </Link>
+            <Link to="dashboard/dashhome">
+              <li>
+                <a className="hover:text-white hover:bg-green-700">Dashboard</a>
               </li>
             </Link>
           </ul>
@@ -129,23 +130,23 @@ const Navbar = () => {
               Products
             </summary>
             {showLinks1 && (
-              <ul className="p-2 bg-white absolute top-full right-0">
-                <Link>
+              <ul className="p-2 bg-green-900 text-white rounded-xl absolute top-full right-0">
+                <Link to={'/dataAnalysis'}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Data Analysis & Insights
                   </li>
                 </Link>
-                <Link>
+                <Link to={'/consulting'}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Consulting Services
                   </li>
                 </Link>
-                <Link>
+                <Link to={'/businessoption'}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Business optimization
                   </li>
                 </Link>
-                <Link>
+                <Link to={'/competitor'}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Competitor Solution
                   </li>
@@ -164,13 +165,13 @@ const Navbar = () => {
               Customers
             </summary>
             {showLinks && (
-              <ul className="p-2 bg-white absolute top-full right-0">
+              <ul className="p-2 bg-green-900 text-white absolute rounded-xl top-full right-0">
                 <Link to="/customerService">
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Limited Service Hotel
                   </li>
                 </Link>
-                <Link to="hybridcustomer">
+                <Link to="/hybridcustomer">
                   <li className="my-2 hover:bg-green-700 p-2 rounded-lg">
                     Hybrid Accommodation
                   </li>
@@ -183,10 +184,14 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-
-          <Link>
+          <Link to={'/contact'}>
             <li>
               <a className="hover:text-white hover:bg-green-700">Contact</a>
+            </li>
+          </Link>
+          <Link to="dashboard/dashhome">
+            <li>
+              <a className="hover:text-white hover:bg-green-700">Dashboard</a>
             </li>
           </Link>
         </ul>

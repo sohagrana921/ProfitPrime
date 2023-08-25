@@ -80,7 +80,7 @@ const Login = () => {
             </div>
           </div>
 
-          <Link to="/resetPassword" className="text-start text-red-800">
+          <Link to="/resetPassword" className="text-start text-red-600">
             Forget Password? Reset
           </Link>
 
@@ -91,8 +91,7 @@ const Login = () => {
               value="Login"
             />
           </div>
-        </form>
-        <div className="mb-4">
+        <div className="">
           <small>
             New to ProfitPrime ?
             <Link to="/register">
@@ -100,6 +99,7 @@ const Login = () => {
             </Link>
           </small>
         </div>
+        </form>
         <SocialLogin></SocialLogin>
       </div>
     </div>

@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <div className="lg:px-24 h-full my-container" id="contact">
       <div>
-        <h1 className="hero lg:text-4xl text-2xl uppercase font-bold pb-6 text-sky-950 text-center">
+        <h1 className="hero lg:text-4xl text-2xl uppercase font-bold my-20 text-sky-950 text-center">
           Ask a question
         </h1>
         <div className="md:flex">
