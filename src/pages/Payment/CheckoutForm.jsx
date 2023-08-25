@@ -1,7 +1,9 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
+import './CheckoutForm.css'
+import { Link } from "react-router-dom";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({pay}) => {
     const stripe = useStripe();
     const elements = useElements();
     // const [cardError, setError] = useState('');
@@ -40,7 +42,7 @@ const CheckoutForm = () => {
 
         // setProcessing(true)
         const { paymentIntent, error:confirmError } = await stripe.confirmCardPayment(
-            elements,
+            pay,
             {
                 payment_method: {
                     card: card,
@@ -101,6 +103,11 @@ const CheckoutForm = () => {
           },
         }}
       />
+      <Link to='/dashboard/dashhome'>
+      <button type="submit" disabled={!stripe}>
+        Pay
+      </button>
+      </Link>
       <button type="submit" disabled={!stripe}>
         Pay
       </button>
