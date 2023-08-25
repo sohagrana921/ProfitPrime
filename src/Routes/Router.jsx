@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>
+        element: <Contact></Contact>,
       },
       {
         path: "/payment/:plan/:billingOption",
@@ -91,19 +91,19 @@ const router = createBrowserRouter([
       },
       {
         path: "help",
-        element: <Contact/>,
+        element: <Contact />,
       },
       {
         path: "dai",
-        element: <DataAnalysis/>,
+        element: <DataAnalysis />,
       },
       {
-        path: "cs",
-        element: <ConsultingProducts/>,
+        path: "bo",
+        element: <BussinessOption></BussinessOption>,
       },
       {
         path: "comps",
-        element: <CompetitorSolution/>,
+        element: <CompetitorSolution />,
       },
     ],
   },
