@@ -15,8 +15,8 @@ const Pricing = () => {
       <button
         onClick={() => setIsYearly(!isYearly)}
         className={`py-2 px-4 rounded-full ${
-          isYearly ? "bg-blue-400 text-white" : "bg-green-600 text-white"
-        } mb-4 hover:bg-blue-500 hover:text-white transition duration-300 focus:outline-none`}
+          isYearly ? "bg-blue-400 text-white" : "bg-green-900 text-white"
+        } mb-4 hover:bg-green-700 hover:text-white transition duration-300 focus:outline-none`}
       >
         {isYearly ? "Switch to Monthly" : "Switch to Yearly"}
       </button>
@@ -32,7 +32,7 @@ const Pricing = () => {
         <div className="bg-blue-400 rounded-lg shadow-lg p-6 w-64 m-4">
           <h2 className="text-xl font-semibold mb-4">Basic Plan</h2>
           <p className="text-gray-600 mb-2">Limited features</p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mb-4">
             {isYearly ? "$100/year" : "$10/month"}
           </p>
           <div className="mt-2">
@@ -47,7 +47,7 @@ const Pricing = () => {
         <div className="bg-green-400 rounded-lg shadow-lg p-6 w-64 m-4">
           <h2 className="text-xl font-semibold mb-4">Prime Plan</h2>
           <p className="text-gray-600 mb-2">Enhanced features</p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mb-4">
             {isYearly ? "$200/year" : "$20/month"}
           </p>
           <div className="mt-2">

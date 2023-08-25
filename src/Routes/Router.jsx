@@ -15,6 +15,7 @@ import DashHome from "../Dashboard/DashHome/DashHome";
 import Payment from "../pages/Payment/Payment";
 import UpscaleCustomer from "../pages/Home/UpscaleCustomer/UpscaleCustomer";
 import HybridCustomer from "../pages/Home/HybridCustomer/HybridCustomer";
+import Contact from "../Components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -31,20 +32,40 @@ const router = createBrowserRouter([
         element: <DataAnalysis></DataAnalysis>,
       },
       {
+        path: "/consulting",
+        element: <ConsultingProducts></ConsultingProducts>,
+      },
+      {
         path: "/businessoption",
         element: <BussinessOption />,
+      },
+      {
+        path: "/competitor",
+        element: <CompetitorSolution />,
       },
       {
         path: "/pricing",
         element: <Pricing />,
       },
       {
-        path: "/payment/:plan/:billingOption",
-        element: <Payment />,
+        path: "/customerService",
+        element: <CustomerService></CustomerService>,
       },
       {
-        path: "/competitor",
-        element: <CompetitorSolution />,
+        path: "/upscale",
+        element: <UpscaleCustomer></UpscaleCustomer>,
+      },
+      {
+        path: "/hybridcustomer",
+        element: <HybridCustomer></HybridCustomer>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
+      },
+      {
+        path: "/payment/:plan/:billingOption",
+        element: <Payment />,
       },
       {
         path: "/login",
@@ -57,23 +78,6 @@ const router = createBrowserRouter([
       {
         path: "/resetPassword",
         element: <ResetPassword></ResetPassword>,
-      },
-      {
-        path: "/consulting",
-        element: <ConsultingProducts></ConsultingProducts>,
-      },
-      {
-        path: "/customerService",
-        element: <CustomerService></CustomerService>,
-      },
-
-      {
-        path: "/upscale",
-        element: <UpscaleCustomer></UpscaleCustomer>,
-      },
-      {
-        path: "/hybridcustomer",
-        element: <HybridCustomer></HybridCustomer>,
       },
     ],
   },

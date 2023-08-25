@@ -104,8 +104,7 @@ const Register = () => {
               value="Sign Up"
             />
           </div>
-        </form>
-        <p className="text-center mb-4">
+        <p className="">
           <small>
             Already have an account ?
             <Link to="/login">
@@ -113,6 +112,7 @@ const Register = () => {
             </Link>
           </small>
         </p>
+        </form>
         <SocialLogin></SocialLogin>
       </div>
     </div>

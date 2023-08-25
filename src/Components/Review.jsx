@@ -8,7 +8,7 @@ import "@smastrom/react-rating/style.css";
 const Reviews = () => {
   return (
     <div className="text-center md:mb-20 my-container">
-      <h1 className="lg:text-4xl text-2xl uppercase font-bold pt-10 md:py-20 text-sky-950 text-center">
+      <h1 className="lg:text-4xl text-2xl uppercase font-bold pt-10 md:py-24 text-sky-950 text-center">
         Whats our clients say
       </h1>
       <Swiper
