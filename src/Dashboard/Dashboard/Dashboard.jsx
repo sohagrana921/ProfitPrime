@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
-import {FaHome, FaPaypal } from "react-icons/fa";
+import {FaBattleNet, FaHandsHelping, FaHome, FaPaypal } from "react-icons/fa";
+import { FcDatabase } from "react-icons/fc";
+import { AiFillCaretRight } from "react-icons/ai";
 
 const Dashboard = () => {
 
@@ -20,7 +22,11 @@ const Dashboard = () => {
 
                         <div className="divider"></div>
 
-                        <li><NavLink to={'/'} className="hover:text-white hover:bg-green-700"><FaHome></FaHome> Home</NavLink></li>
+                        <li><NavLink to={'/'} className="hover:text-white hover:bg-green-700"><FaHome/> Home</NavLink></li>
+                        <li><NavLink to={'/'} className="hover:text-white hover:bg-green-700"><AiFillCaretRight/> Consulting Service</NavLink></li>
+                        <li><NavLink to={'/'} className="hover:text-white hover:bg-green-700"><FaBattleNet/> Competitor solution</NavLink></li>
+                        <li><NavLink to={'/'} className="hover:text-white hover:bg-green-700"><FcDatabase/> Data Analysis $ Insight</NavLink></li>
+                        <li><NavLink to={'/help'} className="hover:text-white hover:bg-green-700"><FaHandsHelping/> Help</NavLink></li>
 
                     </ul>
 
