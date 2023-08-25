@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <Contact></Contact>
       },
       {
         path: "/payment/:plan/:billingOption",
@@ -90,8 +90,20 @@ const router = createBrowserRouter([
         element: <DashHome></DashHome>,
       },
       {
-        path: "consulting",
-        element: <ConsultingProducts></ConsultingProducts>,
+        path: "help",
+        element: <Contact/>,
+      },
+      {
+        path: "dai",
+        element: <DataAnalysis/>,
+      },
+      {
+        path: "cs",
+        element: <ConsultingProducts/>,
+      },
+      {
+        path: "comps",
+        element: <CompetitorSolution/>,
       },
     ],
   },
