@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/profit-up.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [showLinks, setShowLinks] = useState(false);
   const [showLinks1, setShowLinks1] = useState(false);
 
@@ -11,6 +13,9 @@ const Navbar = () => {
   };
   const toggleLinks1 = () => {
     setShowLinks1(!showLinks1);
+  };
+  const handleLogOut = () => {
+    logOut();
   };
 
   return (
@@ -49,22 +54,22 @@ const Navbar = () => {
               </summary>
               {showLinks1 && (
                 <ul className="p-2 bg-green-900 text-white rounded-xl absolute top-0 left-32">
-                  <Link to={'/dataAnalysis'}>
+                  <Link to={"/dataAnalysis"}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Data Analysis & Insights
                     </li>
                   </Link>
-                  <Link to={'/consulting'}>
+                  <Link to={"/consulting"}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Consulting Services
                     </li>
                   </Link>
-                  <Link to={'/businessoption'}>
+                  <Link to={"/businessoption"}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Business optimization
                     </li>
                   </Link>
-                  <Link to={'/competitor'}>
+                  <Link to={"/competitor"}>
                     <li className="hover:bg-green-700 p-2 rounded-lg">
                       Competitor Solution
                     </li>
@@ -103,7 +108,7 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <Link to={'/contact'}>
+            <Link to={"/contact"}>
               <li>
                 <a className="hover:text-white hover:bg-green-700">Contact</a>
               </li>
@@ -131,22 +136,22 @@ const Navbar = () => {
             </summary>
             {showLinks1 && (
               <ul className="p-2 bg-green-900 text-white rounded-xl absolute top-full right-0">
-                <Link to={'/dataAnalysis'}>
+                <Link to={"/dataAnalysis"}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Data Analysis & Insights
                   </li>
                 </Link>
-                <Link to={'/consulting'}>
+                <Link to={"/consulting"}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Consulting Services
                   </li>
                 </Link>
-                <Link to={'/businessoption'}>
+                <Link to={"/businessoption"}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Business optimization
                   </li>
                 </Link>
-                <Link to={'/competitor'}>
+                <Link to={"/competitor"}>
                   <li className="hover:bg-green-700 p-2 rounded-lg">
                     Competitor Solution
                   </li>
@@ -184,7 +189,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <Link to={'/contact'}>
+          <Link to={"/contact"}>
             <li>
               <a className="hover:text-white hover:bg-green-700">Contact</a>
             </li>
@@ -197,9 +202,18 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to={"/login"}>
-          <button className="hover:bg-green-700 p-3 rounded-md">Login</button>
-        </Link>
+        {user ? (
+          <Link
+            onClick={handleLogOut}
+            className="hover:bg-green-700 p-3 rounded-md"
+          >
+            Logout
+          </Link>
+        ) : (
+          <Link className="hover:bg-green-700 p-3 rounded-md" to={"/login"}>
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ const Register = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const { createUser } = useContext(AuthContext);
@@ -19,16 +20,34 @@ const Register = () => {
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
       console.log(loggedUser);
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "User created successfully.",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-
-      navigate("/login");
+      // ---------
+      const saveUser = {
+        name: data.name,
+        email: data.email,
+      };
+      fetch("http://localhost:5000/users", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(saveUser),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            reset();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "User created successfully.",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate("/");
+          }
+        });
     });
+    // ---------
   };
 
   return (
@@ -104,14 +123,14 @@ const Register = () => {
               value="Sign Up"
             />
           </div>
-        <p className="">
-          <small>
-            Already have an account ?
-            <Link to="/login">
-              <span className="text-blue-600"> Login</span>
-            </Link>
-          </small>
-        </p>
+          <p className="">
+            <small>
+              Already have an account ?
+              <Link to="/login">
+                <span className="text-blue-600"> Login</span>
+              </Link>
+            </small>
+          </p>
         </form>
         <SocialLogin></SocialLogin>
       </div>
