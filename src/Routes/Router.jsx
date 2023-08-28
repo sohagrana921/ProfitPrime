@@ -16,6 +16,7 @@ import Payment from "../pages/Payment/Payment";
 import UpscaleCustomer from "../pages/Home/UpscaleCustomer/UpscaleCustomer";
 import HybridCustomer from "../pages/Home/HybridCustomer/HybridCustomer";
 import Contact from "../Components/Contact";
+import AdminHome from "../Dashboard/Admin/AdminHome/AdminHome";
 
 const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
     children: [
+      {
+        path: "adminhome",
+        element: <AdminHome></AdminHome>
+      },
       {
         path: "dashhome",
         element: <DashHome></DashHome>,
