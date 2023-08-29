@@ -2,9 +2,13 @@ import { NavLink, Outlet } from "react-router-dom";
 import { FaBattleNet, FaHandsHelping, FaHome, FaPaypal, FaUser } from "react-icons/fa";
 import { FcDatabase } from "react-icons/fc";
 import { AiFillCaretRight } from "react-icons/ai";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 // import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
 
 const Dashboard = () => {
+
+  const { user } = useContext(AuthContext);
 
   // const [checkAdmin] = useVerifyAdmin();
 
@@ -26,8 +30,8 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
-            {/* {
-              checkAdmin ? */}
+            {
+              user === "admin" ?
                 <>
                   <li>
                     <NavLink to={"/dashboard/adminhome"} className="hover:text-white hover:bg-green-700">
@@ -45,7 +49,7 @@ const Dashboard = () => {
                     </NavLink>
                   </li>
                 </>
-                {/* : */}
+                :
                 <>
                   <li>
                     <NavLink to={"/dashboard/dai"} className="hover:text-white hover:bg-green-700">
@@ -68,7 +72,7 @@ const Dashboard = () => {
                     </NavLink>
                   </li>
                 </>
-            {/* } */}
+            }
 
             <div className="divider"></div>
 

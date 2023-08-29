@@ -99,7 +99,7 @@ const CheckoutForm = ({ pay }) => {
             },
           }}
         />
-        <Link to="/dashboard/dashhome">
+        <Link to="/info">
           <button
             className="btn btn-sm bg-green-800 text-white"
             type="submit"

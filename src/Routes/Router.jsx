@@ -17,6 +17,7 @@ import UpscaleCustomer from "../pages/Home/UpscaleCustomer/UpscaleCustomer";
 import HybridCustomer from "../pages/Home/HybridCustomer/HybridCustomer";
 import Contact from "../Components/Contact";
 import AdminHome from "../Dashboard/Admin/AdminHome/AdminHome";
+import CustomerInformation from "../pages/Information/CustomerInformation";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/info",
+        element: <CustomerInformation/>
       },
       {
         path: "/payment/:plan/:billingOption",
