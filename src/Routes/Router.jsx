@@ -16,8 +16,10 @@ import Payment from "../pages/Payment/Payment";
 import UpscaleCustomer from "../pages/Home/UpscaleCustomer/UpscaleCustomer";
 import HybridCustomer from "../pages/Home/HybridCustomer/HybridCustomer";
 import Contact from "../Components/Contact";
-import AdminHome from "../Dashboard/Admin/AdminHome/AdminHome";
 import CustomerInformation from "../pages/Information/CustomerInformation";
+import AdminHome from "../Dashboard/Admin/adminHome";
+import ManageUsers from "../Dashboard/Admin/ManageUsers";
+import ShowHome from "../Dashboard/Dashboard/ShowHome/ShowHome";
 
 const router = createBrowserRouter([
   {
@@ -96,8 +98,16 @@ const router = createBrowserRouter([
         element: <AdminHome></AdminHome>
       },
       {
+        path: "manageusers",
+        element: <ManageUsers></ManageUsers>
+      },
+      {
         path: "dashhome",
         element: <DashHome></DashHome>,
+      },
+      {
+        path: "showhome",
+        element: <ShowHome></ShowHome>,
       },
       {
         path: "help",

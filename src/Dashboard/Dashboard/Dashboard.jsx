@@ -1,16 +1,13 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaBattleNet, FaHandsHelping, FaHome, FaPaypal, FaUser } from "react-icons/fa";
+import { FaBattleNet, FaHandsHelping, FaHome, FaMoneyBill, FaPaypal, FaUser } from "react-icons/fa";
 import { FcDatabase } from "react-icons/fc";
 import { AiFillCaretRight } from "react-icons/ai";
-import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
-// import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
+import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
 
 const Dashboard = () => {
 
-  const { user } = useContext(AuthContext);
 
-  // const [checkAdmin] = useVerifyAdmin();
+  const [checkAdmin] = useVerifyAdmin();
 
   return (
     <div>
@@ -31,20 +28,10 @@ const Dashboard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
             {
-              user === "admin" ?
+              checkAdmin ?
                 <>
                   <li>
-                    <NavLink to={"/dashboard/adminhome"} className="hover:text-white hover:bg-green-700">
-                      <FaUser></FaUser> Users Info
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to={"/dashboard/adminhome"} className="hover:text-white hover:bg-green-700">
-                      <FaUser></FaUser> Users Progress
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to={"/dashboard/adminhome"} className="hover:text-white hover:bg-green-700">
+                    <NavLink to={"/dashboard/manageusers"} className="hover:text-white hover:bg-green-700">
                       <FaUser></FaUser> Manage Users
                     </NavLink>
                   </li>
@@ -64,6 +51,11 @@ const Dashboard = () => {
                   <li>
                     <NavLink to={"/dashboard/comps"} className="hover:text-white hover:bg-green-700">
                       <FaBattleNet /> Competitor
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to={"/dashboard/dashhome"} className="hover:text-white hover:bg-green-700">
+                      <FaMoneyBill></FaMoneyBill> Subscription
                     </NavLink>
                   </li>
                   <li>
