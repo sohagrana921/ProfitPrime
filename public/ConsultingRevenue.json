@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Producr A",
+    "price": 4000,
+    "sells": 2400,
+    "target": 2400
+  },
+  {
+    "name": "Producr B",
+    "price": 3000,
+    "sells": 1398,
+    "target": 2210
+  },
+  {
+    "name": "Producr C",
+    "price": 2000,
+    "sells": 9800,
+    "target": 2290
+  },
+  {
+    "name": "Producr D",
+    "price": 2780,
+    "sells": 3908,
+    "target": 2000
+  },
+  {
+    "name": "Producr E",
+    "price": 1890,
+    "sells": 4800,
+    "target": 2181
+  },
+  {
+    "name": "Producr F",
+    "price": 2390,
+    "sells": 3800,
+    "target": 2500
+  },
+  {
+    "name": "Producr G",
+    "price": 3490,
+    "sells": 4300,
+    "target": 2100
+  }
+]
