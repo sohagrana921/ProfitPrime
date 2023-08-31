@@ -16,9 +16,10 @@ import Payment from "../pages/Payment/Payment";
 import UpscaleCustomer from "../pages/Home/UpscaleCustomer/UpscaleCustomer";
 import HybridCustomer from "../pages/Home/HybridCustomer/HybridCustomer";
 import Contact from "../Components/Contact";
-import DataRevenue from "../pages/Home/Revenue/DataRevenue";
-import CosultingRevenue from "../pages/Home/Revenue/CosultingRevenue";
-import BusinessRevenue from "../pages/Home/Revenue/BusinessRevenue";
+import CustomerInformation from "../pages/Information/CustomerInformation";
+import AdminHome from "../Dashboard/Admin/adminHome";
+import ManageUsers from "../Dashboard/Admin/ManageUsers";
+import ShowHome from "../Dashboard/Dashboard/ShowHome/ShowHome";
 
 const router = createBrowserRouter([
   {
@@ -64,7 +65,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/info",
+        element: <CustomerInformation/>
       },
       {
         path: "/payment/:plan/:billingOption",
@@ -89,24 +94,36 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
+        path: "adminhome",
+        element: <AdminHome></AdminHome>
+      },
+      {
+        path: "manageusers",
+        element: <ManageUsers></ManageUsers>
+      },
+      {
         path: "dashhome",
         element: <DashHome></DashHome>,
       },
       {
+        path: "showhome",
+        element: <ShowHome></ShowHome>,
+      },
+      {
         path: "help",
-        element: <Contact/>,
+        element: <Contact />,
       },
       {
         path: "dai",
-        element: <BusinessRevenue></BusinessRevenue>
+        element: <DataAnalysis />,
       },
       {
-        path: "cs",
-        element: <CosultingRevenue></CosultingRevenue>
+        path: "bo",
+        element: <BussinessOption></BussinessOption>,
       },
       {
         path: "comps",
-        element: <DataRevenue></DataRevenue>
+        element: <CompetitorSolution />,
       },
     ],
   },
