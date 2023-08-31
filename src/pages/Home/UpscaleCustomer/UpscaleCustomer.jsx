@@ -86,7 +86,7 @@ const UpscaleCustomer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 mx-auto">
               <div className="card card-compact w-full h-full bg-base-100">
                 <figure>
-                  <img src={p.hotel_img1} alt="" />
+                  <img className="mr-4 rounded-xl" src={p.hotel_img1} alt="" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title text-xl">{p.hotel_name}</h2>
