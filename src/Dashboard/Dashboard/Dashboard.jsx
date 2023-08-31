@@ -1,12 +1,17 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaBattleNet, FaHandsHelping, FaHome, FaMoneyBill, FaPaypal, FaUser } from "react-icons/fa";
+import {
+  FaBattleNet,
+  FaHandsHelping,
+  FaHome,
+  FaMoneyBill,
+  FaPaypal,
+  FaUser,
+} from "react-icons/fa";
 import { FcDatabase } from "react-icons/fc";
 import { AiFillCaretRight } from "react-icons/ai";
 import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
 
 const Dashboard = () => {
-
-
   const [checkAdmin] = useVerifyAdmin();
 
   return (
@@ -27,44 +32,61 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
-            {
-              checkAdmin ?
-                <>
-                  <li>
-                    <NavLink to={"/dashboard/manageusers"} className="hover:text-white hover:bg-green-700">
-                      <FaUser></FaUser> Manage Users
-                    </NavLink>
-                  </li>
-                </>
-                :
-                <>
-                  <li>
-                    <NavLink to={"/dashboard/dai"} className="hover:text-white hover:bg-green-700">
-                      <FcDatabase /> Data Insight
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to={"/dashboard/bo"} className="hover:text-white hover:bg-green-700">
-                      <AiFillCaretRight /> Business Info
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to={"/dashboard/comps"} className="hover:text-white hover:bg-green-700">
-                      <FaBattleNet /> Competitor
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to={"/dashboard/dashhome"} className="hover:text-white hover:bg-green-700">
-                      <FaMoneyBill></FaMoneyBill> Subscription
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to={"/"} className="hover:text-white hover:bg-green-700">
-                      <FaPaypal></FaPaypal> Payment History
-                    </NavLink>
-                  </li>
-                </>
-            }
+            {checkAdmin ? (
+              <>
+                <li>
+                  <NavLink
+                    to={"/dashboard/manageusers"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FaUser></FaUser> Manage Users
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <NavLink
+                    to={"/dashboard/dataRevenue"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FcDatabase /> Data Insight
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/dashboard/businessRevenue"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <AiFillCaretRight /> Business Info
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/dashboard/cosultingRevenue"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FaBattleNet /> Competitor
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/dashboard/dashhome"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FaMoneyBill></FaMoneyBill> Subscription
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FaPaypal></FaPaypal> Payment History
+                  </NavLink>
+                </li>
+              </>
+            )}
 
             <div className="divider"></div>
 
@@ -74,7 +96,10 @@ const Dashboard = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/dashboard/help"} className="hover:text-white hover:bg-green-700">
+              <NavLink
+                to={"/dashboard/help"}
+                className="hover:text-white hover:bg-green-700"
+              >
                 <FaHandsHelping /> Help
               </NavLink>
             </li>

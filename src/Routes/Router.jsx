@@ -20,6 +20,9 @@ import CustomerInformation from "../pages/Information/CustomerInformation";
 import AdminHome from "../Dashboard/Admin/adminHome";
 import ManageUsers from "../Dashboard/Admin/ManageUsers";
 import ShowHome from "../Dashboard/Dashboard/ShowHome/ShowHome";
+import BusinessRevenue from "../pages/Home/Revenue/BusinessRevenue";
+import CosultingRevenue from "../pages/Home/Revenue/CosultingRevenue";
+import DataRevenue from "../pages/Home/Revenue/DataRevenue";
 
 const router = createBrowserRouter([
   {
@@ -69,7 +72,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/info",
-        element: <CustomerInformation/>
+        element: <CustomerInformation />,
       },
       {
         path: "/payment/:plan/:billingOption",
@@ -95,11 +98,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "adminhome",
-        element: <AdminHome></AdminHome>
+        element: <AdminHome></AdminHome>,
       },
       {
         path: "manageusers",
-        element: <ManageUsers></ManageUsers>
+        element: <ManageUsers></ManageUsers>,
       },
       {
         path: "dashhome",
@@ -114,16 +117,16 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "dai",
-        element: <DataAnalysis />,
+        path: "businessRevenue",
+        element: <DataRevenue></DataRevenue>,
       },
       {
-        path: "bo",
-        element: <BussinessOption></BussinessOption>,
+        path: "cosultingRevenue",
+        element: <CosultingRevenue></CosultingRevenue>,
       },
       {
-        path: "comps",
-        element: <CompetitorSolution />,
+        path: "dataRevenue",
+        element: <BusinessRevenue></BusinessRevenue>,
       },
     ],
   },
