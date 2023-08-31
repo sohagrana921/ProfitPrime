@@ -16,10 +16,9 @@ import Payment from "../pages/Payment/Payment";
 import UpscaleCustomer from "../pages/Home/UpscaleCustomer/UpscaleCustomer";
 import HybridCustomer from "../pages/Home/HybridCustomer/HybridCustomer";
 import Contact from "../Components/Contact";
-import CustomerInformation from "../pages/Information/CustomerInformation";
-import AdminHome from "../Dashboard/Admin/adminHome";
-import ManageUsers from "../Dashboard/Admin/ManageUsers";
-import ShowHome from "../Dashboard/Dashboard/ShowHome/ShowHome";
+import DataRevenue from "../pages/Home/Revenue/DataRevenue";
+import CosultingRevenue from "../pages/Home/Revenue/CosultingRevenue";
+import BusinessRevenue from "../pages/Home/Revenue/BusinessRevenue";
 
 const router = createBrowserRouter([
   {
@@ -65,11 +64,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
-      },
-      {
-        path: "/info",
-        element: <CustomerInformation/>
+        element: <Contact></Contact>
       },
       {
         path: "/payment/:plan/:billingOption",
@@ -94,36 +89,24 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
-        path: "adminhome",
-        element: <AdminHome></AdminHome>
-      },
-      {
-        path: "manageusers",
-        element: <ManageUsers></ManageUsers>
-      },
-      {
         path: "dashhome",
         element: <DashHome></DashHome>,
       },
       {
-        path: "showhome",
-        element: <ShowHome></ShowHome>,
-      },
-      {
         path: "help",
-        element: <Contact />,
+        element: <Contact/>,
       },
       {
         path: "dai",
-        element: <DataAnalysis />,
+        element: <BusinessRevenue></BusinessRevenue>
       },
       {
-        path: "bo",
-        element: <BussinessOption></BussinessOption>,
+        path: "cs",
+        element: <CosultingRevenue></CosultingRevenue>
       },
       {
         path: "comps",
-        element: <CompetitorSolution />,
+        element: <DataRevenue></DataRevenue>
       },
     ],
   },
