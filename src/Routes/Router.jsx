@@ -25,6 +25,7 @@ import CosultingRevenue from "../pages/Home/Revenue/CosultingRevenue";
 import DataRevenue from "../pages/Home/Revenue/DataRevenue";
 import PrimeUsers from "../Dashboard/Admin/PrimeUsers";
 import BasicUsers from "../Dashboard/Admin/BasicUsers";
+import PaymentHistory from "../pages/Payment/PaymentHistory";
 
 const router = createBrowserRouter([
   {
@@ -142,6 +143,10 @@ const router = createBrowserRouter([
         path: "dataRevenue",
         element: <BusinessRevenue></BusinessRevenue>,
       },
+      {
+        path:'pay',
+        element:<PaymentHistory/>
+      }
     ],
   },
 ]);
