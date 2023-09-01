@@ -28,7 +28,7 @@ const CustomerService = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
               <img
                 src={p.brand_img}
-                className="max-w-lg rounded-lg shadow-2xl"
+                className=" w-96 rounded-lg shadow-2xl"
               />
               <div>
                 <p className="mb-5 text-xl">{p.service}</p>
