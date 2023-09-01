@@ -54,24 +54,26 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, currentUser => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
-        axios.post('http://localhost:5000', { email: currentUser.email })
-          .then(res => {
-            console.log(res.data.accessToken);
-            localStorage.setItem('access-token', res.data.accessToken)
-            setLoading(false);
+        axios
+          .post("https://profit-prime-server.vercel.app/", {
+            email: currentUser.email,
           })
+          .then((res) => {
+            console.log(res.data.accessToken);
+            localStorage.setItem("access-token", res.data.accessToken);
+            setLoading(false);
+          });
+      } else {
+        localStorage.removeItem("access-token");
       }
-      else {
-        localStorage.removeItem('access-token')
-      }
-    })
+    });
     return () => {
       return unsubscribe();
-    }
-  }, [])
+    };
+  }, []);
 
   const authInfo = {
     user,

@@ -9,26 +9,28 @@ import PaymentSuccessModal from "./PaymentSuccessModal";
 const CheckoutForm = ({ pay, userRole }) => {
   const stripe = useStripe();
   const elements = useElements();
-  const [cardError, setError] = useState('');
+  const [cardError, setError] = useState("");
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
   const { user } = useContext(AuthContext);
-  const [clientSecret, setClientSecret] = useState('');
+  const [clientSecret, setClientSecret] = useState("");
   const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
-
 
   const price = parseFloat(pay).toFixed(2);
   const email = user?.email;
 
   useEffect(() => {
     if (price > 0) {
-      axios.post('http://localhost:5000/create-payment-intent', { price })
-        .then(res => {
+      axios
+        .post("https://profit-prime-server.vercel.app/create-payment-intent", {
+          price,
+        })
+        .then((res) => {
           console.log(res);
           setClientSecret(res.data.clientSecret);
         })
-        .catch(error => {
-          console.error('Error fetching client secret:', error);
+        .catch((error) => {
+          console.error("Error fetching client secret:", error);
         });
     }
   }, [price]);
@@ -57,13 +59,13 @@ const CheckoutForm = ({ pay, userRole }) => {
     });
     if (error) {
       console.log("[error]", error);
-      setError(error.message)
+      setError(error.message);
     } else {
       console.log("[PaymentMethod]", paymentMethod);
-      setError('')
+      setError("");
     }
 
-    setProcessing(true)
+    setProcessing(true);
     const { paymentIntent, error: confirmError } =
       await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -71,17 +73,17 @@ const CheckoutForm = ({ pay, userRole }) => {
           billing_details: {
             // name: "unknown",
             // email: "anonymous",
-            name: user?.displayName || 'unknown',
-            email: user?.email || 'anonymous'
+            name: user?.displayName || "unknown",
+            email: user?.email || "anonymous",
           },
         },
       });
     console.log(user);
     if (confirmError) {
-      setError(confirmError.message)
+      setError(confirmError.message);
     }
     console.log("intend", paymentIntent);
-    setProcessing(false)
+    setProcessing(false);
     if (paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
       setIsPaymentSuccess(true);
@@ -91,47 +93,51 @@ const CheckoutForm = ({ pay, userRole }) => {
         transactionId: paymentIntent.id,
         price,
         date: new Date(),
-        plan: userRole
-      }
+        plan: userRole,
+      };
 
       try {
-        const response = await axios.post('http://localhost:5000/payments', payment);
+        const response = await axios.post(
+          "https://profit-prime-server.vercel.app/payments",
+          payment
+        );
         console.log(response.data);
 
         if (response.data?.result?.insertedId) {
           // Handle success
-          console.log('Payment inserted with ID:', response.data.result.insertedId);
+          console.log(
+            "Payment inserted with ID:",
+            response.data.result.insertedId
+          );
         } else {
           // Handle the case where insertedId is not found in the response
         }
       } catch (error) {
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
-
-
 
       const updateUserRole = async (email, userRole) => {
         try {
-          const response = await axios.post('http://localhost:5000/update-user', {
-            email,
-            userRole,
-          });
+          const response = await axios.post(
+            "https://profit-prime-server.vercel.app/update-user",
+            {
+              email,
+              userRole,
+            }
+          );
 
           if (response.status === 200) {
-            console.log('User role updated successfully');
+            console.log("User role updated successfully");
             // Perform any additional actions or state updates as needed
           } else {
-            console.error('Failed to update user role');
+            console.error("Failed to update user role");
           }
         } catch (error) {
-          console.error('Error updating user role:', error);
+          console.error("Error updating user role:", error);
         }
       };
 
       updateUserRole(email, userRole);
-
-
-
     }
   };
   console.log(transactionId);
@@ -166,7 +172,11 @@ const CheckoutForm = ({ pay, userRole }) => {
         </Link> */}
 
         <p>{cardError}</p>
-        <button className="btn btn-sm bg-green-800 hover:bg-red-400 text-white" type="submit" disabled={!stripe || !clientSecret || processing}>
+        <button
+          className="btn btn-sm bg-green-800 hover:bg-red-400 text-white"
+          type="submit"
+          disabled={!stripe || !clientSecret || processing}
+        >
           Pay
         </button>
       </form>
@@ -176,7 +186,6 @@ const CheckoutForm = ({ pay, userRole }) => {
         onClose={() => setIsPaymentSuccess(false)}
         transactionId={transactionId}
       />
-
     </div>
   );
 };

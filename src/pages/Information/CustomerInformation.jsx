@@ -1,21 +1,25 @@
-import { useContext } from 'react';
-import { useForm } from 'react-hook-form';
-import { AuthContext } from '../../providers/AuthProvider';
-import { useEffect } from 'react';
-import axios from 'axios';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CustomerInformation = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const { user } = useContext(AuthContext);
   const [customer, setCustomer] = useState();
   const email = user?.email;
-  const Navigate=useNavigate();
+  const Navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/user/${email}`)
+      .get(`https://profit-prime-server.vercel.app/user/${email}`)
       .then((response) => {
         setCustomer(response.data);
       })
@@ -24,88 +28,139 @@ const CustomerInformation = () => {
       });
   }, [email]);
 
-  const defaultName = customer?.name || ''; // Set a default value for name
-  const defaultEmail = email || ''; // Set a default value for email
+  const defaultName = customer?.name || ""; // Set a default value for name
+  const defaultEmail = email || ""; // Set a default value for email
 
   const onSubmit = (data) => {
     console.log(data);
-    Navigate('/dashboard/dashhome')
+    Navigate("/dashboard/dashhome");
   };
 
   return (
     <div className="flex flex-col md:flex-row pt-8 mt-8 justify-center items-center h-screen bg-gradient-to-r from-green-200 via-purple-300 to-green-300">
-      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 bg-gray-200 rounded-lg shadow-lg">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10 bg-gray-200 rounded-lg shadow-lg"
+      >
         <div>
-          <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800 md:mb-0">Customer Information</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800 md:mb-0">
+            Customer Information
+          </h2>
           <div className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Name</label>
+              <label
+                htmlFor="name"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Name
+              </label>
               <input
                 type="text"
                 id="name"
-                {...register('name', { required: true })}
+                {...register("name", { required: true })}
                 defaultValue={defaultName} // Set default value for name
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
               />
-              {errors.name && <span className="text-red-500">Name is required</span>}
+              {errors.name && (
+                <span className="text-red-500">Name is required</span>
+              )}
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-1">Email</label>
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Email
+              </label>
               <input
                 type="email"
                 id="email"
-                {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+                {...register("email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
                 defaultValue={defaultEmail} // Set default value for email
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
               />
-              {errors.email?.type === 'required' && <span className="text-red-500">Email is required</span>}
-              {errors.email?.type === 'pattern' && <span className="text-red-500">Invalid email format</span>}
+              {errors.email?.type === "required" && (
+                <span className="text-red-500">Email is required</span>
+              )}
+              {errors.email?.type === "pattern" && (
+                <span className="text-red-500">Invalid email format</span>
+              )}
             </div>
             <div>
-              <label htmlFor="contact" className="block text-gray-700 font-medium mb-1">Contact Number</label>
+              <label
+                htmlFor="contact"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Contact Number
+              </label>
               <input
                 type="tel"
                 id="contact"
-                {...register('contact', { required: true })}
+                {...register("contact", { required: true })}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
               />
-              {errors.contact && <span className="text-red-500">Contact number is required</span>}
+              {errors.contact && (
+                <span className="text-red-500">Contact number is required</span>
+              )}
             </div>
             <div>
-              <label htmlFor="address" className="block text-gray-700 font-medium mb-1">Address</label>
+              <label
+                htmlFor="address"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Address
+              </label>
               <textarea
                 id="address"
-                {...register('address', { required: true })}
+                {...register("address", { required: true })}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
               />
-              {errors.address && <span className="text-red-500">Address is required</span>}
+              {errors.address && (
+                <span className="text-red-500">Address is required</span>
+              )}
             </div>
           </div>
         </div>
         <div className="md:mt-8">
           <div className="space-y-4">
             <div>
-              <label htmlFor="website" className="block text-gray-700 font-medium mb-1">Website</label>
+              <label
+                htmlFor="website"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Website
+              </label>
               <input
                 type="text"
                 id="website"
-                {...register('website')}
+                {...register("website")}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
               />
             </div>
             <div>
-              <label htmlFor="category" className="block text-gray-700 font-medium mb-1">Category</label>
+              <label
+                htmlFor="category"
+                className="block text-gray-700 font-medium mb-1"
+              >
+                Category
+              </label>
               <input
                 type="text"
                 id="category"
-                {...register('category')}
+                {...register("category")}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
               />
             </div>
           </div>
         </div>
         <div className="flex justify-center">
-          <button type="submit" className="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 focus:outline-none">
+          <button
+            type="submit"
+            className="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 focus:outline-none"
+          >
             Submit
           </button>
         </div>
