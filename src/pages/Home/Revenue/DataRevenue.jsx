@@ -59,7 +59,7 @@ const DataRevenue = () => {
   const [chart, setChart] = useState([]);
 
   useEffect(() => {
-    fetch("/revenueChart.json")
+    fetch("https://profit-prime-server.vercel.app/revenueChart")
       .then((res) => res.json())
       .then((data) => {
         setChart(data);
@@ -70,7 +70,9 @@ const DataRevenue = () => {
 
   return (
     <div>
-      <h1 className="text-center font-serif font-bold text-5xl mb-20">Business Information</h1>
+      <h1 className="text-center font-serif font-bold text-5xl mb-20">
+        Business Information
+      </h1>
       <LineChart
         width={600}
         height={400}

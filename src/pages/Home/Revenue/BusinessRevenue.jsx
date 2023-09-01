@@ -79,7 +79,7 @@ const BusinessRevenue = () => {
   const [chart, setChart] = useState([]);
 
   useEffect(() => {
-    fetch("/BusinessRevenue.json")
+    fetch("https://profit-prime-server.vercel.app/businessRevenue")
       .then((res) => res.json())
       .then((data) => {
         setChart(data);
@@ -87,7 +87,9 @@ const BusinessRevenue = () => {
   });
   return (
     <div className="mx-auto mt-20">
-      <h2 className="text-center font-serif font-bold text-5xl mb-10">Data Insight</h2>
+      <h2 className="text-center font-serif font-bold text-5xl mb-10">
+        Data Insight
+      </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
         <div className="mr-10">
           <BarChart
@@ -118,7 +120,7 @@ const BusinessRevenue = () => {
               data={data01}
               cx={300}
               cy={150}
-              outerRadius={80}  
+              outerRadius={80}
               fill="#8884d8"
               label
             />
@@ -137,7 +139,9 @@ const BusinessRevenue = () => {
       </div>
 
       <div className="mt-20 lg:ml-36">
-        <h1 className="mb-8 text-xl font-bold">Last seven month sells chart:</h1>
+        <h1 className="mb-8 text-xl font-bold">
+          Last seven month sells chart:
+        </h1>
         <ResponsiveContainer width="50%" height={200}>
           <AreaChart
             width={500}
@@ -163,10 +167,9 @@ const BusinessRevenue = () => {
             />
           </AreaChart>
         </ResponsiveContainer>
-        
       </div>
       <div className="mt-20 lg:ml-36">
-      <h1 className="mb-8 text-xl font-bold">Our product price chart:</h1>
+        <h1 className="mb-8 text-xl font-bold">Our product price chart:</h1>
         <BarChart
           width={500}
           height={300}

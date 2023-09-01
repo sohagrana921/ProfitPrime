@@ -4,7 +4,7 @@ const ConsultingProducts = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("ProductConsulting.json")
+    fetch("https://profit-prime-server.vercel.app/productConsulting")
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -26,8 +26,6 @@ const ConsultingProducts = () => {
             </div>
             <figure>
               <img src={p.pimg} alt="Image" />
-
-              
             </figure>
           </div>
         </div>
