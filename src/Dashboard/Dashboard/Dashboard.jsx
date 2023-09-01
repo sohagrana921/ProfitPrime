@@ -3,9 +3,11 @@ import {
   FaBattleNet,
   FaHandsHelping,
   FaHome,
-  FaMoneyBill,
+  FaMoneyCheck,
   FaPaypal,
-  FaUser,
+  FaUserAstronaut,
+  FaUserCircle,
+  FaUsers,
 } from "react-icons/fa";
 import { FcDatabase } from "react-icons/fc";
 import { AiFillCaretRight } from "react-icons/ai";
@@ -32,18 +34,34 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
-            {checkAdmin ? (
+            {checkAdmin ?
               <>
                 <li>
                   <NavLink
                     to={"/dashboard/manageusers"}
                     className="hover:text-white hover:bg-green-700"
                   >
-                    <FaUser></FaUser> Manage Users
+                    <FaUsers></FaUsers> Users Management
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/dashboard/primeusers"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FaUserAstronaut></FaUserAstronaut> Prime Users
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/dashboard/basicusers"}
+                    className="hover:text-white hover:bg-green-700"
+                  >
+                    <FaUserCircle></FaUserCircle> Basic Users
                   </NavLink>
                 </li>
               </>
-            ) : (
+              :
               <>
                 <li>
                   <NavLink
@@ -74,7 +92,7 @@ const Dashboard = () => {
                     to={"/dashboard/dashhome"}
                     className="hover:text-white hover:bg-green-700"
                   >
-                    <FaMoneyBill></FaMoneyBill> Subscription
+                    <FaMoneyCheck></FaMoneyCheck> Subscription
                   </NavLink>
                 </li>
                 <li>
@@ -86,7 +104,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
               </>
-            )}
+            }
 
             <div className="divider"></div>
 

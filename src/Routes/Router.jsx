@@ -23,6 +23,8 @@ import ShowHome from "../Dashboard/Dashboard/ShowHome/ShowHome";
 import BusinessRevenue from "../pages/Home/Revenue/BusinessRevenue";
 import CosultingRevenue from "../pages/Home/Revenue/CosultingRevenue";
 import DataRevenue from "../pages/Home/Revenue/DataRevenue";
+import PrimeUsers from "../Dashboard/Admin/PrimeUsers";
+import BasicUsers from "../Dashboard/Admin/BasicUsers";
 
 const router = createBrowserRouter([
   {
@@ -96,6 +98,8 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
     children: [
+      
+      // Admin Works
       {
         path: "adminhome",
         element: <AdminHome></AdminHome>,
@@ -104,6 +108,16 @@ const router = createBrowserRouter([
         path: "manageusers",
         element: <ManageUsers></ManageUsers>,
       },
+      {
+        path: "primeusers",
+        element: <PrimeUsers></PrimeUsers>,
+      },
+      {
+        path: "basicusers",
+        element: <BasicUsers></BasicUsers>,
+      },
+
+      //Users Works
       {
         path: "dashhome",
         element: <DashHome></DashHome>,
