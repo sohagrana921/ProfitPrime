@@ -70,9 +70,10 @@ const DataRevenue = () => {
 
   return (
     <div>
+      <h1 className="text-center font-serif font-bold text-5xl mb-20">Business Information</h1>
       <LineChart
-        width={500}
-        height={300}
+        width={600}
+        height={400}
         data={chart}
         margin={{
           top: 5,

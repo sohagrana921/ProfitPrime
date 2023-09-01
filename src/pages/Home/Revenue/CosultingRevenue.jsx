@@ -65,6 +65,7 @@ const CosultingRevenue = () => {
   });
   return (
     <div>
+      <h1 className="text-center font-serif font-bold text-5xl mb-20">Our Sells Competitor</h1>
       <AreaChart
         width={500}
         height={400}
