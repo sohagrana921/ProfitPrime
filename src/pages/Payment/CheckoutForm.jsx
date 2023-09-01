@@ -4,6 +4,7 @@ import "./CheckoutForm.css";
 // import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import axios from "axios";
+import PaymentSuccessModal from "./PaymentSuccessModal";
 
 const CheckoutForm = ({ pay, userRole }) => {
   const stripe = useStripe();
@@ -13,13 +14,15 @@ const CheckoutForm = ({ pay, userRole }) => {
   const [transactionId, setTransactionId] = useState("");
   const { user } = useContext(AuthContext);
   const [clientSecret, setClientSecret] = useState('');
+  const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
 
-  const price=parseFloat(pay).toFixed(2);
+
+  const price = parseFloat(pay).toFixed(2);
   const email = user?.email;
 
   useEffect(() => {
     if (price > 0) {
-      axios.post('http://localhost:5000/create-payment-intent', { price }) 
+      axios.post('http://localhost:5000/create-payment-intent', { price })
         .then(res => {
           console.log(res);
           setClientSecret(res.data.clientSecret);
@@ -73,7 +76,7 @@ const CheckoutForm = ({ pay, userRole }) => {
           },
         },
       });
-      console.log(user);
+    console.log(user);
     if (confirmError) {
       setError(confirmError.message)
     }
@@ -81,24 +84,31 @@ const CheckoutForm = ({ pay, userRole }) => {
     setProcessing(false)
     if (paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
+      setIsPaymentSuccess(true);
 
-      // const payment = {
-      //     email: user?.email,
-      //     transactionId: paymentIntent.id,
-      //     price,
-      //     date: new Date(),
-      //     className:classItem.className,
-      //     classItem,
-      //     status:'pending'
-      // }
-      // axiosSecure.post('/payments', payment)
-      //     .then(res => {
-      //         console.log(res.data);
-      //         if (res.data?.result?.insertedId) {
-      //             //
-      //         }
-      //     })
-      
+      const payment = {
+        email: user?.email,
+        transactionId: paymentIntent.id,
+        price,
+        date: new Date(),
+        plan: userRole
+      }
+
+      try {
+        const response = await axios.post('http://localhost:5000/payments', payment);
+        console.log(response.data);
+
+        if (response.data?.result?.insertedId) {
+          // Handle success
+          console.log('Payment inserted with ID:', response.data.result.insertedId);
+        } else {
+          // Handle the case where insertedId is not found in the response
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+
+
 
       const updateUserRole = async (email, userRole) => {
         try {
@@ -106,7 +116,7 @@ const CheckoutForm = ({ pay, userRole }) => {
             email,
             userRole,
           });
-      
+
           if (response.status === 200) {
             console.log('User role updated successfully');
             // Perform any additional actions or state updates as needed
@@ -118,7 +128,7 @@ const CheckoutForm = ({ pay, userRole }) => {
         }
       };
 
-      updateUserRole(email,userRole);
+      updateUserRole(email, userRole);
 
 
 
@@ -156,13 +166,17 @@ const CheckoutForm = ({ pay, userRole }) => {
         </Link> */}
 
         <p>{cardError}</p>
-        <button className="btn btn-sm bg-green-800 text-white" type="submit" disabled={!stripe || !clientSecret || processing}>
-        Pay
-      </button>
+        <button className="btn btn-sm bg-green-800 hover:bg-red-400 text-white" type="submit" disabled={!stripe || !clientSecret || processing}>
+          Pay
+        </button>
       </form>
-      {transactionId && (
-        <p>Transaction complete with transactionId: {transactionId}</p>
-      )}
+
+      <PaymentSuccessModal
+        isOpen={isPaymentSuccess}
+        onClose={() => setIsPaymentSuccess(false)}
+        transactionId={transactionId}
+      />
+
     </div>
   );
 };
