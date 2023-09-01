@@ -87,10 +87,11 @@ const BusinessRevenue = () => {
   });
   return (
     <div className="mx-auto mt-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div>
+      <h2 className="text-center font-serif font-bold text-5xl mb-10">Data Insight</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
+        <div className="mr-10">
           <BarChart
-            width={500}
+            width={600}
             height={300}
             data={chart}
             margin={{
@@ -109,25 +110,25 @@ const BusinessRevenue = () => {
             <Bar dataKey="price" fill="#82ca9d" />
           </BarChart>
         </div>
-        <div>
-          <PieChart width={600} height={400}>
+        <div className="ml-10">
+          <PieChart width={600} height={300}>
             <Pie
               dataKey="value"
               isAnimationActive={false}
               data={data01}
-              cx={200}
-              cy={200}
-              outerRadius={80}
+              cx={300}
+              cy={150}
+              outerRadius={80}  
               fill="#8884d8"
               label
             />
             <Pie
               dataKey="value"
               data={data02}
-              cx={500}
-              cy={200}
+              cx={400}
+              cy={90}
               innerRadius={40}
-              outerRadius={80}
+              outerRadius={60}
               fill="#82ca9d"
             />
             <Tooltip />
@@ -135,7 +136,8 @@ const BusinessRevenue = () => {
         </div>
       </div>
 
-      <div>
+      <div className="mt-20 lg:ml-36">
+        <h1 className="mb-8 text-xl font-bold">Last seven month sells chart:</h1>
         <ResponsiveContainer width="50%" height={200}>
           <AreaChart
             width={500}
@@ -161,8 +163,10 @@ const BusinessRevenue = () => {
             />
           </AreaChart>
         </ResponsiveContainer>
+        
       </div>
-      <div className="mt-20">
+      <div className="mt-20 lg:ml-36">
+      <h1 className="mb-8 text-xl font-bold">Our product price chart:</h1>
         <BarChart
           width={500}
           height={300}
@@ -184,7 +188,7 @@ const BusinessRevenue = () => {
           <Tooltip />
           <Legend />
           <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="sells" fill="#8884d8" background={{ fill: "#eee" }} />
+          <Bar dataKey="price" fill="#8884d8" background={{ fill: "#eee" }} />
         </BarChart>
       </div>
     </div>

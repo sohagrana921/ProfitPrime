@@ -85,7 +85,7 @@ const HybridCustomer = () => {
             </h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 mx-auto">
               <div className="card card-compact w-full h-full bg-base-100">
-                <figure>
+                <figure className="rounded-none">
                   <img src={p.hotel_img1} alt="" />
                 </figure>
                 <div className="card-body">
@@ -94,8 +94,8 @@ const HybridCustomer = () => {
                 </div>
               </div>
               <div className="card card-compact w-full h-full bg-base-100">
-                <figure>
-                  <img src={p.hotel_img2} alt="" />
+                <figure className="rounded-none">
+                  <img className="ml-5" src={p.hotel_img2} alt="" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title text-xl">{p.hotel_name2}</h2>
