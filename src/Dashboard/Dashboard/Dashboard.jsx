@@ -34,7 +34,7 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
-            {checkAdmin ?
+            {checkAdmin ? (
               <>
                 <li>
                   <NavLink
@@ -61,7 +61,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
               </>
-              :
+            ) : (
               <>
                 <li>
                   <NavLink
@@ -97,14 +97,14 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink
-                    to={"/"}
+                    to={"/dashboard/pay"}
                     className="hover:text-white hover:bg-green-700"
                   >
                     <FaPaypal></FaPaypal> Payment History
                   </NavLink>
                 </li>
               </>
-            }
+            )}
 
             <div className="divider"></div>
 
