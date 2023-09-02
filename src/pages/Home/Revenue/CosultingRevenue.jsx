@@ -6,6 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 // const data = [
@@ -68,43 +69,43 @@ const CosultingRevenue = () => {
       <h1 className="text-center font-serif font-bold text-5xl mb-20">
         Our Sells Competitor
       </h1>
-      <AreaChart
-        width={500}
-        height={400}
-        data={chart}
-        margin={{
-          top: 10,
-          right: 30,
-          left: 0,
-          bottom: 0,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Area
-          type="monotone"
-          dataKey="sells"
-          stackId="1"
-          stroke="#8884d8"
-          fill="#8884d8"
-        />
-        <Area
-          type="monotone"
-          dataKey="price"
-          stackId="1"
-          stroke="#82ca9d"
-          fill="#82ca9d"
-        />
-        <Area
-          type="monotone"
-          dataKey="target"
-          stackId="1"
-          stroke="#ffc658"
-          fill="#ffc658"
-        />
-      </AreaChart>
+      <ResponsiveContainer width="90%" height={200}>
+        <AreaChart
+          data={chart}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Area
+            type="monotone"
+            dataKey="sells"
+            stackId="1"
+            stroke="#8884d8"
+            fill="#8884d8"
+          />
+          <Area
+            type="monotone"
+            dataKey="price"
+            stackId="1"
+            stroke="#82ca9d"
+            fill="#82ca9d"
+          />
+          <Area
+            type="monotone"
+            dataKey="target"
+            stackId="1"
+            stroke="#ffc658"
+            fill="#ffc658"
+          />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 };

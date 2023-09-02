@@ -8,6 +8,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 // const data = [
@@ -73,30 +74,30 @@ const DataRevenue = () => {
       <h1 className="text-center font-serif font-bold text-5xl mb-20">
         Business Information
       </h1>
-      <LineChart
-        width={600}
-        height={400}
-        data={chart}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="unitPrice"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="sales" stroke="#82ca9d" />
-      </LineChart>
+      <ResponsiveContainer width="90%" height={200}>
+        <LineChart
+          data={chart}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="unitPrice"
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
+          />
+          <Line type="monotone" dataKey="sales" stroke="#82ca9d" />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
