@@ -173,7 +173,7 @@ const CheckoutForm = ({ pay, userRole }) => {
 
         <p>{cardError}</p>
         <button
-          className="btn btn-sm bg-green-800 hover:bg-red-400 text-white"
+          className="btn btn-sm mb-8 bg-green-800 hover:bg-red-400 text-white"
           type="submit"
           disabled={!stripe || !clientSecret || processing}
         >

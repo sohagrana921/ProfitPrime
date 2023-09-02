@@ -20,14 +20,14 @@ const PaymentHistory = () => {
   }, [email]);
 
   return (
-    <div className="h-full w-full bg-gradient-to-r from-green-200 via-gray-200 to-green-200">
+    <div className="h-full w-full bg-gradient-to-r from-green-200 via-gray-200 to-green-200 my-container">
       <div className="flex items-center justify-center h-screen">
-        <div className="p-4 bg-gradient-to-r from-green-200 via-blue-200 to-green-300 rounded-lg max-w-screen-md">
+        <div className="p-4 bg-gradient-to-r from-green-200 via-blue-200 to-green-300 rounded-lg w-full">
           <h1 className="text-3xl font-semibold mb-4 text-indigo-600">
             Payment History
           </h1>
           <div className="overflow-x-auto">
-            <table className="w-full table-auto">
+            <table className="md:w-full table-auto">
               <thead>
                 <tr className="bg-indigo-100">
                   <th className="px-4 py-2">Transaction ID</th>
@@ -38,7 +38,7 @@ const PaymentHistory = () => {
               </thead>
               <tbody>
                 {payments?.map((payment) => (
-                  <tr key={payment.transactionId}>
+                  <tr key={payment.transactionId} className="text-center">
                     <td className="px-4 py-2">{payment.transactionId}</td>
                     <td className="px-4 py-2">
                       {new Date(payment.date).toLocaleDateString()}
