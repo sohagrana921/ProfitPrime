@@ -12,7 +12,7 @@ const ConsultingProducts = () => {
   });
 
   return (
-    <div className="mt-20">
+    <div className="mt-20 my-container">
       {product.map((p) => (
         <div key={p.id}>
           <div className="card w-full bg-base-100 mb-5">

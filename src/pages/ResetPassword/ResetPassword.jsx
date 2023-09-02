@@ -36,7 +36,7 @@ const ResetPassword = () => {
           />
         </div>
 
-        <button className="btn btn-primary w-full mt-8" type="submit">
+        <button className="btn btn-primary w-full my-8" type="submit">
           Reset Password
         </button>
       </form>

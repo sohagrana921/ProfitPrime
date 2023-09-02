@@ -28,7 +28,7 @@ const CustomerInformation = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/user/${email}`)
+      .get(`https://profit-prime-server.vercel.app/user/${email}`)
       .then((response) => {
         setCustomer(response.data);
       })
@@ -50,7 +50,10 @@ const CustomerInformation = () => {
     };
     console.log(updatedUserData);
     axios
-      .post("http://localhost:5000/update-user-info", updatedUserData)
+      .post(
+        "https://profit-prime-server.vercel.app/update-user-info",
+        updatedUserData
+      )
       .then((response) => {
         console.log(response.data);
         Navigate("/dashboard/dashhome");
