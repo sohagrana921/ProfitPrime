@@ -58,7 +58,7 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser) {
         axios
-          .post("https://profit-prime-server.vercel.app/", {
+          .post("https://profit-prime-server.vercel.app", {
             email: currentUser.email,
           })
           .then((res) => {
