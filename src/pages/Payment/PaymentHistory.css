@@ -1,0 +1,15 @@
+.table-auto {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .table-auto {
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .table-auto {
+      font-size: 0.7rem;
+    }
+  }

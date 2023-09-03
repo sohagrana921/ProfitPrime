@@ -12,7 +12,7 @@ const DashHome = () => {
   const [customer, setCustomer] = useState();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/user/${email}`)
+      .get(`https://profit-prime-server.vercel.app/user/${email}`)
       .then((response) => {
         setCustomer(response.data);
       })
