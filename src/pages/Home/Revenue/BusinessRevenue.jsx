@@ -90,47 +90,47 @@ const BusinessRevenue = () => {
       <h2 className="text-center font-serif font-bold text-5xl mb-10">
         Data Insight
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
-        <div className="mr-10">
-          <BarChart
-            width={600}
-            height={300}
-            data={chart}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="sells" fill="#8884d8" />
-            <Bar dataKey="price" fill="#82ca9d" />
-          </BarChart>
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 mx-auto">
+        <div>
+          <ResponsiveContainer width="80%" height={200}>
+            <BarChart
+              data={chart}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="sells" fill="#8884d8" />
+              <Bar dataKey="price" fill="#82ca9d" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
-        <div className="ml-10">
-          <PieChart width={600} height={300}>
+        <div>
+          <PieChart width={400} height={200}>
             <Pie
               dataKey="value"
               isAnimationActive={false}
               data={data01}
-              cx={300}
-              cy={150}
-              outerRadius={80}
+              cx={200}
+              cy={90}
+              outerRadius={60}
               fill="#8884d8"
               label
             />
             <Pie
               dataKey="value"
               data={data02}
-              cx={400}
+              cx={200}
               cy={90}
-              innerRadius={40}
-              outerRadius={60}
+              innerRadius={20}
+              outerRadius={40}
               fill="#82ca9d"
             />
             <Tooltip />
@@ -138,14 +138,12 @@ const BusinessRevenue = () => {
         </div>
       </div>
 
-      <div className="mt-20 lg:ml-36">
+      <div className="mt-20 lg:ml-36 mx-auto">
         <h1 className="mb-8 text-xl font-bold">
           Last seven month sells chart:
         </h1>
-        <ResponsiveContainer width="50%" height={200}>
+        <ResponsiveContainer width="80%" height={200}>
           <AreaChart
-            width={500}
-            height={200}
             data={chart}
             syncId="anyId"
             margin={{
@@ -168,31 +166,31 @@ const BusinessRevenue = () => {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-20 lg:ml-36">
+      <div className="mt-20 lg:ml-36 mx-auto">
         <h1 className="mb-8 text-xl font-bold">Our product price chart:</h1>
-        <BarChart
-          width={500}
-          height={300}
-          data={chart}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-          barSize={20}
-        >
-          <XAxis
-            dataKey="name"
-            scale="point"
-            padding={{ left: 10, right: 10 }}
-          />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="price" fill="#8884d8" background={{ fill: "#eee" }} />
-        </BarChart>
+        <ResponsiveContainer width="80%" height={200}>
+          <BarChart
+            data={chart}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+            barSize={20}
+          >
+            <XAxis
+              dataKey="name"
+              scale="point"
+              padding={{ left: 10, right: 10 }}
+            />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Bar dataKey="price" fill="#8884d8" background={{ fill: "#eee" }} />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
   );
