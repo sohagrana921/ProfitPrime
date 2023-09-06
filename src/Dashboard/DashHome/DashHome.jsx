@@ -27,7 +27,7 @@ const DashHome = () => {
       <SubscriptionCard
         companyName={customer?.name}
         planName={customer?.userRole}
-        subscriptionDate="Sep 1, 2023"
+        subscriptionDate="Sep 8, 2023"
         endDate=""
         imageUrl="https://via.placeholder.com/150"
       />
