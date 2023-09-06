@@ -12,7 +12,6 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
-import axios from "axios";
 
 export const AuthContext = createContext(null);
 
@@ -41,7 +40,6 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signOut(auth);
   };
-
   const updateUserProfile = (name) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
@@ -56,19 +54,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      if (currentUser) {
-        axios
-          .post("https://profit-prime-server.vercel.app", {
-            email: currentUser.email,
-          })
-          .then((res) => {
-            console.log(res.data.accessToken);
-            localStorage.setItem("access-token", res.data.accessToken);
-            setLoading(false);
-          });
-      } else {
-        localStorage.removeItem("access-token");
-      }
+       
     });
     return () => {
       return unsubscribe();
