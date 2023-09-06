@@ -27,6 +27,8 @@ import PrimeUsers from "../Dashboard/Admin/PrimeUsers";
 import BasicUsers from "../Dashboard/Admin/BasicUsers";
 import PaymentHistory from "../pages/Payment/PaymentHistory";
 import Profile from "../Dashboard/Dashboard/Profile/Profile";
+import CompanyData from "../pages/Home/FreeDemo/CompanyData";
+import FreeDemo from "../pages/Home/FreeDemo/FreeDemo";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,14 @@ const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/free",
+        element: <CompanyData></CompanyData>
+      },
+      {
+        path: "/freeDemo",
+        element: <FreeDemo></FreeDemo>
       },
       {
         path: "/customerService",

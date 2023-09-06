@@ -24,10 +24,13 @@ const Pricing = () => {
         <div className="bg-yellow-200 rounded-lg shadow-lg p-6 w-64 m-4">
           <h2 className="text-xl font-semibold mb-4">Free Plan</h2>
           <p className="text-gray-600 mb-2">Access to demos</p>
-          <p className="text-gray-700">Free</p>
-          <button className="bg-yellow-500 text-white py-2 px-4 rounded mt-2">
+          <p className="text-gray-700 mb-4">Free</p>
+          <Link
+            to="/free"
+            className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
+          >
             Select
-          </button>
+          </Link>
         </div>
         <div className="bg-blue-400 rounded-lg shadow-lg p-6 w-64 m-4">
           <h2 className="text-xl font-semibold mb-4">Basic Plan</h2>
@@ -36,12 +39,14 @@ const Pricing = () => {
             {isYearly ? "$100/year" : "$10/month"}
           </p>
           <div className="mt-2">
-          <Link
-            to={`/payment/${encodeURIComponent('Basic')}/${isYearly ? 'yearly' : 'monthly'}`}
-            className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
-          >
-            Select
-          </Link>
+            <Link
+              to={`/payment/${encodeURIComponent("Basic")}/${
+                isYearly ? "yearly" : "monthly"
+              }`}
+              className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
+            >
+              Select
+            </Link>
           </div>
         </div>
         <div className="bg-green-400 rounded-lg shadow-lg p-6 w-64 m-4">
@@ -51,12 +56,14 @@ const Pricing = () => {
             {isYearly ? "$200/year" : "$20/month"}
           </p>
           <div className="mt-2">
-          <Link
-            to={`/payment/${encodeURIComponent('Prime')}/${isYearly ? 'yearly' : 'monthly'}`}
-            className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
-          >
-            Select
-          </Link>
+            <Link
+              to={`/payment/${encodeURIComponent("Prime")}/${
+                isYearly ? "yearly" : "monthly"
+              }`}
+              className="bg-yellow-500 text-white py-2 px-4 rounded mt-2"
+            >
+              Select
+            </Link>
           </div>
         </div>
       </div>
