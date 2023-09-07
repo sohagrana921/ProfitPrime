@@ -29,6 +29,7 @@ import PaymentHistory from "../pages/Payment/PaymentHistory";
 import Profile from "../Dashboard/Dashboard/Profile/Profile";
 import CompanyData from "../pages/Home/FreeDemo/CompanyData";
 import FreeDemo from "../pages/Home/FreeDemo/FreeDemo";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -62,11 +63,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/free",
-        element: <CompanyData></CompanyData>
+        element: (
+          <PrivateRoute>
+            <CompanyData></CompanyData>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/freeDemo",
-        element: <FreeDemo></FreeDemo>
+        element: (
+          <PrivateRoute>
+            <FreeDemo></FreeDemo>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/customerService",
@@ -110,7 +119,6 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
     children: [
-      
       // Admin Works
       {
         path: "adminhome",
@@ -155,12 +163,12 @@ const router = createBrowserRouter([
         element: <BusinessRevenue></BusinessRevenue>,
       },
       {
-        path:'pay',
-        element:<PaymentHistory/>
+        path: "pay",
+        element: <PaymentHistory />,
       },
       {
-        path:'profile',
-        element:<Profile/>
+        path: "profile",
+        element: <Profile />,
       },
     ],
   },
