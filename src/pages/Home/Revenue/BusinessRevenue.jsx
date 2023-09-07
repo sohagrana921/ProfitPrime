@@ -9,50 +9,6 @@ import {
   Legend,
 } from "recharts";
 
-// const data = [
-//   {
-//     name: "Page A",
-//     price: 4000,
-//     sells: 2400,
-//     target: 2400
-//   },
-//   {
-//     name: "Page B",
-//     price: 3000,
-//     sells: 1398,
-//     target: 2210
-//   },
-//   {
-//     name: "Page C",
-//     price: 2000,
-//     sells: 9800,
-//     target: 2290
-//   },
-//   {
-//     name: "Page D",
-//     price: 2780,
-//     sells: 3908,
-//     target: 2000
-//   },
-//   {
-//     name: "Page E",
-//     price: 1890,
-//     sells: 4800,
-//     target: 2181
-//   },
-//   {
-//     name: "Page F",
-//     price: 2390,
-//     sells: 3800,
-//     target: 2500
-//   },
-//   {
-//     name: "Page G",
-//     price: 3490,
-//     sells: 4300,
-//     target: 2100
-//   }
-// ];
 import { AreaChart, Area, ResponsiveContainer } from "recharts";
 
 import { PieChart, Pie } from "recharts";
