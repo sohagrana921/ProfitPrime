@@ -7,7 +7,6 @@ import axios from "axios";
 const ManageUsers = () => {
   const { data: users = [], refetch } = useQuery(["users"], async () => {
     const res = await axios.get("https://profit-prime-server.vercel.app/users");
-    console.log(res.data);
     return res.data;
   });
 
