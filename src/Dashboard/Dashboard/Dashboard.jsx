@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import {
   FaBattleNet,
   FaHandsHelping,
@@ -12,9 +12,12 @@ import {
 import { FcDatabase } from "react-icons/fc";
 import { AiFillCaretRight } from "react-icons/ai";
 import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
+import useUsersInfo from "../../Hooks/useUsersInfo";
 
 const Dashboard = () => {
   const [checkAdmin] = useVerifyAdmin();
+  const [users] = useUsersInfo()
+  console.log(users);
 
   return (
     <div>
@@ -48,6 +51,11 @@ const Dashboard = () => {
                   tabIndex={0}
                   className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-900 text-white hover:text-white rounded-box w-52 "
                 >
+                  <h1 className="text-center text-sm">{users.name}</h1>
+                  <h1 className="text-center my-2 text-sm">{users.website}</h1>
+                  <Link to={'/dashboard/profile'}><p className="text-center flex justify-center uppercase text-sky-600 mb-2">{users.userRole}</p></Link>
+                  <h1 className="text-center uppercase text-sky-600 mb-2">{users.role === "admin" ? <>Admin</> : <></>}</h1>
+
                   {checkAdmin ? (
                     <>
                       <li>
@@ -146,6 +154,14 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
+
+            <h1 className="text-center text-md">{users.name}</h1>
+            <h1 className="text-center my-2 text-md">{users.website}</h1>
+            <Link to={'/dashboard/profile'}><a className="flex justify-center uppercase text-sky-500 mb-2 font-bold">{users.userRole}</a></Link>
+            <h1 className="text-center uppercase text-sky-500 font-bold">{users.role === "admin" ? <>Admin</> : <></>}</h1>
+
+            <div className="divider"></div>
+
             {checkAdmin ? (
               <>
                 <li>
