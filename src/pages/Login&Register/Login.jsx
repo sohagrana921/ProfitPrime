@@ -5,7 +5,6 @@ import { FaEye } from "react-icons/fa";
 import logo from "../../assets/profit-up.png";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -91,16 +90,15 @@ const Login = () => {
               value="Login"
             />
           </div>
-        <div className="">
-          <small>
-            New to ProfitPrime ?
-            <Link to="/register">
-              <span className="text-blue-600"> Create an account</span>
-            </Link>
-          </small>
-        </div>
+          <div className="">
+            <small>
+              New to ProfitPrime ?
+              <Link to="/register">
+                <span className="text-blue-600"> Create an account</span>
+              </Link>
+            </small>
+          </div>
         </form>
-        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

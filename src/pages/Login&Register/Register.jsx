@@ -3,7 +3,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
-import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Register = () => {
   const {
@@ -132,7 +131,6 @@ const Register = () => {
             </small>
           </p>
         </form>
-        <SocialLogin></SocialLogin>
       </div>
     </div>
   );
