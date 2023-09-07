@@ -9,51 +9,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// const data = [
-//   {
-//     name: "Product A",
-//     sells: 4000,
-//     price: 2400,
-//     terget: 2400
-//   },
-//   {
-//     name: "Product B",
-//     sells: 3000,
-//     price: 1398,
-//     terget: 2210
-//   },
-//   {
-//     name: "Product C",
-//     sells: 1000,
-//     price: 2800,
-//     terget: 2290
-//   },
-//   {
-//     name: "Product D",
-//     sells: 1880,
-//     price: 1908,
-//     terget: 2000
-//   },
-//   {
-//     name: "Product E",
-//     sells: 990,
-//     price: 1500,
-//     terget: 2181
-//   },
-//   {
-//     name: "Product F",
-//     sells: 1390,
-//     price: 2500,
-//     terget: 2500
-//   },
-//   {
-//     name: "Product G",
-//     sells: 1490,
-//     price: 1900,
-//     terget: 2100
-//   }
-// ];
-
 const CosultingRevenue = () => {
   const [chart, setChart] = useState([]);
 

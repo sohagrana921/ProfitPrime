@@ -5,50 +5,16 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  LineChart,
   Legend,
+  Line,
 } from "recharts";
 import { ResponsiveContainer } from "recharts";
 import { BsPersonFillAdd } from "react-icons/bs";
 import { GiNetworkBars, GiProfit } from "react-icons/gi";
-import { PieChart, Pie, Cell } from "recharts";
 import { useLocation } from "react-router-dom";
 
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group D", value: 200 },
-  { name: "Group C", value: 300 },
-];
-
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-}) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text
-      x={x}
-      y={y}
-      fill="white"
-      textAnchor={x > cx ? "start" : "end"}
-      dominantBaseline="central"
-    >
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
-
-const FreeDemo = () => {
+const FreeDemo1 = () => {
   const allData = useLocation();
   const { updatedUserData } = allData.state;
 
@@ -57,7 +23,7 @@ const FreeDemo = () => {
       <h2 className="text-center py-10 font-serif font-bold text-5xl mb-10">
         Your Company Revenue Chart.
       </h2>
-      <div className="bg-slate-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
+      <div className="bg-slate-300 grid grid-cols-1 lg:grid-cols-2 text-center mb-32 ">
         <div>
           <div>
             <div className="flex justify-center items-center py-10">
@@ -120,38 +86,11 @@ const FreeDemo = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="mt-10">
-            <h1 className="text-3xl font-serif font-bold">
-              Average Sales Target
-            </h1>
-            <h1 className="text-3xl font-bold">1445 $</h1>
-          </div>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={data}
-                labelLine={false}
-                label={renderCustomizedLabel}
-                outerRadius={100}
-                fill="#8884d8"
-                dataKey="value"
-              >
-                {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
       </div>
-
-      <div className=" bg-slate-300 mb-20">
-        <ResponsiveContainer width="70%" height={300}>
-          <BarChart
+      <div className="bg-slate-300 mb-20">
+        <h1 className="text-4xl font-serif font-bold py-10 ml-10">Price & Sales Chart:</h1>
+        <ResponsiveContainer width="80%" height={300}>
+          <LineChart
             data={updatedUserData}
             margin={{
               top: 5,
@@ -165,13 +104,18 @@ const FreeDemo = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="sales" fill="#8884d8" />
-            <Bar dataKey="price" fill="#82ca9d" />
-          </BarChart>
+            <Line
+              type="monotone"
+              dataKey="price"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
+            <Line type="monotone" dataKey="sales" stroke="#82ca9d" />
+          </LineChart>
         </ResponsiveContainer>
       </div>
     </div>
   );
 };
 
-export default FreeDemo;
+export default FreeDemo1;
