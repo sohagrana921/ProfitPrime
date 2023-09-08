@@ -28,7 +28,7 @@ const Customer = () => {
             key={index}
             src={logo.url}
             alt=""
-            className="logo-style md:w-[150px] h-[100px] w-[100px] md:h-[150px] mr-[70px] rounded-[50%]"
+            className="logo-style md:w-[150px] h-[80px] w-[80px] md:h-[150px] md:mr-[100px] mr-[40px] rounded-[50%]"
           />
         ))}
       </Marquee>

@@ -163,9 +163,7 @@ const Dashboard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
             <h1 className="text-center text-md font-bold">{users.name}</h1>
-            <h1 className="text-center my-2 text-md text-base">
-              {users.website}
-            </h1>
+            <h1 className="text-center my-2 text-md text-">{users.website}</h1>
             <Link to={"/dashboard/profile"}>
               <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-white mb-2 hover:underline">
                 {users.userRole}

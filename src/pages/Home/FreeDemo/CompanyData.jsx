@@ -10,7 +10,7 @@ const AdminDashBoard = () => {
     setActiveTab(tabName);
   };
   return (
-    <div className="w-full md:py-20 bg-gradient-to-r from-green-200 via-purple-300 to-green-300">
+    <div className="w-full md:py-20 bg-gradient-to-r from-green-200 via-purple-300 to-green-300 mt-20">
       <Tabs className="my-12 text-center">
         <TabList className="flex justify-center gap-1 my-6">
           <Tab className="flex items-center bg-slate-200 ">

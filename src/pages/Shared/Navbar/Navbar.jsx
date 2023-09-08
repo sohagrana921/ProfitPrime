@@ -113,24 +113,27 @@ const Navbar = () => {
                 <a className="hover:text-white hover:bg-green-700">Contact</a>
               </li>
             </Link>
-            {
-              user ?
-                <>
-                  <Link to="/dashboard/showhome">
-                    <li>
-                      <a className="hover:text-white hover:bg-green-700">Dashboard</a>
-                    </li>
-                  </Link>
-                </>
-                :
-                <>
-                  <Link to="/dashboard/showhome">
-                    <li>
-                      <a className="hover:text-white hidden hover:bg-green-700">Dashboard</a>
-                    </li>
-                  </Link>
-                </>
-            }
+            {user ? (
+              <>
+                <Link to="/dashboard/dataRevenue">
+                  <li>
+                    <a className="hover:text-white hover:bg-green-700">
+                      Dashboard
+                    </a>
+                  </li>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/dashboard/dataRevenue">
+                  <li>
+                    <a className="hover:text-white hidden hover:bg-green-700">
+                      Dashboard
+                    </a>
+                  </li>
+                </Link>
+              </>
+            )}
           </ul>
         </div>
         <img src={logo} alt="" className="h-10 w-10" />
@@ -207,24 +210,27 @@ const Navbar = () => {
               <a className="hover:text-white hover:bg-green-700">Contact</a>
             </li>
           </Link>
-          {
-            user ?
-              <>
-                <Link to="/dashboard/showhome">
-                  <li>
-                    <a className="hover:text-white hover:bg-green-700">Dashboard</a>
-                  </li>
-                </Link>
-              </>
-              :
-              <>
-                <Link to="/dashboard/showhome">
-                  <li>
-                    <a className="hover:text-white hidden hover:bg-green-700">Dashboard</a>
-                  </li>
-                </Link>
-              </>
-          }
+          {user ? (
+            <>
+              <Link to="/dashboard/showhome">
+                <li>
+                  <a className="hover:text-white hover:bg-green-700">
+                    Dashboard
+                  </a>
+                </li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to="/dashboard/showhome">
+                <li>
+                  <a className="hover:text-white hidden hover:bg-green-700">
+                    Dashboard
+                  </a>
+                </li>
+              </Link>
+            </>
+          )}
         </ul>
       </div>
       <div className="navbar-end">

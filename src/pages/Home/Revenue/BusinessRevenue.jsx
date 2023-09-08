@@ -48,7 +48,7 @@ const renderCustomizedLabel = ({
   );
 };
 
-const FreeDemo = () => {
+const BusinessRevenue = () => {
   const [chart, setChart] = useState([]);
 
   useEffect(() => {
@@ -60,9 +60,6 @@ const FreeDemo = () => {
   });
   return (
     <div>
-      <h2 className="text-center py-10 font-serif font-bold text-5xl mb-10">
-        Your Company Revenue Chart.
-      </h2>
       <div className="bg-slate-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
         <div>
           <div>
@@ -158,7 +155,7 @@ const FreeDemo = () => {
           <h1 className="text-2xl font-bold py-5 lg:ml-5">
             Sales & Price Chart:
           </h1>
-          <div className="md:ml-10"> 
+          <div className="md:ml-10">
             <ResponsiveContainer width="70%" height={300}>
               <BarChart
                 data={chart}
@@ -252,4 +249,4 @@ const FreeDemo = () => {
   );
 };
 
-export default FreeDemo;
+export default BusinessRevenue;
