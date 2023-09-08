@@ -8,7 +8,7 @@ const ShowHome = () => {
       {
         checkAdmin ? 
         <>
-        <h1 className="text-4xl text-sky-900 font-bold">Welcome To Your Dashboard</h1>
+        <h1 className="text-4xl text-sky-900 font-bold uppercase">Welcome</h1>
         </> 
         : 
         <><BusinessRevenue></BusinessRevenue></>
