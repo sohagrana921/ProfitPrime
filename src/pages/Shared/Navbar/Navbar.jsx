@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/profit-up.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import useVerifyAdmin from "../../../Hooks/useVerifyAdmin";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [showLinks, setShowLinks] = useState(false);
   const [showLinks1, setShowLinks1] = useState(false);
+  const [checkAdmin] = useVerifyAdmin()
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -78,11 +80,24 @@ const Navbar = () => {
               )}
             </li>
 
-            <Link to="/pricing">
-              <li>
-                <a className="hover:text-white hover:bg-green-700">Pricing</a>
-              </li>
-            </Link>
+            {
+              checkAdmin ?
+                <>
+                  <Link to="/pricing">
+                    <li>
+                      <a className="hover:text-white hover:bg-green-700 hidden">Pricing</a>
+                    </li>
+                  </Link>
+                </>
+                :
+                <>
+                  <Link to="/pricing">
+                    <li>
+                      <a className="hover:text-white hover:bg-green-700">Pricing</a>
+                    </li>
+                  </Link>
+                </>
+            }
 
             <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
               <summary className="hover:text-white hover:bg-green-700">
@@ -175,11 +190,24 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <Link to="/pricing">
-            <li>
-              <a className="hover:text-white hover:bg-green-700">Pricing</a>
-            </li>
-          </Link>
+          {
+            checkAdmin ?
+              <>
+                <Link to="/pricing">
+                  <li>
+                    <a className="hover:text-white hover:bg-green-700 hidden">Pricing</a>
+                  </li>
+                </Link>
+              </>
+              :
+              <>
+                <Link to="/pricing">
+                  <li>
+                    <a className="hover:text-white hover:bg-green-700">Pricing</a>
+                  </li>
+                </Link>
+              </>
+          }
 
           <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
             <summary className="hover:text-white hover:bg-green-700">

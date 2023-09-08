@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/pricing",
-        element: <Pricing />,
+        element: <PrivateRoute><Pricing /></PrivateRoute>,
       },
       {
         path: "/free",

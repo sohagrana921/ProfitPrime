@@ -52,11 +52,11 @@ const Dashboard = () => {
                   <h1 className="text-center text-sm">{users.name}</h1>
                   <h1 className="text-center my-2 text-sm">{users.website}</h1>
                   <Link to={"/dashboard/profile"}>
-                    <p className="text-center flex justify-center uppercase text-sky-600 mb-2">
+                    <p className="text-center flex justify-center uppercase text-yellow-200 mb-2">
                       {users.userRole}
                     </p>
                   </Link>
-                  <h1 className="text-center text-xl tracking-widest uppercase text-white font-bold mb-2">
+                  <h1 className="text-center text-xl tracking-widest uppercase text-yellow-200 font-bold mb-2">
                     {users.role === "admin" ? <>Admin</> : <></>}
                   </h1>
 
@@ -165,11 +165,11 @@ const Dashboard = () => {
             <h1 className="text-center text-md font-bold">{users.name}</h1>
             <h1 className="text-center my-2 text-md text-">{users.website}</h1>
             <Link to={"/dashboard/profile"}>
-              <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-white mb-2 hover:underline">
+              <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-yellow-200 mb-2 hover:underline">
                 {users.userRole}
               </a>
             </Link>
-            <h1 className="text-center text-2xl tracking-widest uppercase text-white font-extrabold">
+            <h1 className="text-center text-2xl tracking-widest uppercase text-yellow-200 font-extrabold">
               {users.role === "admin" ? <>Admin</> : <></>}
             </h1>
 
@@ -254,14 +254,30 @@ const Dashboard = () => {
                 <FaHome /> Home
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to={"/dashboard/help"}
-                className="hover:text-white hover:bg-green-700"
-              >
-                <FaHandsHelping /> Help
-              </NavLink>
-            </li>
+            {
+              checkAdmin ?
+                <>
+                  <li>
+                    <NavLink
+                      to={"/dashboard/help"}
+                      className="hover:text-white hover:bg-green-700 hidden"
+                    >
+                      <FaHandsHelping /> Help
+                    </NavLink>
+                  </li>
+                </>
+                :
+                <>
+                  <li>
+                    <NavLink
+                      to={"/dashboard/help"}
+                      className="hover:text-white hover:bg-green-700"
+                    >
+                      <FaHandsHelping /> Help
+                    </NavLink>
+                  </li>
+                </>
+            }
           </ul>
         </div>
       </div>
