@@ -108,7 +108,7 @@ const FreeDemo = () => {
             <div className="">
               <div className="mt-10">
                 <h1 className="text-2xl font-serif font-bold">
-                  Average Weekly Sales Revenue
+                  Average Weekly Sales
                 </h1>
                 <h1 className="text-3xl font-bold">1065.64565 $</h1>
               </div>
@@ -128,9 +128,7 @@ const FreeDemo = () => {
         </div>
         <div>
           <div className="mt-10">
-            <h1 className="text-3xl font-serif font-bold">
-              Average Sales Target
-            </h1>
+            <h1 className="text-3xl font-serif font-bold">Average Sales</h1>
             <h1 className="text-3xl font-bold">1445 $</h1>
           </div>
           <ResponsiveContainer width="100%" height={300}>
@@ -160,7 +158,68 @@ const FreeDemo = () => {
           <h1 className="text-2xl font-bold py-5 lg:ml-5">
             Sales & Price Chart:
           </h1>
-          <ResponsiveContainer width="70%" height={300}>
+          <div className="md:ml-10"> 
+            <ResponsiveContainer width="70%" height={300}>
+              <BarChart
+                data={chart}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 20,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="sells" fill="#8884d8" />
+                <Bar dataKey="price" fill="#82ca9d" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-20  bg-slate-300">
+        <h1 className="text-2xl font-bold py-5 md:ml-5">
+          Last seven month sells chart:
+        </h1>
+
+        <div className="md:ml-10">
+          <ResponsiveContainer width="80%" height={200}>
+            <AreaChart
+              data={chart}
+              syncId="anyId"
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="sells"
+                stroke="#8884d8"
+                fill="#8884d8"
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <div className="mt-20  mb-20 bg-slate-300">
+        <h1 className="text-2xl font-bold py-5 md:ml-5">
+          Our product price chart:
+        </h1>
+
+        <div className="md:ml-10">
+          <ResponsiveContainer width="80%" height={200}>
             <BarChart
               data={chart}
               margin={{
@@ -169,75 +228,25 @@ const FreeDemo = () => {
                 left: 20,
                 bottom: 5,
               }}
+              barSize={20}
             >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
+              <XAxis
+                dataKey="name"
+                scale="point"
+                padding={{ left: 10, right: 10 }}
+              />
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="sells" fill="#8884d8" />
-              <Bar dataKey="price" fill="#82ca9d" />
+              <CartesianGrid strokeDasharray="3 3" />
+              <Bar
+                dataKey="price"
+                fill="#8884d8"
+                background={{ fill: "#eee" }}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div></div>
-      </div>
-
-      <div className="mt-20  bg-slate-300">
-        <h1 className="text-2xl font-bold py-5 lg:ml-5">
-          Last seven month sells chart:
-        </h1>
-        <ResponsiveContainer width="80%" height={200}>
-          <AreaChart
-            data={chart}
-            syncId="anyId"
-            margin={{
-              top: 10,
-              right: 30,
-              left: 0,
-              bottom: 0,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="sells"
-              stroke="#8884d8"
-              fill="#8884d8"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
-      </div>
-      <div className="mt-20  mb-20 bg-slate-300">
-        <h1 className="text-2xl font-bold py-5 lg:ml-5">
-          Our product price chart:
-        </h1>
-        <ResponsiveContainer width="80%" height={200}>
-          <BarChart
-            data={chart}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-            barSize={20}
-          >
-            <XAxis
-              dataKey="name"
-              scale="point"
-              padding={{ left: 10, right: 10 }}
-            />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <CartesianGrid strokeDasharray="3 3" />
-            <Bar dataKey="price" fill="#8884d8" background={{ fill: "#eee" }} />
-          </BarChart>
-        </ResponsiveContainer>
       </div>
     </div>
   );
