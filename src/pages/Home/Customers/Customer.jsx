@@ -7,7 +7,7 @@ const Customer = () => {
 
   useEffect(() => {
     axios
-      .get("/CompanyLogo.json")
+      .get("https://profit-prime-server.vercel.app/companyLogos")
       .then((response) => {
         setLogos(response.data);
       })
@@ -28,13 +28,7 @@ const Customer = () => {
             key={index}
             src={logo.url}
             alt=""
-            className="logo-style"
-            style={{
-              width: "auto",
-              height: "150px",
-              margin: "0 70px",
-              borderRadius: "50%",
-            }}
+            className="logo-style md:w-[150px] h-[100px] w-[100px] md:h-[150px] mr-[70px] rounded-[50%]"
           />
         ))}
       </Marquee>

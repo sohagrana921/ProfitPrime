@@ -16,17 +16,15 @@ import useUsersInfo from "../../Hooks/useUsersInfo";
 
 const Dashboard = () => {
   const [checkAdmin] = useVerifyAdmin();
-  const [users] = useUsersInfo()
+  const [users] = useUsersInfo();
   console.log(users);
 
   return (
     <div>
       <div className="drawer lg:drawer-open">
-
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
         <div className="drawer-content flex flex-col items-center justify-center">
-
           <div className="navbar bg-green-900 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto lg:hidden">
             <div className="navbar-start">
               <div className="dropdown">
@@ -53,8 +51,14 @@ const Dashboard = () => {
                 >
                   <h1 className="text-center text-sm">{users.name}</h1>
                   <h1 className="text-center my-2 text-sm">{users.website}</h1>
-                  <Link to={'/dashboard/profile'}><p className="text-center flex justify-center uppercase text-sky-600 mb-2">{users.userRole}</p></Link>
-                  <h1 className="text-center uppercase text-sky-600 mb-2">{users.role === "admin" ? <>Admin</> : <></>}</h1>
+                  <Link to={"/dashboard/profile"}>
+                    <p className="text-center flex justify-center uppercase text-sky-600 mb-2">
+                      {users.userRole}
+                    </p>
+                  </Link>
+                  <h1 className="text-center text-xl tracking-widest uppercase text-white font-bold mb-2">
+                    {users.role === "admin" ? <>Admin</> : <></>}
+                  </h1>
 
                   {checkAdmin ? (
                     <>
@@ -138,9 +142,13 @@ const Dashboard = () => {
                 </ul>
               </div>
               <div className="flex justify-between items-center">
-
-                <a className="btn btn-ghost normal-case text-xl">Profit Prime</a>
-                <NavLink to={"/"} className="hover:text-white hover:bg-green-700 ml-24">
+                <a className="btn btn-ghost normal-case text-xl">
+                  Profit Prime
+                </a>
+                <NavLink
+                  to={"/"}
+                  className="hover:text-white hover:bg-green-700 ml-24"
+                >
                   Home
                 </NavLink>
               </div>
@@ -154,11 +162,18 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
-
-            <h1 className="text-center text-md">{users.name}</h1>
-            <h1 className="text-center my-2 text-md">{users.website}</h1>
-            <Link to={'/dashboard/profile'}><a className="flex justify-center uppercase text-sky-500 mb-2 font-bold">{users.userRole}</a></Link>
-            <h1 className="text-center uppercase text-sky-500 font-bold">{users.role === "admin" ? <>Admin</> : <></>}</h1>
+            <h1 className="text-center text-md font-bold">{users.name}</h1>
+            <h1 className="text-center my-2 text-md text-base">
+              {users.website}
+            </h1>
+            <Link to={"/dashboard/profile"}>
+              <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-white mb-2 hover:underline">
+                {users.userRole}
+              </a>
+            </Link>
+            <h1 className="text-center text-2xl tracking-widest uppercase text-white font-extrabold">
+              {users.role === "admin" ? <>Admin</> : <></>}
+            </h1>
 
             <div className="divider"></div>
 
