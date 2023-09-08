@@ -42,8 +42,8 @@ const BusinessForm = () => {
     <div className="flex flex-col md:flex-row py-16 pt-8 mt-8 justify-center items-center text-start  bg-gradient-to-r from-green-200 via-purple-300 to-green-300">
       <form onSubmit={handleSubmit(onSubmit)} className="w-full px-8">
         <div>
-          <h2 className="text-2xl py-5 font-semibold mb-4 text-center text-gray-800 md:mb-0">
-            <Marquee>Business Form Data For Free Trial</Marquee>
+          <h2 className="md:text-4xl text-2xl  py-4 font-bold mb-4 text-center text-gray-800 md:mb-8">
+            <Marquee>Enter Data For Free Trial</Marquee>
           </h2>
         </div>
         <div className="md:grid grid-cols-4 gap-8 p-10 bg-gray-200 rounded-lg shadow-lg">
@@ -69,7 +69,7 @@ const BusinessForm = () => {
                     htmlFor="sales"
                     className="block text-gray-700 font-medium mb-1"
                   >
-                    Sales
+                    Total Sales
                   </label>
                   <input
                     type="text"
@@ -117,7 +117,7 @@ const BusinessForm = () => {
                   htmlFor="sales1"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Sales
+                  Total Sales
                 </label>
                 <input
                   type="text"
@@ -166,7 +166,7 @@ const BusinessForm = () => {
                       htmlFor="sales2"
                       className="block text-gray-700 font-medium mb-1"
                     >
-                      Sales
+                      Total Sales
                     </label>
                     <input
                       type="text"
@@ -215,7 +215,7 @@ const BusinessForm = () => {
                   htmlFor="sales3"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Sales
+                  Total Sales
                 </label>
                 <input
                   type="text"
@@ -239,15 +239,15 @@ const BusinessForm = () => {
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
               </div>
+              <div className="col-span-2 flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-green-700  hover:bg-green-900 transition duration-300 text-white md:px-4 px-2 py-3 mt-4 rounded-lg  w-2/3"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="col-span-2 flex">
-            <button
-              type="submit"
-              className="bg-indigo-500 text-white px-4 py-3 mt-2 rounded-lg hover:bg-indigo-600 focus:outline-none w-1/3"
-            >
-              Submit
-            </button>
           </div>
         </div>
       </form>

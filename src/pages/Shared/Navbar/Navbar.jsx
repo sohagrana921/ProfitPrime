@@ -8,7 +8,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [showLinks, setShowLinks] = useState(false);
   const [showLinks1, setShowLinks1] = useState(false);
-  const [checkAdmin] = useVerifyAdmin()
+  const [checkAdmin] = useVerifyAdmin();
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -80,24 +80,27 @@ const Navbar = () => {
               )}
             </li>
 
-            {
-              checkAdmin ?
-                <>
-                  <Link to="/pricing">
-                    <li>
-                      <a className="hover:text-white hover:bg-green-700 hidden">Pricing</a>
-                    </li>
-                  </Link>
-                </>
-                :
-                <>
-                  <Link to="/pricing">
-                    <li>
-                      <a className="hover:text-white hover:bg-green-700">Pricing</a>
-                    </li>
-                  </Link>
-                </>
-            }
+            {checkAdmin ? (
+              <>
+                <Link to="/pricing">
+                  <li>
+                    <a className="hover:text-white hover:bg-green-700 hidden">
+                      Pricing
+                    </a>
+                  </li>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/pricing">
+                  <li>
+                    <a className="hover:text-white hover:bg-green-700">
+                      Pricing
+                    </a>
+                  </li>
+                </Link>
+              </>
+            )}
 
             <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
               <summary className="hover:text-white hover:bg-green-700">
@@ -190,24 +193,25 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          {
-            checkAdmin ?
-              <>
-                <Link to="/pricing">
-                  <li>
-                    <a className="hover:text-white hover:bg-green-700 hidden">Pricing</a>
-                  </li>
-                </Link>
-              </>
-              :
-              <>
-                <Link to="/pricing">
-                  <li>
-                    <a className="hover:text-white hover:bg-green-700">Pricing</a>
-                  </li>
-                </Link>
-              </>
-          }
+          {checkAdmin ? (
+            <>
+              <Link to="/pricing">
+                <li>
+                  <a className="hover:text-white hover:bg-green-700 hidden">
+                    Pricing
+                  </a>
+                </li>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to="/pricing">
+                <li>
+                  <a className="hover:text-white hover:bg-green-700">Pricing</a>
+                </li>
+              </Link>
+            </>
+          )}
 
           <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
             <summary className="hover:text-white hover:bg-green-700">
@@ -262,6 +266,13 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <Link
+          to="/free"
+          className="btn border-2 btn-sm text-white hover:text-white hover:bg-black bg-blue-950 rounded-full"
+        >
+          Give a Free Trial
+        </Link>
+
         {user ? (
           <Link
             onClick={handleLogOut}
