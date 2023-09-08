@@ -8,30 +8,47 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-
 import { AreaChart, Area, ResponsiveContainer } from "recharts";
+import { BsPersonFillAdd } from "react-icons/bs";
+import { GiNetworkBars, GiProfit } from "react-icons/gi";
+import { PieChart, Pie, Cell } from "recharts";
 
-import { PieChart, Pie } from "recharts";
-
-const data01 = [
+const data = [
   { name: "Group A", value: 400 },
   { name: "Group B", value: 300 },
   { name: "Group C", value: 300 },
   { name: "Group D", value: 200 },
-  { name: "Group E", value: 278 },
-  { name: "Group F", value: 189 },
 ];
 
-const data02 = [
-  { name: "Group A", value: 2400 },
-  { name: "Group B", value: 4567 },
-  { name: "Group C", value: 1398 },
-  { name: "Group D", value: 9800 },
-  { name: "Group E", value: 3908 },
-  { name: "Group F", value: 4800 },
-];
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
-const BusinessRevenue = () => {
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+}) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="white"
+      textAnchor={x > cx ? "start" : "end"}
+      dominantBaseline="central"
+    >
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
+
+const FreeDemo = () => {
   const [chart, setChart] = useState([]);
 
   useEffect(() => {
@@ -42,13 +59,108 @@ const BusinessRevenue = () => {
       });
   });
   return (
-    <div className="mx-auto mt-20">
-      <h2 className="text-center font-serif font-bold text-5xl mb-10">
-        Data Insight
+    <div>
+      <h2 className="text-center py-10 font-serif font-bold text-5xl mb-10">
+        Your Company Revenue Chart.
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 mx-auto">
+      <div className="bg-slate-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
         <div>
-          <ResponsiveContainer width="80%" height={200}>
+          <div>
+            <div className="flex justify-center items-center py-10">
+              <div className="text-5xl">
+                <BsPersonFillAdd></BsPersonFillAdd>
+              </div>
+              <div className="text-left text-3xl font-serif font-bold ml-2">
+                <h1>133</h1>
+                <h1>New Customer</h1>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <div className="flex justify-center items-center py-10">
+              <div className="text-5xl">
+                <GiProfit></GiProfit>
+              </div>
+              <div className="text-left text-3xl font-serif font-bold ml-2">
+                <h1>199.562 $</h1>
+                <h1>Company Profit</h1>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <div className="flex justify-center items-center py-10">
+              <div className="text-5xl">
+                <GiNetworkBars></GiNetworkBars>
+              </div>
+              <div className="text-left text-3xl font-serif font-bold ml-2">
+                <h1>199.5556 $</h1>
+                <h1>Sales Revenue</h1>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+
+        <div>
+          <div>
+            <div className="">
+              <div className="mt-10">
+                <h1 className="text-2xl font-serif font-bold">
+                  Average Weekly Sales Revenue
+                </h1>
+                <h1 className="text-3xl font-bold">1065.64565 $</h1>
+              </div>
+              <div className="mt-20">
+                <ResponsiveContainer width="100%" height={200}>
+                  <BarChart data={chart}>
+                    <XAxis dataKey="name" stroke="#8884d8" />
+                    <YAxis />
+                    <Tooltip />
+                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                    <Bar dataKey="price" fill="#8884d8" barSize={30} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="mt-10">
+            <h1 className="text-3xl font-serif font-bold">
+              Average Sales Target
+            </h1>
+            <h1 className="text-3xl font-bold">1445 $</h1>
+          </div>
+          <ResponsiveContainer width="100%" height={300}>
+            <PieChart>
+              <Pie
+                data={data}
+                labelLine={false}
+                label={renderCustomizedLabel}
+                outerRadius={80}
+                fill="#8884d8"
+                dataKey="value"
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+      <div className="">
+        <div className=" bg-slate-300">
+          <h1 className="text-2xl font-bold py-5 lg:ml-5">
+            Sales & Price Chart:
+          </h1>
+          <ResponsiveContainer width="70%" height={300}>
             <BarChart
               data={chart}
               margin={{
@@ -68,34 +180,11 @@ const BusinessRevenue = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div>
-          <PieChart width={400} height={200}>
-            <Pie
-              dataKey="value"
-              isAnimationActive={false}
-              data={data01}
-              cx={200}
-              cy={90}
-              outerRadius={60}
-              fill="#8884d8"
-              label
-            />
-            <Pie
-              dataKey="value"
-              data={data02}
-              cx={200}
-              cy={90}
-              innerRadius={20}
-              outerRadius={40}
-              fill="#82ca9d"
-            />
-            <Tooltip />
-          </PieChart>
-        </div>
+        <div></div>
       </div>
 
-      <div className="mt-20 lg:ml-36 mx-auto">
-        <h1 className="mb-8 text-xl font-bold">
+      <div className="mt-20  bg-slate-300">
+        <h1 className="text-2xl font-bold py-5 lg:ml-5">
           Last seven month sells chart:
         </h1>
         <ResponsiveContainer width="80%" height={200}>
@@ -122,8 +211,10 @@ const BusinessRevenue = () => {
           </AreaChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-20 lg:ml-36 mx-auto">
-        <h1 className="mb-8 text-xl font-bold">Our product price chart:</h1>
+      <div className="mt-20  mb-20 bg-slate-300">
+        <h1 className="text-2xl font-bold py-5 lg:ml-5">
+          Our product price chart:
+        </h1>
         <ResponsiveContainer width="80%" height={200}>
           <BarChart
             data={chart}
@@ -152,4 +243,4 @@ const BusinessRevenue = () => {
   );
 };
 
-export default BusinessRevenue;
+export default FreeDemo;
