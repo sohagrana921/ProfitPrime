@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../providers/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { useCallback } from "react";
 
 const popularCategories = [
   "Technology",
@@ -23,7 +25,7 @@ const Profile = () => {
   const [editMode, setEditMode] = useState(false); 
   const email = user?.email;
 
-  useEffect(() => {
+  const fetchCustomerInfo = useCallback(() => {
     axios
       .get(`https://profit-prime-server.vercel.app/user/${email}`)
       .then((response) => {
@@ -34,6 +36,11 @@ const Profile = () => {
       });
   }, [email]);
 
+  useEffect(() => {
+    // Fetch customer information on initial load
+    fetchCustomerInfo();
+  }, [email, fetchCustomerInfo]);
+
   const onSubmit = (data) => {
     const updatedUserData = {
       email,
@@ -41,6 +48,7 @@ const Profile = () => {
       website: data.website?data.website:customer?.website,
       contact: data.contact?data.contact:customer?.contact,
       category: data.category?data.category:customer?.category,
+      name: data.name?data.name:customer?.name,
     };
     console.log(data);
     console.log(updatedUserData);
@@ -51,6 +59,15 @@ const Profile = () => {
       )
       .then((response) => {
         console.log(response.data);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Update successfully.",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setEditMode(!editMode);
+        fetchCustomerInfo();
       })
       .catch((error) => {
         console.error("Error updating user data:", error);
