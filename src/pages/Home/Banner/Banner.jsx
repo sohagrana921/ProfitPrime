@@ -2,7 +2,7 @@ import logo1 from "../../../assets/banner/img45.jpg";
 import logo2 from "../../../assets/banner/dfdfdf.jpg";
 import logo3 from "../../../assets/banner/img23d.jpg";
 import logo4 from "../../../assets/banner/img23.jpeg";
-import { AiOutlineArrowRight } from "react-icons/ai";
+// import { AiOutlineArrowRight } from "react-icons/ai";
 import { FcAbout } from "react-icons/fc";
 import "./Banner.css";
 
@@ -24,20 +24,21 @@ const Banner = () => {
             </p>
 
             <div className="lg:flex">
-              <button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
-                About us
+              <a href="#about"><button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
+                About us{" "}
                 <p className="text-lg">
                   <FcAbout></FcAbout>
                 </p>
-              </button>
-              <div className="flex items-center font-bold hover:text-green-400">
+              </button></a>
+              
+              {/* <div className="flex items-center font-bold hover:text-green-400">
                 <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
                   <AiOutlineArrowRight></AiOutlineArrowRight>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -65,20 +66,20 @@ const Banner = () => {
             </p>
 
             <div className="lg:flex">
-              <button className="btn btn-sm bg-[#123426] text-white rounded-2xl">
+              <a href="#about"><button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
                 About us{" "}
                 <p className="text-lg">
                   <FcAbout></FcAbout>
                 </p>
-              </button>
-              <div className="flex items-center font-bold hover:text-green-400">
+              </button></a>
+              {/* <div className="flex items-center font-bold hover:text-green-400">
                 <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
                   <AiOutlineArrowRight></AiOutlineArrowRight>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -106,20 +107,21 @@ const Banner = () => {
             </p>
 
             <div className="lg:flex">
-              <button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
-                About us
+              <a href="#about"><button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
+                About us{" "}
                 <p className="text-lg">
                   <FcAbout></FcAbout>
                 </p>
-              </button>
-              <div className="flex items-center font-bold hover:text-green-400">
+              </button></a>
+              
+              {/* <div className="flex items-center font-bold hover:text-green-400">
                 <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
                   <AiOutlineArrowRight></AiOutlineArrowRight>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -147,20 +149,21 @@ const Banner = () => {
             </p>
 
             <div className="lg:flex">
-              <button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
+              <a href="#about"><button className="btn btn-sm bg-[#123426] hover:bg-black text-white rounded-2xl">
                 About us{" "}
                 <p className="text-lg">
                   <FcAbout></FcAbout>
                 </p>
-              </button>
-              <div className="flex items-center font-bold hover:text-green-400">
+              </button></a>
+              
+              {/* <div className="flex items-center font-bold hover:text-green-400">
                 <a className="text-lg font-serif lg:ml-4" href="">
                   More on morden revenue
                 </a>
                 <p className="ml-2 text-lg">
                   <AiOutlineArrowRight></AiOutlineArrowRight>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

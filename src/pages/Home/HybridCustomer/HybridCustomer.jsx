@@ -11,6 +11,8 @@ import img8 from "../../../assets/details/tsh.png";
 
 const HybridCustomer = () => {
   const [product, setProduct] = useState([]);
+  const [showFullText, setShowFullText] = useState({});
+  const [showMoreDetails, setShowMoreDetails] = useState({});
 
   useEffect(() => {
     fetch("Customer3.json")
@@ -19,6 +21,20 @@ const HybridCustomer = () => {
         setProduct(data);
       });
   });
+
+  const toggleFullText = (productId) => {
+    setShowFullText((prev) => ({
+      ...prev,
+      [productId]: !prev[productId],
+    }));
+  };
+
+  const toggleMoreDetails = (productId) => {
+    setShowMoreDetails((prev) => ({
+      ...prev,
+      [productId]: !prev[productId],
+    }));
+  };
 
   return (
     <div className="my-container">
@@ -33,8 +49,15 @@ const HybridCustomer = () => {
               <div>
                 <p className="mb-5 text-xl">{p.service}</p>
                 <h1 className="text-5xl font-bold">{p.branding}</h1>
-                <p className="py-6 text-2xl">{p.descrb}</p>
-                <button className="btn btn-primary">Learn More</button>
+                <p className="py-6 text-2xl">
+                  {showFullText[p.id] ? p.descrb : `${p.descrb.slice(0, 100)}...`}
+                </p>
+                <button
+                  onClick={() => toggleFullText(p.id)}
+                  className="btn btn-primary"
+                >
+                  {showFullText[p.id] ? "Read Less" : "Learn More"}
+                </button>
               </div>
             </div>
           </div>
@@ -45,9 +68,9 @@ const HybridCustomer = () => {
               <div>
                 <p className="py-6 text-2xl">{p.customer_des}</p>
                 <h1 className="text-xl font-bold">{p.c_name}</h1>
-                <a className="hover:underline" href="">
+                {/* <a className="hover:underline" href="">
                   {p.c_work}
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -110,9 +133,17 @@ const HybridCustomer = () => {
               <h1 className="text-5xl font-serif font-bold">{p.question}</h1>
             </div>
             <div>
-              <p className="text-xl">{p.q_details}</p>
+              <p className="py-6 text-2xl">
+                {showMoreDetails[p.id] ? p.q_details : `${p.q_details.slice(0, 100)}...`}
+              </p>
+              {/* <p className="text-xl">{p.q_details}</p> */}
               <div className="mt-10 mb-16">
-                <button className="btn btn-primary">Learn More</button>
+                <button
+                  onClick={() => toggleMoreDetails(p.id)}
+                  className="btn btn-primary"
+                >
+                  {showMoreDetails[p.id] ? "Show Less Details" : "Learn More Details"}
+                </button>
               </div>
             </div>
           </div>

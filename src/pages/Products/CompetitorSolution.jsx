@@ -27,9 +27,9 @@ const CompetitorSolution = () => {
             <li>Analyze their marketing and promotional strategies.</li>
             <li>Assess their strengths and weaknesses.</li>
           </ul>
-          <button className="mt-3 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">
+          {/* <button className="mt-3 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -57,16 +57,16 @@ const CompetitorSolution = () => {
             <li>Create compelling marketing messages and visuals.</li>
             <li>Target the right audience and segment your market.</li>
           </ul>
-          <button className="mt-3 bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded">
+          {/* <button className="mt-3 bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded">
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
 
       <div className="mt-6 md:mt-8 flex justify-center">
-        <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded">
+        {/* <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded">
           Compare Your Competitors
-        </button>
+        </button> */}
       </div>
     </div>
   );
