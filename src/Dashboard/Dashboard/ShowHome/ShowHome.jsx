@@ -1,9 +1,18 @@
+import useVerifyAdmin from "../../../Hooks/useVerifyAdmin";
 import BusinessRevenue from "../../../pages/Home/Revenue/BusinessRevenue";
 
 const ShowHome = () => {
+  const [checkAdmin] =  useVerifyAdmin();
   return (
     <div>
-      <BusinessRevenue></BusinessRevenue>
+      {
+        checkAdmin ? 
+        <>
+        <h1 className="text-4xl text-sky-900 font-bold">Welcome To Your Dashboard</h1>
+        </> 
+        : 
+        <><BusinessRevenue></BusinessRevenue></>
+      }
     </div>
   );
 };
