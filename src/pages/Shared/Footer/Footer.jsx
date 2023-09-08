@@ -32,7 +32,10 @@ const Footer = () => {
                 Follow Us
               </h6>
               <div className="flex flex-col gap-5">
-                <a href="#" className="mr-6 flex gap-2 items-center">
+                <a
+                  href="https://www.linkedin.com/"
+                  className="mr-6 flex gap-2 items-center"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
@@ -44,7 +47,10 @@ const Footer = () => {
                   LinkedIn
                 </a>
 
-                <a href="#!" className="mr-6 flex gap-2 items-center ">
+                <a
+                  href="https://www.facebook.com/"
+                  className="mr-6 flex gap-2 items-center "
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
@@ -55,7 +61,10 @@ const Footer = () => {
                   </svg>
                   Facebook
                 </a>
-                <a href="#!" className="mr-6 flex gap-2 items-center ">
+                <a
+                  href="https://twitter.com/?lang=en"
+                  className="mr-6 flex gap-2 items-center "
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
@@ -67,7 +76,10 @@ const Footer = () => {
                   Twitter
                 </a>
 
-                <a href="#!" className="mr-6 flex gap-2 items-center ">
+                <a
+                  href="https://www.instagram.com/"
+                  className="mr-6 flex gap-2 items-center "
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4"
