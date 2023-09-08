@@ -65,7 +65,6 @@ const Profile = () => {
   return (
     <div className="flex flex-col md:flex-row py-16 pt-8 mt-8 justify-center items-center  bg-gradient-to-r from-green-200 via-purple-300 to-green-300">
       <div>
-        {/* Edit button */}
         
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full px-8">
@@ -77,8 +76,9 @@ const Profile = () => {
             <p>{customer?.userRole} plan</p>
             <button
           onClick={handleEditClick}
-          className="bg-purple-500 text-white px-4 py-2 rounded-lg mb-4 hover:bg-blue-600 focus:outline-none"
+          className="bg-green-700 text-white px-4 py-2 rounded-lg mb-4 hover:bg-blue-600 focus:outline-none"
         >
+          {/* Edit button */}
           {editMode ? "Cancel Edit" : "Edit"}
         </button>
           </div>
@@ -91,16 +91,18 @@ const Profile = () => {
                   htmlFor="name"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Company Name
+                  <strong>Company Name</strong>:
                 </label>
-                <input
+                {
+                  editMode?<input
                   type="text"
                   id="name"
                   {...register("name", { required: 0 })}
                   defaultValue={customer?.name}
                   disabled={!editMode} // Disable based on edit mode
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
-                />
+                />:<p>{customer?.name}</p>
+                }
                 {errors.name && (
                   <span className="text-red-500">Name is required</span>
                 )}
@@ -110,9 +112,10 @@ const Profile = () => {
                   htmlFor="email"
                   className="block text-gra y-700 font-medium mb-1"
                 >
-                  Email
+                  <strong>Email</strong>:
                 </label>
-                <input
+                {
+                  editMode?<input
                   type="email"
                   id="email"
                   {...register("email", {
@@ -122,7 +125,8 @@ const Profile = () => {
                   defaultValue={customer?.email}
                   disabled
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
-                />
+                />:<p>{customer?.email}</p>
+                }
                 {errors.email?.type === "required" && (
                   <span className="text-red-500">Email is required</span>
                 )}
@@ -135,16 +139,18 @@ const Profile = () => {
                   htmlFor="contact"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Contact Number
+                  <strong>Contact Number</strong>:
                 </label>
-                <input
+                {
+                  editMode?<input
                   type="tel"
                   id="contact"
                   {...register("contact", { required: 0 })}
                   defaultValue={customer?.contact}
                   disabled={!editMode}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
-                />
+                />:<p>{customer?.contact}</p>
+                }
                 {errors.contact && (
                   <span className="text-red-500">
                     Contact number is required
@@ -160,9 +166,10 @@ const Profile = () => {
                   htmlFor="category"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Category
+                  <strong>Category</strong>:
                 </label>
-                <select
+                {
+                  editMode?<select
                   id="category"
                   {...register("category")}
                   defaultValue={customer?.category}
@@ -174,23 +181,26 @@ const Profile = () => {
                       {category}
                     </option>
                   ))}
-                </select>
+                </select>:<p>{customer?.category}</p>
+                }
               </div>
               <div>
                 <label
                   htmlFor="website"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Website
+                  <strong>Website</strong>:
                 </label>
-                <input
+                {
+                  editMode?<input
                   type="text"
                   id="website"
                   {...register("website")}
                   defaultValue={customer?.website}
                   disabled={!editMode}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
-                />
+                />:<p>{customer?.website}</p>
+                }
               </div>
 
               <div>
@@ -198,15 +208,17 @@ const Profile = () => {
                   htmlFor="address"
                   className="block text-gray-700 font-medium mb-1"
                 >
-                  Address
+                  <strong>Address</strong>:
                 </label>
-                <textarea
+                {
+                  editMode ?<textarea
                   id="address"
                   {...register("address", { required: 0 })}
                   defaultValue={customer?.address}
                   disabled={!editMode}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
-                />
+                />:<p>{customer?.address}</p>
+                }
                 {errors.address && (
                   <span className="text-red-500">Address is required</span>
                 )}
@@ -217,7 +229,7 @@ const Profile = () => {
             <div className="col-span-2 flex justify-center ">
               <button
                 type="submit"
-                className="bg-indigo-500 text-white px-4 py-3 mt-2 rounded-lg hover:bg-indigo-600 focus:outline-none w-1/3"
+                className="bg-green-700 text-white px-4 py-3 mt-2 rounded-lg hover:bg-indigo-600 focus:outline-none w-1/3"
               >
                 Submit
               </button>
