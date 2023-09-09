@@ -39,7 +39,7 @@ const Reviews = () => {
                 analytics, I can make informed decisions to enhance my revenue
                 generation strategies
               </p>
-              <h3 className="md:text-2xl text-green-600 font-bold uppercase">
+              <h3 className="md:text-2xl text-purple-950 font-bold uppercase">
                 Mark
               </h3>
             </div>
@@ -55,7 +55,7 @@ const Reviews = () => {
                 fine-tuning my strategies. I highly recommend ProfitPrime to
                 fellow entrepreneurs
               </p>
-              <h3 className="md:text-2xl text-green-600 font-bold uppercase">
+              <h3 className="md:text-2xl text-purple-950 font-bold uppercase">
                 Titan
               </h3>
             </div>
@@ -71,7 +71,7 @@ const Reviews = () => {
                 audience and increase my earnings while staying true to my
                 creative vision
               </p>
-              <h3 className="md:text-2xl text-green-600 font-bold uppercase">
+              <h3 className="md:text-2xl text-purple-950 font-bold uppercase">
                 Tonmoy
               </h3>
             </div>
@@ -87,7 +87,7 @@ const Reviews = () => {
                 Thanks to ProfitPrime, I have achieved remarkable results and
                 significantly increased my revenue
               </p>
-              <h3 className="md:text-2xl text-green-600 font-bold uppercase">
+              <h3 className="md:text-2xl text-purple-950 font-bold uppercase">
                 Hassan
               </h3>
             </div>
