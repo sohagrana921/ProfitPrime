@@ -18,10 +18,10 @@ const Customer = () => {
 
   return (
     <>
-      <h1 className="lg:text-4xl text-2xl uppercase font-bold py-14 md:py-20 text-sky-950 text-center my-container">
-        {" "}
-        10+ Company Grow Their Businesses With Us!!
-      </h1>
+      <div className="text-center my-16 md:my-32  md:mx-64">
+        <p className="text-red-800">---CUSTOMERS---</p>
+        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">10+ Company Grow Their Businesses With Us!!</h3>
+      </div>
       <Marquee>
         {logos.map((logo, index) => (
           <img
