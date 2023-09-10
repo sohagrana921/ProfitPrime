@@ -30,12 +30,13 @@ import Profile from "../Dashboard/Dashboard/Profile/Profile";
 import CompanyData from "../pages/Home/FreeDemo/CompanyData";
 import FreeDemo from "../pages/Home/FreeDemo/FreeDemo";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/pricing",
-        element: <PrivateRoute><Pricing /></PrivateRoute>,
+        element: <Pricing />,
       },
       {
         path: "/free",
