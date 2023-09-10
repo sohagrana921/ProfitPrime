@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import Lottie from "lottie-react";
-import email from "../../animation_ll61reax.json";
+import email from "../../animation_lmcjoff8.json";
 
 const Contact = () => {
   const form = useRef();
@@ -28,11 +28,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="lg:px-24 h-full my-container" id="contact">
+    <div className="h-full my-container" id="contact">
       <div>
-        <h1 className="hero lg:text-4xl text-2xl uppercase font-bold my-20 text-sky-950 text-center">
-          Ask a question
-        </h1>
+        <div className="text-center my-16 md:my-32 md:mx-64">
+          <p className="text-red-800">---Ask Questions---</p>
+          <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Contact Us</h3>
+        </div>
         <div className="md:flex">
           <div className="text-center lg:text-left ">
             <Lottie animationData={email} loop={true} />
@@ -87,7 +88,7 @@ const Contact = () => {
                 />
               </div>
               <input
-                className="bg-green-700 text-white hover:bg-green-900 uppercase p-3 rounded-lg mt-5 hover:text-white"
+                className=" text-white bg-red-800 hover:bg-purple-900 uppercase p-3 rounded-lg mt-5 hover:text-white"
                 type="submit"
                 value="Send"
               />

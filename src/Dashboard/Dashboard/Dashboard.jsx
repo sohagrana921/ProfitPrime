@@ -161,7 +161,7 @@ const Dashboard = () => {
 
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-green-600 to-green-900 text-white text-xl">
+          <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-purple-950 to-red-800 text-white text-xl">
             <h1 className="text-center text-md font-bold">{users.name}</h1>
             <h1 className="text-center my-2 text-md text-">{users.website}</h1>
             <Link to={"/dashboard/profile"}>
@@ -180,7 +180,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/manageusers"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FaUsers></FaUsers> Users Management
                   </NavLink>
@@ -188,7 +188,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/primeusers"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FaUserAstronaut></FaUserAstronaut> Prime Users
                   </NavLink>
@@ -196,7 +196,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/basicusers"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FaUserCircle></FaUserCircle> Basic Users
                   </NavLink>
@@ -207,7 +207,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/dataRevenue"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FcDatabase /> Data Insight
                   </NavLink>
@@ -215,7 +215,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/businessRevenue"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <AiFillCaretRight /> Business Info
                   </NavLink>
@@ -223,7 +223,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/cosultingRevenue"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FaBattleNet /> Competitor
                   </NavLink>
@@ -231,7 +231,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/dashhome"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FaMoneyCheck></FaMoneyCheck> Subscription
                   </NavLink>
@@ -239,7 +239,7 @@ const Dashboard = () => {
                 <li>
                   <NavLink
                     to={"/dashboard/pay"}
-                    className="hover:text-white hover:bg-green-700"
+                    className="hover:text-white hover:bg-red-950"
                   >
                     <FaPaypal></FaPaypal> Payment History
                   </NavLink>
@@ -250,7 +250,7 @@ const Dashboard = () => {
             <div className="divider"></div>
 
             <li>
-              <NavLink to={"/"} className="hover:text-white hover:bg-green-700">
+              <NavLink to={"/"} className="hover:text-white hover:bg-red-950">
                 <FaHome /> Home
               </NavLink>
             </li>
@@ -260,7 +260,7 @@ const Dashboard = () => {
                   <li>
                     <NavLink
                       to={"/dashboard/help"}
-                      className="hover:text-white hover:bg-green-700 hidden"
+                      className="hover:text-white hover:bg-red-950 hidden"
                     >
                       <FaHandsHelping /> Help
                     </NavLink>
@@ -271,7 +271,7 @@ const Dashboard = () => {
                   <li>
                     <NavLink
                       to={"/dashboard/help"}
-                      className="hover:text-white hover:bg-green-700"
+                      className="hover:text-white hover:bg-red-950"
                     >
                       <FaHandsHelping /> Help
                     </NavLink>

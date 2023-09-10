@@ -1,16 +1,16 @@
 import image1 from ".././assets/Team/Sohag.jpg";
 import image2 from ".././assets/Team/sohan.jpg";
 import image3 from ".././assets/Team/Arafat.jpg";
-// import image4 from ".././assets/Team/sayed.jpg";
-import image6 from ".././assets/Team/tonmoy.png";
+import image6 from ".././assets/Team/Tonmoy.jpg";
 
 const Team = () => {
   return (
     <div>
-      <h1 className="lg:text-4xl text-2xl uppercase font-bold pt-10 md:py-20 py-10 text-sky-950 text-center my-container">
-        Meet Our Team
-      </h1>
-      <div className="grid md:grid-cols-4 grid-cols-1 gap-5 mx-28 text-center mb-20">
+      <div className="text-center my-16 md:my-32 md:mx-64">
+        <p className="text-red-800">---Our Specialists---</p>
+        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Meet Our Team</h3>
+      </div>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 mx-28 text-center mb-20">
         <div>
           <img
             src={image1}
