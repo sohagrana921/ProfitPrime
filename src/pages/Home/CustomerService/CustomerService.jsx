@@ -42,19 +42,18 @@ const CustomerService = () => {
         <div key={p.id}>
           <div className="hero mt-52 mb-52">
             <div className="hero-content flex-col lg:flex-row-reverse">
-              <img
-                src={p.brand_img}
-                className=" w-96 rounded-lg shadow-2xl"
-              />
+              <img src={p.brand_img} className=" w-96 rounded-lg shadow-2xl" />
               <div>
                 <p className="mb-5 text-xl">{p.service}</p>
                 <h1 className="text-5xl font-bold">{p.branding}</h1>
                 <p className="py-6 text-2xl">
-                  {showFullText[p.id] ? p.descrb : `${p.descrb.slice(0, 100)}...`}
+                  {showFullText[p.id]
+                    ? p.descrb
+                    : `${p.descrb.slice(0, 100)}...`}
                 </p>
                 <button
                   onClick={() => toggleFullText(p.id)}
-                  className="btn btn-primary"
+                  className="btn bg-red-800 hover:bg-purple-900  text-white"
                 >
                   {showFullText[p.id] ? "Read Less" : "Learn More"}
                 </button>
@@ -134,15 +133,19 @@ const CustomerService = () => {
             </div>
             <div>
               <p className="py-6 text-2xl">
-                {showMoreDetails[p.id] ? p.q_details : `${p.q_details.slice(0, 100)}...`}
+                {showMoreDetails[p.id]
+                  ? p.q_details
+                  : `${p.q_details.slice(0, 100)}...`}
               </p>
               {/* <p className="text-xl">{p.q_details}</p> */}
               <div className="mt-10 mb-16">
                 <button
                   onClick={() => toggleMoreDetails(p.id)}
-                  className="btn btn-primary"
+                  className="btn bg-red-800 hover:bg-purple-900  text-white"
                 >
-                  {showMoreDetails[p.id] ? "Show Less Details" : "Learn More Details"}
+                  {showMoreDetails[p.id]
+                    ? "Show Less Details"
+                    : "Learn More Details"}
                 </button>
               </div>
             </div>

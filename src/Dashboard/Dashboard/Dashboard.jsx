@@ -21,7 +21,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div className="drawer lg:drawer-open">
+      <div className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
         <div className="drawer-content flex flex-col items-center justify-center">
@@ -254,30 +254,29 @@ const Dashboard = () => {
                 <FaHome /> Home
               </NavLink>
             </li>
-            {
-              checkAdmin ?
-                <>
-                  <li>
-                    <NavLink
-                      to={"/dashboard/help"}
-                      className="hover:text-white hover:bg-red-950 hidden"
-                    >
-                      <FaHandsHelping /> Help
-                    </NavLink>
-                  </li>
-                </>
-                :
-                <>
-                  <li>
-                    <NavLink
-                      to={"/dashboard/help"}
-                      className="hover:text-white hover:bg-red-950"
-                    >
-                      <FaHandsHelping /> Help
-                    </NavLink>
-                  </li>
-                </>
-            }
+            {checkAdmin ? (
+              <>
+                <li>
+                  <NavLink
+                    to={"/dashboard/help"}
+                    className="hover:text-white hover:bg-red-950 hidden"
+                  >
+                    <FaHandsHelping /> Help
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <NavLink
+                    to={"/dashboard/help"}
+                    className="hover:text-white hover:bg-red-950"
+                  >
+                    <FaHandsHelping /> Help
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

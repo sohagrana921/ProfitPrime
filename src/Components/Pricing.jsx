@@ -14,7 +14,7 @@ const Pricing = () => {
       </p>
       <button
         onClick={() => setIsYearly(!isYearly)}
-        className={`py-2 px-4 rounded-full ${
+        className={`py-2 px-4 rounded-full bg-red-800 hover:bg-purple-900  text-white${
           isYearly ? "bg-blue-400 text-white" : "bg-green-900 text-white"
         } mb-4 hover:bg-green-700 hover:text-white transition duration-300 focus:outline-none`}
       >
