@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import Marquee from "react-fast-marquee";
 
 const BusinessForm = () => {
   const { register, handleSubmit } = useForm();
@@ -39,13 +38,8 @@ const BusinessForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row py-16 pt-8 mt-8 justify-center items-center text-start  bg-gradient-to-r from-green-200 via-purple-300 to-green-300">
+    <div className="flex flex-col md:flex-row py-16 pt-8 mt-8 justify-center items-center text-start  bg-gradient-to-r">
       <form onSubmit={handleSubmit(onSubmit)} className="w-full px-8">
-        <div>
-          <h2 className="md:text-4xl text-2xl  py-4 font-bold mb-4 text-center text-gray-800 md:mb-8">
-            <Marquee>Enter Data For Free Trial</Marquee>
-          </h2>
-        </div>
         <div className="md:grid grid-cols-4 gap-8 p-10 bg-gray-200 rounded-lg shadow-lg">
           <div>
             <div className="md:mt">
@@ -242,7 +236,7 @@ const BusinessForm = () => {
               <div className="col-span-2 flex justify-end">
                 <button
                   type="submit"
-                  className="bg-green-700  hover:bg-green-900 transition duration-300 text-white md:px-4 px-2 py-3 mt-4 rounded-lg  w-2/3"
+                  className="bg-red-800 hover:bg-purple-950 transition duration-300 text-white md:px-4 px-2 py-3 mt-4 rounded-lg  w-2/3"
                 >
                   Submit
                 </button>

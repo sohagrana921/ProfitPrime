@@ -50,12 +50,12 @@ const Register = () => {
   };
 
   return (
-    <div className="md:h-100vh mt-32">
+    <div className="md:h-100vh my-32">
       <div className="py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
-        <h1 className="text-2xl font-bold text-center uppercase">
+        <h1 className="text-2xl font-bold text-center uppercase text-red-800">
           Register an Account
         </h1>
-        <h1 className="text-sm mt-2 text-center">
+        <h1 className="text-sm mt-2 text-center text-purple-950">
           Sign up now to start your free trial
         </h1>
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -117,7 +117,7 @@ const Register = () => {
           </div>
           <div className="form-control mt-6">
             <input
-              className="btn bg-green-700 text-white hover:bg-green-900 uppercase border-none w-full"
+              className="btn bg-red-800 text-white hover:bg-purple-950 uppercase border-none w-full"
               type="submit"
               value="Sign Up"
             />

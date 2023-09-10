@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import anime from '../../../animation_lmdq6nzz.json'
+import Lottie from "lottie-react";
 
 const Payment = () => {
   const { plan, billingOption } = useParams();
@@ -20,18 +22,19 @@ const Payment = () => {
 
   const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway);
   return (
-    <div className="flex flex-col items-center mt-24">
-      <h1 className="lg:text-4xl text-2xl uppercase font-bold pt-10 md:pt-3 text-sky-950 text-center">
-        Payment
-      </h1>
-      <p className="text-gray-500 mb-4 text-center">
-        You have selected the {plan} plan on {billingOption} billing.
-      </p>
-      <p className="text-gray-600">Payment Value: ${paymentValue}</p>
+    <div className="flex flex-col items-center">
+      <div className="text-center my-16 md:my-24 md:mx-64">
+        <p className="text-red-800">---You have selected the {plan} plan on {billingOption} billing.---</p>
+        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">        Payment</h3>
+      </div>
+      <p className="text-red-800 text-xl">Payment Value: ${paymentValue}</p>
 
-      <div>
+      <div className="md:flex justify-center items-center">
+        <div className="text-center lg:text-left ">
+          <Lottie animationData={anime} loop={true} />
+        </div>
         <Elements stripe={stripePromise}>
-          <CheckoutForm pay={paymentValue} userRole={plan}/>
+          <CheckoutForm pay={paymentValue} userRole={plan} />
         </Elements>
       </div>
     </div>

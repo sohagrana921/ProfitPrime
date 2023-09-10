@@ -35,13 +35,13 @@ const Login = () => {
   };
 
   return (
-    <div className="md:h-100vh mt-32">
-      <div className="md:px-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
+    <div className="md:h-100vh my-32">
+      <div className="md:px-10 md:py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <img
             src={logo}
             alt=""
-            className="h-24 w-44 rounded-2xl mx-auto bg-green-900"
+            className="h-24 w-44 rounded-2xl mx-auto bg-purple-950"
           />
           <div className="form-control">
             <label className="label">
@@ -79,13 +79,13 @@ const Login = () => {
             </div>
           </div>
 
-          <Link to="/resetPassword" className="text-start text-red-600">
+          <Link to="/resetPassword" className="text-start text-red-800">
             Forget Password? Reset
           </Link>
 
           <div className="form-control mt-6">
             <input
-              className="btn w-11/12 bg-green-700 text-white hover:bg-green-900 uppercase border-none"
+              className="btn w-11/12 bg-red-800 text-white hover:bg-purple-950 uppercase border-none"
               type="submit"
               value="Login"
             />

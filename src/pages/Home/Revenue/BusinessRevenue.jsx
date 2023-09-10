@@ -60,16 +60,16 @@ const BusinessRevenue = () => {
   });
   return (
     <div>
-      <div className="bg-slate-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
+      <div className="bg-sky-300 mt-20 p-5 grid grid-cols-1 lg:grid-cols-3 text-center mb-10 ">
         <div>
           <div>
             <div className="flex justify-center items-center py-10">
               <div className="text-5xl">
                 <BsPersonFillAdd></BsPersonFillAdd>
               </div>
-              <div className="text-left text-3xl font-serif font-bold ml-2">
-                <h1>133</h1>
-                <h1>New Customer</h1>
+              <div className="text-left text-xl font-serif font-bold ml-2">
+                <h1 className="text-red-800">133</h1>
+                <h1 className="text-purple-950 uppercase">New Customer</h1>
               </div>
             </div>
           </div>
@@ -79,9 +79,9 @@ const BusinessRevenue = () => {
               <div className="text-5xl">
                 <GiProfit></GiProfit>
               </div>
-              <div className="text-left text-3xl font-serif font-bold ml-2">
-                <h1>199.562 $</h1>
-                <h1>Company Profit</h1>
+              <div className="text-left text-xl font-serif font-bold ml-2">
+                <h1 className="text-red-800">199.562 $</h1>
+                <h1 className="text-purple-950 uppercase">Company Profit</h1>
               </div>
             </div>
           </div>
@@ -91,9 +91,9 @@ const BusinessRevenue = () => {
               <div className="text-5xl">
                 <GiNetworkBars></GiNetworkBars>
               </div>
-              <div className="text-left text-3xl font-serif font-bold ml-2">
-                <h1>199.5556 $</h1>
-                <h1>Sales Revenue</h1>
+              <div className="text-left text-xl font-serif font-bold ml-2">
+                <h1 className="text-red-800">199.5556 $</h1>
+                <h1 className="text-purple-950 uppercase">Sales Revenue</h1>
               </div>
             </div>
           </div>
@@ -104,10 +104,10 @@ const BusinessRevenue = () => {
           <div>
             <div className="">
               <div className="mt-10">
-                <h1 className="text-2xl font-serif font-bold">
+                <h1 className="text-xl font-bold text-red-800">1065.64565 $</h1>
+                <h1 className="text-xl font-serif font-bold text-purple-950 uppercase">
                   Average Weekly Sales
                 </h1>
-                <h1 className="text-3xl font-bold">1065.64565 $</h1>
               </div>
               <div className="mt-20">
                 <ResponsiveContainer width="100%" height={200}>
@@ -125,8 +125,8 @@ const BusinessRevenue = () => {
         </div>
         <div>
           <div className="mt-10">
-            <h1 className="text-3xl font-serif font-bold">Average Sales</h1>
-            <h1 className="text-3xl font-bold">1445 $</h1>
+            <h1 className="text-xl font-bold text-red-800">1445 $</h1>
+            <h1 className="text-xl font-serif font-bold text-purple-950 uppercase">Average Sales</h1>
           </div>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
@@ -151,9 +151,9 @@ const BusinessRevenue = () => {
       </div>
 
       <div className="">
-        <div className=" bg-slate-300">
-          <h1 className="text-2xl font-bold py-5 lg:ml-5">
-            Sales & Price Chart:
+        <div className=" bg-sky-300">
+          <h1 className="text-2xl font-bold py-5 lg:ml-5 text-purple-950 uppercase">
+            Sales & Prices:
           </h1>
           <div className="md:ml-10">
             <ResponsiveContainer width="70%" height={300}>
@@ -179,9 +179,9 @@ const BusinessRevenue = () => {
         </div>
       </div>
 
-      <div className="mt-20  bg-slate-300">
-        <h1 className="text-2xl font-bold py-5 md:ml-5">
-          Last seven month sells chart:
+      <div className="mt-10  bg-sky-300">
+        <h1 className="text-2xl font-bold py-5 md:ml-5 text-purple-950 uppercase">
+          Last seven month sells:
         </h1>
 
         <div className="md:ml-10">
@@ -210,9 +210,9 @@ const BusinessRevenue = () => {
           </ResponsiveContainer>
         </div>
       </div>
-      <div className="mt-20  mb-20 bg-slate-300">
-        <h1 className="text-2xl font-bold py-5 md:ml-5">
-          Our product price chart:
+      <div className="mt-10  mb-20 bg-sky-300">
+        <h1 className="text-2xl font-bold py-5 md:ml-5 text-purple-950 uppercase">
+          Products price chart:
         </h1>
 
         <div className="md:ml-10">

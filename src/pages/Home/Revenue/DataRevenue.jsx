@@ -26,7 +26,7 @@ const DataRevenue = () => {
 
   return (
     <div>
-      <h1 className="text-center font-serif font-bold text-5xl mb-20">
+      <h1 className="text-center font-serif font-bold text-5xl mt-32 mb-20 text-red-800">
         Business Information
       </h1>
       <ResponsiveContainer width="90%" height={200}>

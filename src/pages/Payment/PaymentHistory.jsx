@@ -21,20 +21,20 @@ const PaymentHistory = () => {
   }, [email]);
 
   return (
-    <div className="h-full w-full bg-gradient-to-r to-purple-950 from-red-800 my-container text-white">
+    <div className="h-full w-full">
       <div className="flex items-center justify-center h-screen">
         <div className="p-4  rounded-lg md:w-full">
-          <h1 className="text-3xl font-semibold mb-4 text-white">
-            Payment History
-          </h1>
-          <div className="overflow-x-auto">
+          <div className="text-center my-16 md:mb-20 md:mx-64">
+            <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Payment History</h3>
+          </div>
+          <div className="overflow-x-auto bg-sky-300 rounded-lg p-5">
             <table className="md:w-full table-auto">
               <thead>
                 <tr>
-                  <th className="md:px-4 px-1 py-2">Transaction ID</th>
-                  <th className="md:px-4 px-1 py-2">Date</th>
-                  <th className="md:px-4 px-1 py-2">Amount</th>
-                  <th className="md:px-4 px-1 py-2">Plan</th>
+                  <th className="md:px-4 px-1 py-2 text-red-800">Transaction ID</th>
+                  <th className="md:px-4 px-1 py-2 text-red-800">Date</th>
+                  <th className="md:px-4 px-1 py-2 text-red-800">Amount</th>
+                  <th className="md:px-4 px-1 py-2 text-red-800">Plan</th>
                 </tr>
               </thead>
               <tbody>

@@ -36,9 +36,9 @@ const ManageUsers = () => {
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Make Admin</th>
+                <th className="text-red-800">Name</th>
+                <th className="text-red-800">Email</th>
+                <th className="text-red-800">Make Admin</th>
               </tr>
             </thead>
 
@@ -69,7 +69,7 @@ const ManageUsers = () => {
                       >
                         <button
                           onClick={() => handlePromoteAdmin(user)}
-                          className="btn bg-gradient-to-r from-green-700 to-green-900 text-white border-none"
+                          className="btn bg-red-800 hover:bg-purple-950 text-white border-none"
                         >
                           <FaUsers></FaUsers>
                         </button>

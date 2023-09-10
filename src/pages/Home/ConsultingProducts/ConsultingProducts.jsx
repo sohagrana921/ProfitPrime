@@ -17,10 +17,10 @@ const ConsultingProducts = () => {
         <div key={p.id}>
           <div className="card w-full bg-base-100 mb-5">
             <div className="card-body">
-              <h2 className="card-title font-bold text-4xl">{p.pname}</h2>
+              <h2 className="card-title font-bold text-4xl text-red-800">{p.pname}</h2>
               <p>{p.pdescribtion}</p>
               <p>
-                <span className="font-bold">Experience Needed:</span>{" "}
+                <span className="font-bold text-red-800">Experience Needed:</span>{" "}
                 {p.Experience}
               </p>
             </div>
