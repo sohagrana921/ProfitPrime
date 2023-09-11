@@ -8,6 +8,7 @@ import img5 from "../../../assets/details/mama-shelter.png";
 import img6 from "../../../assets/details/sacher.png";
 import img7 from "../../../assets/details/the-hoxton.png";
 import img8 from "../../../assets/details/tsh.png";
+import { Helmet } from "react-helmet-async";
 
 const HybridCustomer = () => {
   const [product, setProduct] = useState([]);
@@ -38,19 +39,23 @@ const HybridCustomer = () => {
 
   return (
     <div className="my-container">
+      <Helmet>
+        <title>ProfitPrime | Customers</title>
+      </Helmet>
       {product.map((p) => (
         <div key={p.id}>
           <div className="hero mt-52 mb-52">
             <div className="hero-content flex-col lg:flex-row-reverse">
-              <img
-                src={p.brand_img}
-                className="w-96 rounded-lg shadow-2xl"
-              />
+              <img src={p.brand_img} className="w-96 rounded-lg shadow-2xl" />
               <div>
                 <p className="mb-5 text-xl text-purple-950">{p.service}</p>
-                <h1 className="text-5xl font-bold text-red-800">{p.branding}</h1>
+                <h1 className="text-5xl font-bold text-red-800">
+                  {p.branding}
+                </h1>
                 <p className="py-6 text-2xl">
-                  {showFullText[p.id] ? p.descrb : `${p.descrb.slice(0, 100)}...`}
+                  {showFullText[p.id]
+                    ? p.descrb
+                    : `${p.descrb.slice(0, 100)}...`}
                 </p>
                 <button
                   onClick={() => toggleFullText(p.id)}
@@ -104,7 +109,9 @@ const HybridCustomer = () => {
 
           <div>
             <div className="text-center my-16 md:my-20 md:mx-64">
-              <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Case Studies</h3>
+              <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">
+                Case Studies
+              </h3>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-16 mx-auto">
               <div className="card card-compact w-full h-full bg-base-100">
@@ -112,7 +119,9 @@ const HybridCustomer = () => {
                   <img src={p.hotel_img1} alt="" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title text-xl text-red-800">{p.hotel_name}</h2>
+                  <h2 className="card-title text-xl text-red-800">
+                    {p.hotel_name}
+                  </h2>
                   <p className="text-lg">{p.hotel_des}</p>
                 </div>
               </div>
@@ -121,7 +130,9 @@ const HybridCustomer = () => {
                   <img className="ml-5" src={p.hotel_img2} alt="" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title text-xl text-red-800">{p.hotel_name2}</h2>
+                  <h2 className="card-title text-xl text-red-800">
+                    {p.hotel_name2}
+                  </h2>
                   <p className="text-lg">{p.hotel_des2}</p>
                 </div>
               </div>
@@ -130,11 +141,15 @@ const HybridCustomer = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-28">
             <div>
-              <h1 className="text-5xl font-serif font-bold text-red-800">{p.question}</h1>
+              <h1 className="text-5xl font-serif font-bold text-red-800">
+                {p.question}
+              </h1>
             </div>
             <div>
               <p className="py-6 text-2xl">
-                {showMoreDetails[p.id] ? p.q_details : `${p.q_details.slice(0, 100)}...`}
+                {showMoreDetails[p.id]
+                  ? p.q_details
+                  : `${p.q_details.slice(0, 100)}...`}
               </p>
               {/* <p className="text-xl">{p.q_details}</p> */}
               <div className="mt-10 mb-16">
@@ -142,7 +157,9 @@ const HybridCustomer = () => {
                   onClick={() => toggleMoreDetails(p.id)}
                   className="btn bg-red-800 hover:bg-purple-950 text-white"
                 >
-                  {showMoreDetails[p.id] ? "Show Less Details" : "Learn More Details"}
+                  {showMoreDetails[p.id]
+                    ? "Show Less Details"
+                    : "Learn More Details"}
                 </button>
               </div>
             </div>

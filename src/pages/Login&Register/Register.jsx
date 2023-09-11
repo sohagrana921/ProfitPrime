@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [showPassowrd, setShowPassword] = useState(false);
@@ -51,6 +52,9 @@ const Register = () => {
 
   return (
     <div className="md:h-100vh my-32">
+      <Helmet>
+        <title>ProfitPrime | Register</title>
+      </Helmet>
       <div className="py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
         <h1 className="text-2xl font-bold text-center uppercase text-red-800">
           Register an Account

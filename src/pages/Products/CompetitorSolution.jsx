@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 const CompetitorSolution = () => {
   return (
     <div className="mt-32">
-      
+      <Helmet>
+        <title>ProfitPrime | Products</title>
+      </Helmet>
       <div className="my-container">
         <div className="bg-gradient-to-r from-purple-100 to-purple-300 p-4 rounded-lg shadow-md flex flex-col md:flex-row md:items-center mb-6">
           {/* Image */}

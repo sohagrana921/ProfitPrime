@@ -6,10 +6,14 @@ import Customer from "./Customers/Customer";
 import AboutUs from "./AboutUs/AboutUs";
 import WebData from "./WebData/WebData";
 import FAQuestion from "./FAQuestion/FAQuestion";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>ProfitPrime | Home</title>
+      </Helmet>
       <Banner></Banner>
       <Customer></Customer>
       <AboutUs></AboutUs>

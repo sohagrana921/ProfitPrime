@@ -13,6 +13,7 @@ import { FcDatabase } from "react-icons/fc";
 import { AiFillCaretRight } from "react-icons/ai";
 import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
 import useUsersInfo from "../../Hooks/useUsersInfo";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const [checkAdmin] = useVerifyAdmin();
@@ -20,6 +21,9 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>ProfitPrime | DashBoard</title>
+      </Helmet>
       <div className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 
