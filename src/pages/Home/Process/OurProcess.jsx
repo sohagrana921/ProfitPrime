@@ -5,7 +5,7 @@ const OurProcess = () => {
     return (
         <div className="bg-gradient-to-r from-purple-950 to-red-800 py-20 mt-20 text-white text-center">
             <div className="text-center  md:mx-64">
-                <h3 className="md:text-2xl mb-20 font-bold border-purple-900 border-y-4 py-2 uppercase text-white">OUR PROCESS</h3>
+                <h3 className="md:text-2xl mb-20 font-bold border-purple-900 border-y-4 py-2 uppercase text-white">OUR PROCESS </h3>
             </div>
             <div className="mt-10 mb-10 text-center">
                 <div className="md:flex justify-center items-center my-5">
