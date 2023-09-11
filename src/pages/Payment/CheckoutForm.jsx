@@ -77,7 +77,7 @@ const CheckoutForm = ({ pay, userRole }) => {
           },
         },
       });
-    console.log(user);
+ 
     if (confirmError) {
       setError(confirmError.message);
     }
@@ -139,7 +139,6 @@ const CheckoutForm = ({ pay, userRole }) => {
       updateUserRole(email, userRole);
     }
   };
-  console.log(transactionId);
 
   return (
     <div>

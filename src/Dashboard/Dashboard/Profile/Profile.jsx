@@ -50,8 +50,6 @@ const Profile = () => {
       category: data.category ? data.category : customer?.category,
       name: data.name ? data.name : customer?.name,
     };
-    console.log(data);
-    console.log(updatedUserData);
     axios
       .post(
         "https://profit-prime-server.vercel.app/update-user-info",
