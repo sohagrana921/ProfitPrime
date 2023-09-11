@@ -26,7 +26,6 @@ const CheckoutForm = ({ pay, userRole }) => {
           price,
         })
         .then((res) => {
-          console.log(res);
           setClientSecret(res.data.clientSecret);
         })
         .catch((error) => {

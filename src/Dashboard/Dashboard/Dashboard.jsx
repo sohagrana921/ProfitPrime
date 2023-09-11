@@ -17,7 +17,6 @@ import useUsersInfo from "../../Hooks/useUsersInfo";
 const Dashboard = () => {
   const [checkAdmin] = useVerifyAdmin();
   const [users] = useUsersInfo();
-  console.log(users);
 
   return (
     <div>

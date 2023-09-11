@@ -32,7 +32,6 @@ const DataInsightForm = () => {
         names: data.names3,
       },
     ];
-    console.log(updatedUserData);
 
     Navigate("/freeDemo", { state: { updatedUserData } });
   };
