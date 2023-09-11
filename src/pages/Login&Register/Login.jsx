@@ -5,6 +5,7 @@ import { FaEye } from "react-icons/fa";
 import logo from "../../assets/profit-up.png";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -36,6 +37,9 @@ const Login = () => {
 
   return (
     <div className="md:h-100vh my-32">
+      <Helmet>
+        <title>ProfitPrime | Login</title>
+      </Helmet>
       <div className="md:px-10 md:py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <img

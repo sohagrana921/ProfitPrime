@@ -31,6 +31,7 @@ import CompanyData from "../pages/Home/FreeDemo/CompanyData";
 import FreeDemo from "../pages/Home/FreeDemo/FreeDemo";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage";
+import FreeDemo1 from "../pages/Home/FreeDemo/FreeDemo1";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <FreeDemo></FreeDemo>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/freeDemo1",
+        element: (
+          <PrivateRoute>
+            <FreeDemo1></FreeDemo1>
           </PrivateRoute>
         ),
       },

@@ -8,7 +8,6 @@ import { useState } from "react";
 const DashHome = () => {
   const { user } = useContext(AuthContext);
   const email = user?.email;
-  console.log(email);
   const [customer, setCustomer] = useState();
   useEffect(() => {
     axios
@@ -20,7 +19,7 @@ const DashHome = () => {
         console.error("Error fetching customer information:", error);
       });
   }, [email]);
-  console.log(customer);
+  
 
   return (
     <div className="flex justify-center w-full items-center h-screen bg-green-100">

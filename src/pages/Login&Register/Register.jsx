@@ -1,10 +1,13 @@
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
+  const [showPassowrd, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
@@ -14,8 +17,6 @@ const Register = () => {
   const { createUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    console.log(data);
-
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
       console.log(loggedUser);
@@ -51,6 +52,9 @@ const Register = () => {
 
   return (
     <div className="md:h-100vh my-32">
+      <Helmet>
+        <title>ProfitPrime | Register</title>
+      </Helmet>
       <div className="py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
         <h1 className="text-2xl font-bold text-center uppercase text-red-800">
           Register an Account
@@ -93,7 +97,12 @@ const Register = () => {
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassowrd ? "text" : "password"}
+              {...register("password", {
+                required: true,
+                minLength: 6,
+                maxLength: 20,
+              })}
               {...register("password", {
                 required: true,
                 minLength: 6,
@@ -103,6 +112,12 @@ const Register = () => {
               placeholder="Password"
               className="input input-bordered"
             />
+            <Link>
+              <FaEye
+                className="text-xl flex absolute md:right-[365px] right-[50px] -mt-8"
+                onClick={() => setShowPassword(!showPassowrd)}
+              ></FaEye>
+            </Link>
             {errors.password?.type === "required" && (
               <p className="text-red-500">password is required</p>
             )}
