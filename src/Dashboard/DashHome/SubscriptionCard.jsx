@@ -18,7 +18,7 @@ const SubscriptionCard = ({
           {companyName ? companyName : "XY"}
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center bg-gradient-to-r from-purple-950 to-red-950 text-white p-8 rounded-lg shadow-lg max-w-md w-full">
+      <div className="flex flex-col items-center justify-center bg-gradient-to-r from-purple-950 to-red-800 text-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <h2 className="text-xl font-semibold mb-2">{planName} Plan</h2>
         <p className="text-white mb-2">
           <span>

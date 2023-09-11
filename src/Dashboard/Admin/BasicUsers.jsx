@@ -10,10 +10,10 @@ const BasicUsers = () => {
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Website</th>
-                <th>Contact</th>
+                <th className="text-red-800">Name</th>
+                <th className="text-red-800">Email</th>
+                <th className="text-red-800">Website</th>
+                <th className="text-red-800">Contact</th>
               </tr>
             </thead>
 
