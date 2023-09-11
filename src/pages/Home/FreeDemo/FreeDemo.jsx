@@ -53,20 +53,21 @@ const FreeDemo = () => {
   const { updatedUserData } = allData.state;
 
   return (
-    <div className="mt-20">
-      <h2 className="text-center py-10 font-serif font-bold text-5xl mb-10">
-        Your Company Revenue Chart.
-      </h2>
-      <div className="bg-slate-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
+    <div className="">
+      <div className="text-center my-16 md:mt-32 md:mx-64">
+        <p className="text-red-800">---Data Insights---</p>
+        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Company Revenue</h3>
+      </div>
+      <div className="bg-sky-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
         <div>
           <div>
             <div className="flex justify-center items-center py-10">
               <div className="text-5xl">
                 <BsPersonFillAdd></BsPersonFillAdd>
               </div>
-              <div className="text-left text-3xl font-serif font-bold ml-2">
-                <h1>133</h1>
-                <h1>New Customer</h1>
+              <div className="text-left text-xl font-serif font-bold ml-2">
+                <h1 className="text-red-800">133</h1>
+                <h1 className="text-purple-950 uppercase">New Customer</h1>
               </div>
             </div>
           </div>
@@ -76,8 +77,8 @@ const FreeDemo = () => {
               <div className="text-5xl">
                 <GiProfit></GiProfit>
               </div>
-              <div className="text-left text-3xl font-serif font-bold ml-2">
-                <h1>199.562 $</h1>
+              <div className="text-left text-xl font-serif font-bold ml-2 text-purple-950 uppercase">
+                <h1 className="text-red-800">199.562 $</h1>
                 <h1>Company Profit</h1>
               </div>
             </div>
@@ -88,8 +89,8 @@ const FreeDemo = () => {
               <div className="text-5xl">
                 <GiNetworkBars></GiNetworkBars>
               </div>
-              <div className="text-left text-3xl font-serif font-bold ml-2">
-                <h1>199.5556 $</h1>
+              <div className="text-left text-xl font-serif font-bold ml-2 text-purple-950 uppercase">
+                <h1 className="text-red-800">199.5556 $</h1>
                 <h1>Sales Revenue</h1>
               </div>
             </div>
@@ -101,10 +102,10 @@ const FreeDemo = () => {
           <div>
             <div className="">
               <div className="mt-10">
-                <h1 className="text-2xl font-serif font-bold">
+                <h1 className="text-xl font-bold text-red-800">1065.64565 $</h1>
+                <h1 className="text-xl font-serif font-bold uppercase text-purple-950">
                   Average Weekly Sales Revenue
                 </h1>
-                <h1 className="text-3xl font-bold">1065.64565 $</h1>
               </div>
               <div className="mt-20">
                 <ResponsiveContainer width="100%" height={200}>
@@ -122,10 +123,10 @@ const FreeDemo = () => {
         </div>
         <div>
           <div className="mt-10">
-            <h1 className="text-3xl font-serif font-bold">
+            <h1 className="text-xl font-bold text-red-800">1445 $</h1>
+            <h1 className="text-xl font-serif font-bold uppercase text-purple-950">
               Average Sales Target
             </h1>
-            <h1 className="text-3xl font-bold">1445 $</h1>
           </div>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
@@ -149,7 +150,7 @@ const FreeDemo = () => {
         </div>
       </div>
 
-      <div className=" bg-slate-300 mb-20">
+      <div className=" bg-sky-300 py-10 mb-20">
         <ResponsiveContainer width="70%" height={300}>
           <BarChart
             data={updatedUserData}

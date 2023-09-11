@@ -5,7 +5,7 @@ import { Link, useRouteError } from "react-router-dom";
 const ErrorPage = () => {
   const { error, status } = useRouteError();
   return (
-    <section className="flex items-center h-screen p-16 text-gray-900">
+    <section className="flex items-center h-screen p-16 mb-10 text-gray-900">
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
         <img
           className="rounded-3xl"
@@ -13,12 +13,12 @@ const ErrorPage = () => {
           alt=""
         />
         <div className="max-w-md text-center">
-          <p className="text-2xl  font-semibold md:text-3xl mb-8">
+          <p className="text-2xl text-purple-950 font-semibold md:text-3xl mb-8">
             {error?.message}
           </p>
           <Link
             to="/"
-            className="px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900"
+            className="px-8 py-3 font-semibold rounded bg-red-800 hover:bg-purple-950 text-white"
           >
             Back to homepage
           </Link>
