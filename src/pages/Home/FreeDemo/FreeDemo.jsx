@@ -58,7 +58,7 @@ const FreeDemo = () => {
         <p className="text-red-800">---Data Insights---</p>
         <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Company Revenue</h3>
       </div>
-      <div className="bg-sky-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
+      <div className="bg-purple-300 grid grid-cols-1 lg:grid-cols-3 text-center mb-32 ">
         <div>
           <div>
             <div className="flex justify-center items-center py-10">
@@ -150,7 +150,7 @@ const FreeDemo = () => {
         </div>
       </div>
 
-      <div className=" bg-sky-300 py-10 mb-20">
+      <div className=" bg-purple-300 py-10 mb-20">
         <ResponsiveContainer width="70%" height={300}>
           <BarChart
             data={updatedUserData}

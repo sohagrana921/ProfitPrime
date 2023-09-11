@@ -27,7 +27,7 @@ const PaymentHistory = () => {
           <div className="text-center my-16 md:mb-20 md:mx-64">
             <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Payment History</h3>
           </div>
-          <div className="overflow-x-auto bg-sky-300 rounded-lg p-5">
+          <div className="overflow-x-auto bg-purple-300 rounded-lg p-5">
             <table className="md:w-full table-auto">
               <thead>
                 <tr>
