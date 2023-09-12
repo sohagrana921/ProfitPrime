@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 const AboutUs = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -9,10 +10,10 @@ const AboutUs = () => {
 
   return (
     <div id="about">
-      <div className="text-center my-16 md:my-32  md:mx-64">
-        <p className="text-red-800">---About Us---</p>
-        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">What We do!!</h3>
-      </div>
+      <SectionTitle
+        subheading={"About Us"}
+        heading={"What We do!!"}
+      ></SectionTitle>
       <div className="flex justify-center items-center my-container">
         <div className="container mx-auto md:flex items-center">
           <div className="md:w-1/2 px-5 md:ml-10 mt-5 md:mt-0">

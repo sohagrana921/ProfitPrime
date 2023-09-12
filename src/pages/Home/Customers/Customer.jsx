@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 const Customer = () => {
   const [logos, setLogos] = useState([]);
@@ -18,12 +19,10 @@ const Customer = () => {
 
   return (
     <>
-      <div className="text-center my-16 md:my-32  md:mx-64">
-        <p className="text-red-800">---CUSTOMERS---</p>
-        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">
-          10+ Company Grow Their Businesses With Us!!
-        </h3>
-      </div>
+      <SectionTitle
+        subheading={"CUSTOMERS"}
+        heading={" 10+ Company Grow Their Businesses With Us!!"}
+      ></SectionTitle>
       <Marquee>
         {logos.map((logo, index) => (
           <img

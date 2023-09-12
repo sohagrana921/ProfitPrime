@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import Lottie from "lottie-react";
 import email from "../../animation_lmcjoff8.json";
+import SectionTitle from "../pages/Shared/SectionTitle/SectionTitle";
 
 const Contact = () => {
   const form = useRef();
@@ -30,12 +31,10 @@ const Contact = () => {
   return (
     <div className="h-full my-container" id="contact">
       <div>
-        <div className="text-center my-16 md:my-32 md:mx-64">
-          <p className="text-red-800">---Ask Questions---</p>
-          <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">
-            Contact Us
-          </h3>
-        </div>
+        <SectionTitle
+          subheading={"Ask Questions"}
+          heading={"Contact Us"}
+        ></SectionTitle>
         <div className="md:flex">
           <div className="text-center lg:text-left ">
             <Lottie animationData={email} loop={true} />

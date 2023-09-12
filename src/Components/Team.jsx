@@ -2,21 +2,19 @@ import image1 from ".././assets/Team/Sohag.jpg";
 import image2 from ".././assets/Team/sohan.jpg";
 import image3 from ".././assets/Team/Arafat.jpg";
 import image6 from ".././assets/Team/Tonmoy.jpg";
+import SectionTitle from "../pages/Shared/SectionTitle/SectionTitle";
 
 const Team = () => {
   return (
     <div>
-      <div className="text-center my-16 md:my-32 md:mx-64">
-        <p className="text-red-800">---Our Specialists---</p>
-        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Meet Our Team</h3>
-      </div>
+      <SectionTitle
+        subheading={"Our Specialists"}
+        heading={"Meet Our Team"}
+      ></SectionTitle>
+
       <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 mx-28 text-center mb-20">
         <div>
-          <img
-            src={image1}
-            alt=""
-            className="w-32 h-32 rounded-full mx-auto"
-          />
+          <img src={image1} alt="" className="w-32 h-32 rounded-full mx-auto" />
           <h1 className=" font-bold">Sohag Rana</h1>
           <h2>Leader</h2>
         </div>

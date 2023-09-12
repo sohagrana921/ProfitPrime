@@ -1,10 +1,13 @@
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+
 const FAQuestion = () => {
   return (
-    <div className="">
-      <div className="text-center my-16 md:my-32  md:mx-64">
-        <p className="text-red-800">---Some Questions---</p>
-        <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Why Need Us</h3>
-      </div>
+    <div>
+      <SectionTitle
+        subheading={"Some Questions"}
+        heading={"Why Need Us"}
+      ></SectionTitle>
+
       <div className="my-container">
         <div className="collapse collapse-plus bg-white">
           <input type="radio" name="my-accordion-3" checked="checked" />
@@ -39,13 +42,13 @@ const FAQuestion = () => {
               capabilities, allowing businesses to sell products or services
               directly to customers online. Customer Relationship Management
               (CRM): CRM tools help organizations manage customer data, track
-              interactions, and personalize marketing efforts to improve customer
-              retention and sales. Analytics and Reporting: Robust data analytics
-              and reporting functionalities help businesses gain insights into
-              customer behavior, revenue trends, and the effectiveness of
-              marketing campaigns. Payment Processing: Integrations with payment
-              gateways and processors facilitate secure and efficient online
-              transactions.
+              interactions, and personalize marketing efforts to improve
+              customer retention and sales. Analytics and Reporting: Robust data
+              analytics and reporting functionalities help businesses gain
+              insights into customer behavior, revenue trends, and the
+              effectiveness of marketing campaigns. Payment Processing:
+              Integrations with payment gateways and processors facilitate
+              secure and efficient online transactions.
             </p>
           </div>
         </div>
@@ -62,21 +65,22 @@ const FAQuestion = () => {
               to consider: Assess Your Goals: Clearly define your revenue
               generation goals. Are you looking to increase online sales, expand
               your customer base, or optimize pricing strategies? Budget:
-              Determine how much you can invest in a revenue generation platform,
-              including both upfront costs and ongoing expenses. Scalability:
-              Ensure the platform can grow with your business. It should
-              accommodate increasing customer volumes and evolving needs.
+              Determine how much you can invest in a revenue generation
+              platform, including both upfront costs and ongoing expenses.
+              Scalability: Ensure the platform can grow with your business. It
+              should accommodate increasing customer volumes and evolving needs.
               Integration: Check if the platform integrates seamlessly with your
               existing systems, such as your website, CRM, and accounting
-              software. User-Friendliness: Consider the ease of use for your team.
-              Complex platforms may require more training and resources. Support
-              and Maintenance: Evaluate the level of customer support and
-              maintenance services provided by the platform provider. Reviews and
-              References: Research user reviews and seek references from
-              businesses that have used the platform to gauge its effectiveness
-              and reliability. By carefully considering these factors, businesses
-              can make informed decisions when selecting a revenue generation
-              platform that aligns with their unique needs and objectives.
+              software. User-Friendliness: Consider the ease of use for your
+              team. Complex platforms may require more training and resources.
+              Support and Maintenance: Evaluate the level of customer support
+              and maintenance services provided by the platform provider.
+              Reviews and References: Research user reviews and seek references
+              from businesses that have used the platform to gauge its
+              effectiveness and reliability. By carefully considering these
+              factors, businesses can make informed decisions when selecting a
+              revenue generation platform that aligns with their unique needs
+              and objectives.
             </p>
           </div>
         </div>
