@@ -32,7 +32,7 @@ const ManageUsers = () => {
   return (
     <div>
       <div>
-        <div className="overflow-x-auto w-full">
+        <div className="overflow-x-auto w-full p-20">
           <table className="table w-full">
             <thead>
               <tr>

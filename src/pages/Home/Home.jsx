@@ -6,7 +6,9 @@ import Customer from "./Customers/Customer";
 import AboutUs from "./AboutUs/AboutUs";
 import WebData from "./WebData/WebData";
 import FAQuestion from "./FAQuestion/FAQuestion";
+import Process from "./Process/Process"
 import { Helmet } from "react-helmet-async";
+import OurProcess from "./Process/OurProcess";
 
 const Home = () => {
   return (
@@ -19,8 +21,10 @@ const Home = () => {
       <AboutUs></AboutUs>
       <WebData></WebData>
       <Reviews></Reviews>
+      <Process></Process>
       <Team></Team>
       <FAQuestion></FAQuestion>
+      <OurProcess></OurProcess>
       <Contact></Contact>
     </div>
   );

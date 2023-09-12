@@ -60,7 +60,7 @@ const BusinessRevenue = () => {
   });
   return (
     <div>
-      <div className="bg-sky-300 mt-20 p-5 grid grid-cols-1 lg:grid-cols-3 text-center mb-10 ">
+      <div className="bg-purple-300 mt-20 p-5 grid grid-cols-1 lg:grid-cols-3 text-center mb-10 ">
         <div>
           <div>
             <div className="flex justify-center items-center py-10">
@@ -151,7 +151,7 @@ const BusinessRevenue = () => {
       </div>
 
       <div className="">
-        <div className=" bg-sky-300">
+        <div className=" bg-purple-300">
           <h1 className="text-2xl font-bold py-5 lg:ml-5 text-purple-950 uppercase">
             Sales & Prices:
           </h1>
@@ -179,7 +179,7 @@ const BusinessRevenue = () => {
         </div>
       </div>
 
-      <div className="mt-10  bg-sky-300">
+      <div className="mt-10  bg-purple-300">
         <h1 className="text-2xl font-bold py-5 md:ml-5 text-purple-950 uppercase">
           Last seven month sells:
         </h1>
@@ -210,9 +210,9 @@ const BusinessRevenue = () => {
           </ResponsiveContainer>
         </div>
       </div>
-      <div className="mt-10  mb-20 bg-sky-300">
+      <div className="mt-10  mb-20 bg-purple-300">
         <h1 className="text-2xl font-bold py-5 md:ml-5 text-purple-950 uppercase">
-          Products price chart:
+          Products prices:
         </h1>
 
         <div className="md:ml-10">

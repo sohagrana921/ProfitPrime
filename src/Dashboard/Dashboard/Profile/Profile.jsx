@@ -98,7 +98,7 @@ const Profile = () => {
             </button>
           </div>
         </div>
-        <div className="md:grid grid-cols-2 gap-8 p-10 bg-sky-300 rounded-lg">
+        <div className="md:grid grid-cols-2 gap-8 p-10 bg-purple-300 rounded-lg">
           <div>
             <div className="space-y-4">
               <div>
