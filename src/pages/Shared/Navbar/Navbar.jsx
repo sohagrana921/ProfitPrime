@@ -105,7 +105,7 @@ const Navbar = () => {
               </summary>
               {showLinks && (
                 <ul className="p-2 bg-gradient-to-r from-purple-950 to-red-950 text-white absolute rounded-xl top-0 left-32">
-                  <Link to="/customerService">
+                  <Link to="/limitedHotelService">
                     <li className="hover:bg-red-900 p-2 rounded-lg">
                       Limited Service Hotel
                     </li>
@@ -216,7 +216,7 @@ const Navbar = () => {
             </summary>
             {showLinks && (
               <ul className="p-2 bg-gradient-to-r from-purple-950 to-red-950 text-white absolute rounded-xl top-full right-0">
-                <Link to="/customerService">
+                <Link to="/limitedHotelService">
                   <li className="hover:bg-red-900 p-2 rounded-lg">
                     Limited Service Hotel
                   </li>
@@ -243,9 +243,7 @@ const Navbar = () => {
             <>
               <Link to="/dashboard/showhome">
                 <li>
-                  <a className="hover:text-white hover:bg-red-950">
-                    Dashboard
-                  </a>
+                  <a className="hover:text-white hover:bg-red-950">Dashboard</a>
                 </li>
               </Link>
             </>

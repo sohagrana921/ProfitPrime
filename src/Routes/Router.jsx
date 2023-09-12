@@ -5,7 +5,6 @@ import Login from "../pages/Login&Register/Login";
 import Register from "../pages/Login&Register/Register";
 import DataAnalysis from "../pages/Products/DataAnalysis";
 import ConsultingProducts from "../pages/Home/ConsultingProducts/ConsultingProducts";
-import CustomerService from "../pages/Home/CustomerService/CustomerService";
 import BussinessOption from "../pages/Products/BussinessOption";
 import CompetitorSolution from "../pages/Products/CompetitorSolution";
 import Pricing from "../Components/Pricing";
@@ -32,6 +31,7 @@ import FreeDemo from "../pages/Home/FreeDemo/FreeDemo";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage";
 import FreeDemo1 from "../pages/Home/FreeDemo/FreeDemo1";
+import LimitedHotelService from "../pages/Home/LimitedHotelService/LimitedHotelService";
 
 const router = createBrowserRouter([
   {
@@ -88,8 +88,8 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/customerService",
-        element: <CustomerService></CustomerService>,
+        path: "/limitedHotelService",
+        element: <LimitedHotelService></LimitedHotelService>,
       },
       {
         path: "/upscale",

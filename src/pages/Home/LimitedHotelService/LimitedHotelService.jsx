@@ -1,4 +1,14 @@
 import { useEffect, useState } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 import img1 from "../../../assets/details/easy-hotel.png";
 import img2 from "../../../assets/details/freehand.png";
@@ -8,9 +18,53 @@ import img5 from "../../../assets/details/mama-shelter.png";
 import img6 from "../../../assets/details/sacher.png";
 import img7 from "../../../assets/details/the-hoxton.png";
 import img8 from "../../../assets/details/tsh.png";
-import { Helmet } from "react-helmet-async";
 
-const CustomerService = () => {
+const data = [
+  {
+    name: "Page A",
+    Price: 4000,
+    Sells: 2400,
+    Target: 2400,
+  },
+  {
+    name: "Page B",
+    Price: 3000,
+    Sells: 1398,
+    Target: 2210,
+  },
+  {
+    name: "Page C",
+    Price: 2000,
+    Sells: 9800,
+    Target: 2290,
+  },
+  {
+    name: "Page D",
+    Price: 2780,
+    Sells: 3908,
+    Target: 2000,
+  },
+  {
+    name: "Page E",
+    Price: 1890,
+    Sells: 4800,
+    Target: 2181,
+  },
+  {
+    name: "Page F",
+    Price: 2390,
+    Sells: 3800,
+    Target: 2500,
+  },
+  {
+    name: "Page G",
+    Price: 3490,
+    Sells: 4300,
+    Target: 2100,
+  },
+];
+
+const LimitedHotelService = () => {
   const [product, setProduct] = useState([]);
   const [showFullText, setShowFullText] = useState({});
   const [showMoreDetails, setShowMoreDetails] = useState({});
@@ -39,12 +93,9 @@ const CustomerService = () => {
 
   return (
     <div className="my-container">
-      <Helmet>
-        <title>ProfitPrime | Customers</title>
-      </Helmet>
       {product.map((p) => (
         <div key={p.id}>
-          <div className="hero mt-52 mb-52">
+          <div className="hero mt-52 mb-36">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <img src={p.brand_img} className=" w-96 rounded-lg shadow-2xl" />
               <div>
@@ -65,6 +116,28 @@ const CustomerService = () => {
                 </button>
               </div>
             </div>
+          </div>
+
+          <div className="mb-36">
+            <ResponsiveContainer width="90%" height={300}>
+              <BarChart
+                data={data}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 20,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="Sells" fill="#8884d8" />
+                <Bar dataKey="Price" fill="#82ca9d" />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
 
           <div className="hero">
@@ -170,4 +243,4 @@ const CustomerService = () => {
   );
 };
 
-export default CustomerService;
+export default LimitedHotelService;
