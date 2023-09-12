@@ -96,28 +96,30 @@ const Register = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input
-              type={showPassowrd ? "text" : "password"}
-              {...register("password", {
-                required: true,
-                minLength: 6,
-                maxLength: 20,
-              })}
-              {...register("password", {
-                required: true,
-                minLength: 6,
-                maxLength: 20,
-                pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*\d]+$/,
-              })}
-              placeholder="Password"
-              className="input input-bordered"
-            />
-            <Link>
-              <FaEye
-                className="text-xl flex absolute md:right-[365px] right-[50px] -mt-8"
-                onClick={() => setShowPassword(!showPassowrd)}
-              ></FaEye>
-            </Link>
+            <div className="flex justify-between">
+              <input
+                type={showPassowrd ? "text" : "password"}
+                {...register("password", {
+                  required: true,
+                  minLength: 6,
+                  maxLength: 20,
+                })}
+                {...register("password", {
+                  required: true,
+                  minLength: 6,
+                  maxLength: 20,
+                  pattern: /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*\d]+$/,
+                })}
+                placeholder="Password"
+                className="input input-bordered w-full"
+              />
+              <Link>
+                <FaEye
+                  className="text-xl -ml-10 mt-4"
+                  onClick={() => setShowPassword(!showPassowrd)}
+                ></FaEye>
+              </Link>
+            </div>
             {errors.password?.type === "required" && (
               <p className="text-red-500">password is required</p>
             )}
