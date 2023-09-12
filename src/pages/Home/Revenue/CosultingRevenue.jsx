@@ -21,10 +21,10 @@ const CosultingRevenue = () => {
   });
   return (
     <div>
-      <h1 className="text-center font-serif font-bold text-5xl mt-32 mb-20 text-red-800">
+      <h1 className="text-4xl font-serif font-bold text-red-800 md:mt-28 mt-20 mb-10">
         Sells Competitor
       </h1>
-      <ResponsiveContainer width="90%" height={200}>
+      <ResponsiveContainer width={350} height={200}>
         <AreaChart
           data={chart}
           margin={{

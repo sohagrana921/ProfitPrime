@@ -1,5 +1,18 @@
-import { useEffect, useState } from "react";
 
+import { useEffect, useState } from "react";
+import {
+  ComposedChart,
+  Line,
+  Area,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Scatter,
+  ResponsiveContainer,
+} from "recharts";
 import img1 from "../../../assets/details/easy-hotel.png";
 import img2 from "../../../assets/details/freehand.png";
 import img3 from "../../../assets/details/lark.png";
@@ -8,7 +21,51 @@ import img5 from "../../../assets/details/mama-shelter.png";
 import img6 from "../../../assets/details/sacher.png";
 import img7 from "../../../assets/details/the-hoxton.png";
 import img8 from "../../../assets/details/tsh.png";
-import { Helmet } from "react-helmet-async";
+
+const data = [
+  {
+    name: "Page A",
+    Price: 590,
+    Sells: 800,
+    Target: 1400,
+    Offer: 490,
+  },
+  {
+    name: "Page B",
+    Price: 868,
+    Sells: 967,
+    Target: 1506,
+    Offer: 590,
+  },
+  {
+    name: "Page C",
+    Price: 1397,
+    Sells: 1098,
+    Target: 989,
+    Offer: 850,
+  },
+  {
+    name: "Page D",
+    Price: 1480,
+    Sells: 1200,
+    Target: 628,
+    Offer: 780,
+  },
+  {
+    name: "Page E",
+    Price: 1520,
+    Sells: 1108,
+    Target: 1100,
+    Offer: 960,
+  },
+  {
+    name: "Page F",
+    Price: 1400,
+    Sells: 680,
+    Target:1700,
+    Offer: 880,
+  },
+];
 
 const HybridCustomer = () => {
   const [product, setProduct] = useState([]);
@@ -39,12 +96,9 @@ const HybridCustomer = () => {
 
   return (
     <div className="my-container">
-      <Helmet>
-        <title>ProfitPrime | Customers</title>
-      </Helmet>
       {product.map((p) => (
         <div key={p.id}>
-          <div className="hero mt-52 mb-52">
+          <div className="hero mt-52 mb-36">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <img src={p.brand_img} className="w-96 rounded-lg shadow-2xl" />
               <div>
@@ -65,6 +119,35 @@ const HybridCustomer = () => {
                 </button>
               </div>
             </div>
+          </div>
+
+          <div className="mb-36">
+            <ResponsiveContainer width="90%" height={300}>
+              <ComposedChart
+                data={data}
+                margin={{
+                  top: 20,
+                  right: 20,
+                  bottom: 20,
+                  left: 20,
+                }}
+              >
+                <CartesianGrid stroke="#f5f5f5" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Area
+                  type="monotone"
+                  dataKey="Target"
+                  fill="#8884d8"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="Sells" barSize={20} fill="#413ea0" />
+                <Line type="monotone" dataKey="Price" stroke="#ff7300" />
+                <Scatter dataKey="Offer" fill="red" />
+              </ComposedChart>
+            </ResponsiveContainer>
           </div>
 
           <div className="hero">

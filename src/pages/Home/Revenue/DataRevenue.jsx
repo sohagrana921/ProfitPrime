@@ -26,10 +26,12 @@ const DataRevenue = () => {
 
   return (
     <div>
-      <h1 className="text-center font-serif font-bold text-6xl mt-32 mb-20 text-red-800">
-        Business Information
-      </h1>
-      <ResponsiveContainer width="90%" height={200}>
+      <div>
+        <h1 className="text-4xl font-serif font-bold text-red-800 md:mt-28 mt-20 mb-10">
+          Business Information
+        </h1>
+      </div>
+      <ResponsiveContainer width={350} height={200}>
         <LineChart
           data={chart}
           margin={{
