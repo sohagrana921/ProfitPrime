@@ -5,7 +5,6 @@ import { FaEye } from "react-icons/fa";
 import logo from "../../assets/profit-up.png";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -18,28 +17,33 @@ const Login = () => {
   const { signIn } = useContext(AuthContext);
   const onSubmit = (data) => {
     console.log(data);
-    signIn(data.email, data.password).then((result) => {
-      const user = result.user;
-      console.log(user);
-      reset();
-      Swal.fire({
-        title: "User Login Successful.",
-        showClass: {
-          popup: "animate__animated animate__fadeInDown",
-        },
-        hideClass: {
-          popup: "animate__animated animate__fadeOutUp",
-        },
-      });
-      navigate(from, { replace: true });
-    });
+    if ((data.email, data.password)) {
+      signIn(data.email, data.password)
+        .then((result) => {
+          const user = result.user;
+          console.log(user);
+          reset();
+          Swal.fire({
+            icon: "success",
+            title: "Login Successful!",
+            text: "You have successfully Login.",
+            confirmButtonText: "OK",
+          });
+          navigate(from, { replace: true });
+        })
+        .catch((error) => {
+          console.log(error.message);
+          Swal.fire({
+            icon: "error",
+            text: "Please valid email and password",
+            confirmButtonText: "OK",
+          });
+        });
+    }
   };
 
   return (
     <div className="md:h-100vh my-32">
-      <Helmet>
-        <title>ProfitPrime | Login</title>
-      </Helmet>
       <div className="md:px-10 md:py-10 lg:w-1/2 md:w-3/4 mx-auto md:border-2 rounded-2xl md:shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <img

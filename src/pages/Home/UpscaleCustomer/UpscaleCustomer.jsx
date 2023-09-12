@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react";
-
+import {
+  ComposedChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Scatter,
+  ResponsiveContainer,
+} from "recharts";
 import img1 from "../../../assets/details/easy-hotel.png";
 import img2 from "../../../assets/details/freehand.png";
 import img3 from "../../../assets/details/lark.png";
@@ -8,7 +18,17 @@ import img5 from "../../../assets/details/mama-shelter.png";
 import img6 from "../../../assets/details/sacher.png";
 import img7 from "../../../assets/details/the-hoxton.png";
 import img8 from "../../../assets/details/tsh.png";
-import { Helmet } from "react-helmet-async";
+
+const data = [
+  { index: 10000, Sells: 1643, Price: 790 },
+  { index: 1666, Sells: 182, Price: 590 },
+  { index: 625, Sells: 156, Price: 490 },
+  // Calculation of line of best fit is not included in this demo
+  { index: 300, redLine: 0 },
+  { index: 10000, redLine: 1522 },
+  { index: 600, blueLine: 0 },
+  { index: 10000, blueLine: 678 },
+];
 
 const UpscaleCustomer = () => {
   const [product, setProduct] = useState([]);
@@ -39,12 +59,9 @@ const UpscaleCustomer = () => {
 
   return (
     <div className="my-container">
-      <Helmet>
-        <title>ProfitPrime | Customers</title>
-      </Helmet>
       {product.map((p) => (
         <div key={p.id}>
-          <div className="hero mt-52 mb-52">
+          <div className="hero mt-52 mb-36">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <img src={p.brand_img} className="w-96 rounded-lg shadow-2xl" />
               <div>
@@ -65,6 +82,55 @@ const UpscaleCustomer = () => {
                 </button>
               </div>
             </div>
+          </div>
+
+          <div className="mb-36">
+            <ResponsiveContainer width="90%" height={300}>
+              <ComposedChart
+                data={data}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 20,
+                  left: 20,
+                }}
+              >
+                <CartesianGrid stroke="#f5f5f5" />
+                <Tooltip />
+                <Legend />
+
+                <XAxis
+                  dataKey="index"
+                  type="number"
+                  label={{
+                    value: "Index",
+                    position: "insideBottomRight",
+                    offset: 0,
+                  }}
+                />
+                <YAxis
+                  unit="ms"
+                  type="number"
+                  label={{ value: "Time", angle: -90, position: "insideLeft" }}
+                />
+                <Scatter name="Sells" dataKey="Sells" fill="Sells" />
+                <Scatter name="Price" dataKey="Price" fill="Price" />
+                <Line
+                  dataKey="blueLine"
+                  stroke="blue"
+                  dot={false}
+                  activeDot={false}
+                  legendType="none"
+                />
+                <Line
+                  dataKey="redLine"
+                  stroke="red"
+                  dot={false}
+                  activeDot={false}
+                  legendType="none"
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
           </div>
 
           <div className="hero">
