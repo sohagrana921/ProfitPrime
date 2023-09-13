@@ -88,22 +88,34 @@ const FooterPage = () => {
                 Products
               </h6>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a
+                  href="/dataAnalysis"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
                   Data Analysis & Insights
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a
+                  href="/consulting"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
                   Consulting Services
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a
+                  href="/businessoption"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
                   Business Optimization
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a
+                  href="/competitor"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
                   Competitor Solution
                 </a>
               </p>
@@ -114,22 +126,22 @@ const FooterPage = () => {
                 Useful links
               </h6>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="/pricing" className="text-neutral-600 dark:text-neutral-200">
                   Pricing
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
                   Settings
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
                   Orders
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="/contact" className="text-neutral-600 dark:text-neutral-200">
                   Help
                 </a>
               </p>
