@@ -36,13 +36,13 @@ const Contact = () => {
           heading={"Contact Us"}
         ></SectionTitle>
         <div className="md:flex">
-          <div className="text-center lg:text-left ">
+          <div className="text-center lg:text-left " data-aos="fade-right">
             <Lottie animationData={email} loop={true} />
           </div>
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="card flex-shrink-0 md:w-1/2  max-w-xl border bg-base-100"
+            className="card flex-shrink-0 md:w-1/2  max-w-xl border bg-base-100" data-aos="fade-left"
           >
             <div className="card-body">
               <div className="form-control">

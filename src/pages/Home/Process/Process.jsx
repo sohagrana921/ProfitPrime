@@ -1,6 +1,7 @@
 const Process = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-950 to-red-800 py-20 mt-20 text-white text-center">
+    <div className="bg-gradient-to-r from-purple-950 to-red-800 py-20 mt-20 text-white text-center" data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom">
       <div className="text-center  md:mx-64">
         <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-white">
           Limited Time Offer!
