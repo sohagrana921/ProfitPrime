@@ -9,7 +9,7 @@ const FAQuestion = () => {
       ></SectionTitle>
 
       <div className="my-container">
-        <div className="collapse collapse-plus bg-white">
+        <div className="collapse collapse-plus bg-white" data-aos="zoom-in-up">
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div className="collapse-title text-xl font-medium">
             What is a revenue generation platform?
@@ -27,7 +27,7 @@ const FAQuestion = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-white mt-5">
+        <div className="collapse collapse-plus bg-white mt-5" data-aos="zoom-in-up">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-xl font-medium">
             What are some common features of revenue generation platforms?{" "}
@@ -52,7 +52,7 @@ const FAQuestion = () => {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-white mt-5 mb-10">
+        <div className="collapse collapse-plus bg-white mt-5 mb-10" data-aos="zoom-in-up">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-xl font-medium">
             How can businesses choose the right revenue generation platform for
