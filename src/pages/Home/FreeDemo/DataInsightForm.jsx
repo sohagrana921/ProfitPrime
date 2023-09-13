@@ -53,6 +53,7 @@ const DataInsightForm = () => {
                   <input
                     type="text"
                     id="names"
+                    required
                     {...register("names")}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                   />
@@ -67,6 +68,7 @@ const DataInsightForm = () => {
                   <input
                     type="text"
                     id="sales"
+                    required
                     {...register("sales")}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                   />
@@ -82,6 +84,7 @@ const DataInsightForm = () => {
                   <input
                     type="text"
                     id="price"
+                    required
                     {...register("price")}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                   />
@@ -101,6 +104,7 @@ const DataInsightForm = () => {
                 <input
                   type="text"
                   id="names1"
+                  required
                   {...register("names1")}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
@@ -115,6 +119,7 @@ const DataInsightForm = () => {
                 <input
                   type="text"
                   id="sales1"
+                  required
                   {...register("sales1")}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
@@ -130,6 +135,7 @@ const DataInsightForm = () => {
                 <input
                   type="text"
                   id="price1"
+                  required
                   {...register("price1")}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
@@ -150,6 +156,7 @@ const DataInsightForm = () => {
                     <input
                       type="text"
                       id="names2"
+                      required
                       {...register("names2")}
                       className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                     />
@@ -164,6 +171,7 @@ const DataInsightForm = () => {
                     <input
                       type="text"
                       id="sales2"
+                      required
                       {...register("sales2")}
                       className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                     />
@@ -179,6 +187,7 @@ const DataInsightForm = () => {
                     <input
                       type="text"
                       id="price2"
+                      required
                       {...register("price2")}
                       className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                     />
@@ -199,6 +208,7 @@ const DataInsightForm = () => {
                 <input
                   type="text"
                   id="names3"
+                  required
                   {...register("names3")}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
@@ -213,6 +223,7 @@ const DataInsightForm = () => {
                 <input
                   type="text"
                   id="sales3"
+                  required
                   {...register("sales3")}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
@@ -228,6 +239,7 @@ const DataInsightForm = () => {
                 <input
                   type="text"
                   id="price3"
+                  required
                   {...register("price3")}
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />
