@@ -31,7 +31,7 @@ const Reviews = () => {
         >
           <SwiperSlide>
             <div className=" flex flex-col items-center md:mx-40" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+              data-aos-anchor-placement="top-bottom">
               <Rating style={{ maxWidth: 180 }} value={4} readOnly />
               <p className="my-4">
                 ProfitPrime has been a valuable tool for optimizing my online
@@ -48,7 +48,7 @@ const Reviews = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className=" flex flex-col items-center md:mx-40" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+              data-aos-anchor-placement="top-bottom">
               <Rating style={{ maxWidth: 180 }} value={4.5} readOnly />
               <p className="my-4">
                 I have found ProfitPrime to be an effective platform for
@@ -59,7 +59,7 @@ const Reviews = () => {
                 recommend ProfitPrime to fellow entrepreneurs
               </p>
               <h3 className="md:text-2xl text-purple-950 font-bold uppercase" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+                data-aos-anchor-placement="top-bottom">
                 Titan
               </h3>
             </div>
@@ -76,7 +76,7 @@ const Reviews = () => {
                 true to my creative vision
               </p>
               <h3 className="md:text-2xl text-purple-950 font-bold uppercase" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+                data-aos-anchor-placement="top-bottom">
                 Tonmoy
               </h3>
             </div>
