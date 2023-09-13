@@ -4,3 +4,11 @@ video {
   object-fit: cover;
   background: white;
 }
+.LazyLoad {
+  opacity: 0;
+  transition: all 3s ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
+}
