@@ -126,7 +126,10 @@ const FooterPage = () => {
                 Useful links
               </h6>
               <p className="mb-4">
-                <a href="/pricing" className="text-neutral-600 dark:text-neutral-200">
+                <a
+                  href="/pricing"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
                   Pricing
                 </a>
               </p>
@@ -141,7 +144,10 @@ const FooterPage = () => {
                 </a>
               </p>
               <p>
-                <a href="/contact" className="text-neutral-600 dark:text-neutral-200">
+                <a
+                  href="/contact"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
                   Help
                 </a>
               </p>
