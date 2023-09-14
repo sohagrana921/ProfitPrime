@@ -1,5 +1,7 @@
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 import {
   ComposedChart,
   Line,
@@ -62,7 +64,7 @@ const data = [
     name: "Page F",
     Price: 1400,
     Sells: 680,
-    Target:1700,
+    Target: 1700,
     Offer: 880,
   },
 ];
@@ -113,9 +115,20 @@ const HybridCustomer = () => {
                 </p>
                 <button
                   onClick={() => toggleFullText(p.id)}
-                  className="btn bg-red-800 hover:bg-purple-950 text-white"
+                  className="btn bg-red-800 hover:bg-purple-950 text-white animate-pulse"
                 >
-                  {showFullText[p.id] ? "Read Less" : "Learn More"}
+                  <motion.div
+                    className="box"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }} >
+
+                    {showFullText[p.id] ? "Read Less" : "Learn More"}
+                  </motion.div>
                 </button>
               </div>
             </div>
@@ -165,28 +178,28 @@ const HybridCustomer = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-4 w-7/12 mt-40 gap-16 mx-auto">
             <div>
-              <img src={img1} alt="" />
+              <img src={img1} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img2} alt="" />
+              <img src={img2} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img3} alt="" />
+              <img src={img3} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img4} alt="" />
+              <img src={img4} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img5} alt="" />
+              <img src={img5} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img6} alt="" />
+              <img src={img6} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img7} alt="" />
+              <img src={img7} alt="" data-aos="zoom-in-up" />
             </div>
             <div>
-              <img src={img8} alt="" />
+              <img src={img8} alt="" data-aos="zoom-in-up" />
             </div>
           </div>
 
@@ -238,11 +251,22 @@ const HybridCustomer = () => {
               <div className="mt-10 mb-16">
                 <button
                   onClick={() => toggleMoreDetails(p.id)}
-                  className="btn bg-red-800 hover:bg-purple-950 text-white"
+                  className="btn bg-red-800 hover:bg-purple-950 text-white animate-pulse"
                 >
-                  {showMoreDetails[p.id]
-                    ? "Show Less Details"
-                    : "Learn More Details"}
+                  <motion.div
+                    className="box"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }} >
+
+                    {showMoreDetails[p.id]
+                      ? "Show Less Details"
+                      : "Learn More Details"}
+                  </motion.div>
                 </button>
               </div>
             </div>

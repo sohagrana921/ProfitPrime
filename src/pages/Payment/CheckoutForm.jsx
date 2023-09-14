@@ -5,6 +5,7 @@ import "./CheckoutForm.css";
 import { AuthContext } from "../../providers/AuthProvider";
 import axios from "axios";
 import PaymentSuccessModal from "./PaymentSuccessModal";
+import { motion } from "framer-motion";
 
 const CheckoutForm = ({ pay, userRole }) => {
   const stripe = useStripe();
@@ -77,7 +78,7 @@ const CheckoutForm = ({ pay, userRole }) => {
           },
         },
       });
- 
+
     if (confirmError) {
       setError(confirmError.message);
     }
@@ -170,12 +171,24 @@ const CheckoutForm = ({ pay, userRole }) => {
         </Link> */}
 
         <p>{cardError}</p>
+
         <button
           className="btn btn-sm bg-red-800 hover:bg-purple-950 text-white"
           type="submit"
           disabled={!stripe || !clientSecret || processing}
         >
-          Pay
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }} >
+
+            Pay
+          </motion.div>
         </button>
       </form>
 

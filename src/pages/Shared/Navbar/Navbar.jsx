@@ -3,6 +3,7 @@ import logo from "../../../assets/profit-up.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useVerifyAdmin from "../../../Hooks/useVerifyAdmin";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -45,11 +46,21 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gradient-to-r from-purple-950 to-red-950 text-white hover:text-white rounded-box w-52"
           >
-            <Link to={"/"}>
-              <li>
-                <a className="hover:text-white hover:bg-red-950">Home</a>
-              </li>
-            </Link>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }} >
+              <Link to={"/"}>
+                <li>
+                  <a className="hover:text-white hover:bg-red-950">Home</a>
+                </li>
+              </Link>
+            </motion.div>
             <li onMouseEnter={toggleLinks1} onMouseLeave={toggleLinks1}>
               <summary className="hover:text-white hover:bg-red-950">
                 Products
@@ -156,108 +167,251 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <Link to={"/"}>
-            <li>
-              <a className="hover:text-white hover:bg-red-950">Home</a>
-            </li>
-          </Link>
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }} >
+            <Link to={"/"}>
+              <li>
+                <a className="hover:text-white hover:bg-red-950">Home</a>
+              </li>
+            </Link>
+          </motion.div>
           <li onMouseEnter={toggleLinks1} onMouseLeave={toggleLinks1}>
             <summary className="hover:text-white hover:bg-red-950">
-              Products
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }} >
+                Products
+              </motion.div>
             </summary>
             {showLinks1 && (
               <ul className="p-2 bg-gradient-to-r from-purple-950 to-red-950 text-white rounded-xl absolute top-full right-0">
-                <Link to={"/dataAnalysis"}>
-                  <li className="hover:bg-red-900 p-2 rounded-lg">
-                    Data Analysis & Insights
-                  </li>
-                </Link>
-                <Link to={"/consulting"}>
-                  <li className="hover:bg-red-900 p-2 rounded-lg">
-                    Consulting Services
-                  </li>
-                </Link>
-                <Link to={"/businessoption"}>
-                  <li className="hover:bg-red-900 p-2 rounded-lg">
-                    Business optimization
-                  </li>
-                </Link>
-                <Link to={"/competitor"}>
-                  <li className="hover:bg-red-900 p-2 rounded-lg">
-                    Competitor Solution
-                  </li>
-                </Link>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to={"/dataAnalysis"}>
+                    <li className="hover:bg-red-900 p-2 rounded-lg">
+                      Data Analysis & Insights
+                    </li>
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to={"/consulting"}>
+                    <li className="hover:bg-red-900 p-2 rounded-lg">
+                      Consulting Services
+                    </li>
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to={"/businessoption"}>
+                    <li className="hover:bg-red-900 p-2 rounded-lg">
+                      Business optimization
+                    </li>
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to={"/competitor"}>
+                    <li className="hover:bg-red-900 p-2 rounded-lg">
+                      Competitor Solution
+                    </li>
+                  </Link>
+                </motion.div>
               </ul>
             )}
           </li>
-          {checkAdmin ? (
-            <>
-              <Link to="/pricing">
-                <li>
-                  <a className="hover:text-white hover:bg-red-950 hidden">
-                    Pricing
-                  </a>
-                </li>
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link to="/pricing">
-                <li>
-                  <a className="hover:text-white hover:bg-red-950">Pricing</a>
-                </li>
-              </Link>
-            </>
-          )}
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }} >
+            {checkAdmin ? (
+              <>
+                <Link to="/pricing">
+                  <li>
+                    <a className="hover:text-white hover:bg-red-950 hidden">
+                      Pricing
+                    </a>
+                  </li>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/pricing">
+                  <li>
+                    <a className="hover:text-white hover:bg-red-950">Pricing</a>
+                  </li>
+                </Link>
+              </>
+            )}
+          </motion.div>
 
           <li onMouseEnter={toggleLinks} onMouseLeave={toggleLinks}>
             <summary className="hover:text-white hover:bg-red-950">
-              Customers
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }} >
+                Customers
+              </motion.div>
             </summary>
             {showLinks && (
               <ul className="p-2 bg-gradient-to-r from-purple-950 to-red-950 text-white absolute rounded-xl top-full right-0">
-                <Link to="/limitedHotelService">
-                  <li className="hover:bg-red-900 p-2 rounded-lg">
-                    Limited Service Hotel
-                  </li>
-                </Link>
-                <Link to="/hybridcustomer">
-                  <li className="my-2 hover:bg-red-900 p-2 rounded-lg">
-                    Hybrid Accommodation
-                  </li>
-                </Link>
-                <Link to="/upscale">
-                  <li className="my-2 hover:bg-red-900 p-2 rounded-lg">
-                    Upscale & Luxury Hotel
-                  </li>
-                </Link>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to="/limitedHotelService">
+                    <li className="hover:bg-red-900 p-2 rounded-lg">
+                      Limited Service Hotel
+                    </li>
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to="/hybridcustomer">
+                    <li className="my-2 hover:bg-red-900 p-2 rounded-lg">
+                      Hybrid Accommodation
+                    </li>
+                  </Link>
+                </motion.div>
+
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <Link to="/upscale">
+                    <li className="my-2 hover:bg-red-900 p-2 rounded-lg">
+                      Upscale & Luxury Hotel
+                    </li>
+                  </Link>
+                </motion.div>
               </ul>
             )}
           </li>
-          <Link to={"/contact"}>
-            <li>
-              <a className="hover:text-white hover:bg-red-950">Contact</a>
-            </li>
-          </Link>
-          {user ? (
-            <>
-              <Link to="/dashboard/showhome">
-                <li>
-                  <a className="hover:text-white hover:bg-red-950">Dashboard</a>
-                </li>
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link to="/dashboard/showhome">
-                <li>
-                  <a className="hover:text-white hidden hover:bg-red-900">
-                    Dashboard
-                  </a>
-                </li>
-              </Link>
-            </>
-          )}
+
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }} >
+            <Link to={"/contact"}>
+              <li>
+                <a className="hover:text-white hover:bg-red-950">Contact</a>
+              </li>
+            </Link>
+          </motion.div>
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }} >
+            {user ? (
+              <>
+                <Link to="/dashboard/showhome">
+                  <li>
+                    <a className="hover:text-white hover:bg-red-950">Dashboard</a>
+                  </li>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/dashboard/showhome">
+                  <li>
+                    <a className="hover:text-white hidden hover:bg-red-900">
+                      Dashboard
+                    </a>
+                  </li>
+                </Link>
+              </>
+            )}
+          </motion.div>
         </ul>
       </div>
       <div className="navbar-end">
@@ -268,18 +422,29 @@ const Navbar = () => {
           Free Trial
         </Link>
 
-        {user ? (
-          <Link
-            onClick={handleLogOut}
-            className="hover:bg-red-950 p-2 rounded-md"
-          >
-            Logout
-          </Link>
-        ) : (
-          <Link className="hover:bg-red-950 p-2 rounded-md" to={"/login"}>
-            Login
-          </Link>
-        )}
+        <motion.div
+          className="box"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }} >
+            
+          {user ? (
+            <Link
+              onClick={handleLogOut}
+              className="hover:bg-red-950 p-2 rounded-md"
+            >
+              Logout
+            </Link>
+          ) : (
+            <Link className="hover:bg-red-950 p-2 rounded-md" to={"/login"}>
+              Login
+            </Link>
+          )}
+        </motion.div>
       </div>
     </div>
   );

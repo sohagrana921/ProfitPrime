@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Lottie from "lottie-react";
 import email from "../../animation_lmcjoff8.json";
 import SectionTitle from "../pages/Shared/SectionTitle/SectionTitle";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef();
@@ -88,11 +89,23 @@ const Contact = () => {
                   className="textarea textarea-bordered textarea-lg w-full max-w-xl"
                 />
               </div>
+
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }} >
+
               <input
-                className=" text-white bg-red-800 hover:bg-purple-900 uppercase p-3 rounded-lg mt-5 hover:text-white"
+                className=" text-white bg-red-800 hover:bg-purple-900 uppercase p-3 rounded-lg mt-5 hover:text-white w-full"
                 type="submit"
                 value="Send"
               />
+              </motion.div>
             </div>
           </form>
         </div>

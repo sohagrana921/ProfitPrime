@@ -68,9 +68,9 @@ const FooterPage = () => {
         <div className="mx-6 py-10 text-center md:text-left">
           <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="">
-              <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 flex items-center text-red-600 justify-center font-semibold uppercase md:justify-start animate-bounce">
                 <img
-                  className="h-8 w-8 rounded-full mr-3 animate-bounce"
+                  className="h-8 w-8 rounded-full mr-3"
                   src="./profit-up.png"
                   alt=""
                 />

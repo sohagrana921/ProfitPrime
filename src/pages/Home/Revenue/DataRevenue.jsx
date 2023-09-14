@@ -10,6 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 const DataRevenue = () => {
   const [chart, setChart] = useState([]);
@@ -26,11 +27,10 @@ const DataRevenue = () => {
 
   return (
     <div>
-      <div>
-        <h1 className="text-4xl font-serif font-bold text-red-800 md:mt-28 mt-20 mb-10">
-          Business Information
-        </h1>
-      </div>
+      <SectionTitle
+        subheading={"Know Your Business"}
+        heading={"Business Information"}
+      ></SectionTitle>
       <ResponsiveContainer width={350} height={200}>
         <LineChart
           data={chart}

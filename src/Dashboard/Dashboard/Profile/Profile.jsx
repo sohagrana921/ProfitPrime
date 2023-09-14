@@ -4,6 +4,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useCallback } from "react";
+import { motion } from "framer-motion";
 
 const popularCategories = [
   "Technology",
@@ -89,13 +90,24 @@ const Profile = () => {
             <h3 className="md:text-2xl font-bold border-purple-900 border-y-4 py-2 uppercase text-red-800">Your Profile</h3>
           </div>
           <div className="py-2 font-semibold mb-4 text-center text-gray-800 md:mb-0">
-            <button
-              onClick={handleEditClick}
-              className="bg-red-800 hover:bg-purple-950 text-white px-4 py-2 rounded-lg mb-4 focus:outline-none"
-            >
-              {/* Edit button */}
-              {editMode ? "Cancel Edit" : "Edit"}
-            </button>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }} >
+
+              <button
+                onClick={handleEditClick}
+                className="bg-red-800 hover:bg-purple-950 text-white px-4 py-2 rounded-lg mb-4 focus:outline-none"
+              >
+                {/* Edit button */}
+                {editMode ? "Cancel Edit" : "Edit"}
+              </button>
+            </motion.div>
           </div>
         </div>
         <div className="md:grid grid-cols-2 gap-8 p-10 bg-purple-300 rounded-lg">
@@ -240,13 +252,25 @@ const Profile = () => {
               </div>
             </div>
           </div>
+
           {editMode && (
             <div className="col-span-2 flex justify-center ">
               <button
                 type="submit"
                 className="bg-red-800 hover:bg-purple-950  text-white px-4 py-3 mt-2 rounded-lg focus:outline-none w-1/3"
               >
-                Submit
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  Submit
+                </motion.div>
               </button>
             </div>
           )}
