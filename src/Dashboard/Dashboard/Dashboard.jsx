@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   FaBattleNet,
   FaHandsHelping,
@@ -197,106 +198,216 @@ const Dashboard = () => {
 
             {checkAdmin ? (
               <>
-                <li>
-                  <NavLink
-                    to={"/dashboard/manageusers"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaUsers></FaUsers> Users Management
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={"/dashboard/primeusers"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaUserAstronaut></FaUserAstronaut> Prime Users
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={"/dashboard/basicusers"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaUserCircle></FaUserCircle> Basic Users
-                  </NavLink>
-                </li>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/manageusers"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaUsers></FaUsers> Users Management
+                    </NavLink>
+                  </li>
+                </motion.div>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/primeusers"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaUserAstronaut></FaUserAstronaut> Prime Users
+                    </NavLink>
+                  </li>
+                </motion.div>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/basicusers"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaUserCircle></FaUserCircle> Basic Users
+                    </NavLink>
+                  </li>
+                </motion.div>
               </>
             ) : (
               <>
-                <li>
-                  <NavLink
-                    to={"/dashboard/dataRevenue"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FcDatabase /> Data Insight
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={"/dashboard/businessRevenue"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <AiFillCaretRight /> Business Info
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={"/dashboard/cosultingRevenue"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaBattleNet /> Competitor
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={"/dashboard/dashhome"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaMoneyCheck></FaMoneyCheck> Subscription
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={"/dashboard/pay"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaPaypal></FaPaypal> Payment History
-                  </NavLink>
-                </li>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/dataRevenue"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FcDatabase /> Data Insight
+                    </NavLink>
+                  </li>
+                </motion.div>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/businessRevenue"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <AiFillCaretRight /> Business Info
+                    </NavLink>
+                  </li>
+                </motion.div>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/cosultingRevenue"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaBattleNet /> Competitor
+                    </NavLink>
+                  </li>
+                </motion.div>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/dashhome"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaMoneyCheck></FaMoneyCheck> Subscription
+                    </NavLink>
+                  </li>
+                </motion.div>
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  <li>
+                    <NavLink
+                      to={"/dashboard/pay"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaPaypal></FaPaypal> Payment History
+                    </NavLink>
+                  </li>
+                </motion.div>
               </>
             )}
 
             <div className="divider"></div>
 
-            <li>
-              <NavLink to={"/"} className="hover:text-white hover:bg-red-950">
-                <FaHome /> Home
-              </NavLink>
-            </li>
-            {checkAdmin ? (
-              <>
-                <li>
-                  <NavLink
-                    to={"/dashboard/help"}
-                    className="hover:text-white hover:bg-red-950 hidden"
-                  >
-                    <FaHandsHelping /> Help
-                  </NavLink>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <NavLink
-                    to={"/dashboard/help"}
-                    className="hover:text-white hover:bg-red-950"
-                  >
-                    <FaHandsHelping /> Help
-                  </NavLink>
-                </li>
-              </>
-            )}
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }} >
+
+              <li>
+                <NavLink to={"/"} className="hover:text-white hover:bg-red-950">
+                  <FaHome /> Home
+                </NavLink>
+              </li>
+            </motion.div>
+            <motion.div
+              className="box"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }} >
+
+              {checkAdmin ? (
+                <>
+                  <li>
+                    <NavLink
+                      to={"/dashboard/help"}
+                      className="hover:text-white hover:bg-red-950 hidden"
+                    >
+                      <FaHandsHelping /> Help
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <NavLink
+                      to={"/dashboard/help"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaHandsHelping /> Help
+                    </NavLink>
+                  </li>
+                </>
+              )}
+            </motion.div>
           </ul>
         </div>
       </div>

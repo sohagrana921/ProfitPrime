@@ -5,6 +5,7 @@ import CheckoutForm from "./CheckoutForm";
 import anime from '../../../animation_lmdq6nzz.json'
 import Lottie from "lottie-react";
 
+
 const Payment = () => {
   const { plan, billingOption } = useParams();
 

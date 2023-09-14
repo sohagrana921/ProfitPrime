@@ -6,8 +6,8 @@ const CompetitorSolution = () => {
       <Helmet>
         <title>ProfitPrime | Products</title>
       </Helmet>
-      <div className="my-container">
-        <div className="bg-gradient-to-r from-purple-100 to-purple-300 p-4 rounded-lg shadow-md flex flex-col md:flex-row md:items-center mb-6">
+      <div className="my-container my-44">
+        <div className="bg-gradient-to-r from-purple-100 to-purple-300 p-4 rounded-lg shadow-md flex flex-col md:flex-row md:items-center mb-6 ">
           {/* Image */}
           <div className="flex-shrink-0 w-12 h-12">
             <img
@@ -19,7 +19,7 @@ const CompetitorSolution = () => {
 
           {/* Text */}
           <div className="md:ml-4 flex-grow">
-            <h3 className="text-lg font-semibold mb-2 text-purple-800">
+            <h3 className="text-lg font-semibold mb-2 text-purple-800 animate-bounce">
               Analyzing Competitors
             </h3>
             <ul className="list-disc list-inside text-gray-800 pl-8">
@@ -47,7 +47,7 @@ const CompetitorSolution = () => {
 
           {/* Text */}
           <div className="md:ml-4 flex-grow">
-            <h3 className="text-lg font-semibold mb-2 text-red-800">
+            <h3 className="text-lg font-semibold mb-2 text-red-800 animate-bounce">
               Positioning Your Offering
             </h3>
             <ul className="list-disc list-inside text-gray-800 pl-8">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -23,27 +24,52 @@ const AboutUs = () => {
                 : "Our Company Profit Prime is your gateway to enhanced growth and prosperity. Through our innovative products, transparent pricing, and powerful features, we empower your business to easily optimize revenue strategies."}
             </p>
 
-            <div className="flex space-x-4">
-              {!showFullText && (
-                <button
-                  onClick={toggleFullText}
-                  className="px-4 py-2 bg-red-800 hover:bg-purple-900  text-white rounded transition duration-300 uppercase"
+            <div className="flex space-x-4 items-center">
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }} >
+                {!showFullText && (
+
+                  <button
+                    onClick={toggleFullText}
+                    className="px-4 py-2 bg-red-800 hover:bg-purple-900  text-white rounded transition duration-300 uppercase"
+                  >
+                    Learn More
+                  </button>
+                )}
+
+              </motion.div>
+
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }} >
+
+                <a
+                  href="#testimonials"
+                  className="px-4 py-3 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300"
                 >
-                  Learn More
-                </button>
-              )}
-              <a
-                href="#testimonials"
-                className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300"
-              >
-                READ TESTIMONIALS
-              </a>
+                  READ TESTIMONIALS
+                </a>
+              </motion.div>
+
             </div>
           </div>
           <div className="md:w-1/2 py-12 " data-aos="fade-left">
-            <img 
+            <img
               src="https://img.freepik.com/premium-vector/profit-money-budget-cash-rising-graph-arrow-up-concept-business-success-capital-earnings-benefit-stock-illustration_100456-1704.jpg?w=2000"
-              alt="About Us Image" 
+              alt="About Us Image"
               className="w-full h-auto md:max-w-lg mx-auto rounded-lg  px-10"
             />
           </div>

@@ -26,7 +26,7 @@ const ConsultingProducts = () => {
               </h2>
               <p>{p.pdescribtion}</p>
               <p>
-                <span className="font-bold text-red-800">
+                <span className="font-bold text-red-800 animate-bounce">
                   Experience Needed:
                 </span>{" "}
                 {p.Experience}

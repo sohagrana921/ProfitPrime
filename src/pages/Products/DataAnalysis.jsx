@@ -14,7 +14,7 @@ const DataAnalysis = () => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-red-800">
+          <h2 className="card-title text-red-800 animate-bounce">
             Get creative with your data!
           </h2>
           <p>
@@ -23,7 +23,7 @@ const DataAnalysis = () => {
             need to be able to have full control of your data.
           </p>
           <div className="my-10">
-            <h2 className="card-title text-red-800">
+            <h2 className="card-title text-red-800 animate-bounce">
               Bring your strategy alive!
             </h2>
             <p>
@@ -32,7 +32,7 @@ const DataAnalysis = () => {
               stakeholders with beautiful visualisations.
             </p>
           </div>
-          <h2 className="card-title text-red-800">Never miss a thing!</h2>
+          <h2 className="card-title text-red-800 animate-bounce">Never miss a thing!</h2>
           <p>
             It is your responsibility to keep everybody in your group updated
             about your revenue strategy. Pace enables you to automate these

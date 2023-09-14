@@ -22,7 +22,7 @@ const DashHome = () => {
   
 
   return (
-    <div className="flex justify-center w-full items-center h-screen bg-green-100">
+    <div className="flex justify-center w-full items-center h-screen">
       <SubscriptionCard
         companyName={customer?.name}
         planName={customer?.userRole}

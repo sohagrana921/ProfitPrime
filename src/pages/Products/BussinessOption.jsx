@@ -14,21 +14,21 @@ const BussinessOption = () => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-red-800">Increase your accuracy!</h2>
+          <h2 className="card-title text-red-800 animate-bounce">Increase your accuracy!</h2>
           <p>
             Take advantage of our system-generated predictions to improve
             accuracy and granularity of forecasts. Review each day and segment
             to supplement information that is unique to your knowledge..
           </p>
           <div className="my-10">
-            <h2 className="card-title text-red-800">Work collaboratively!</h2>
+            <h2 className="card-title text-red-800 animate-bounce">Work collaboratively!</h2>
             <p>
               Lock-in your forecasts for key stakeholders while you and your
               team continue working on the next iteration. Share insights and
               findings directly in Pace, and keep track of various proposals
             </p>
           </div>
-          <h2 className="card-title text-red-800">
+          <h2 className="card-title text-red-800 animate-bounce">
             Keep your eyes on the target!
           </h2>
           <p>

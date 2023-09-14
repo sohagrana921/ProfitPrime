@@ -8,6 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 const CosultingRevenue = () => {
   const [chart, setChart] = useState([]);
@@ -21,9 +22,10 @@ const CosultingRevenue = () => {
   });
   return (
     <div>
-      <h1 className="text-4xl font-serif font-bold text-red-800 md:mt-28 mt-20 mb-10">
-        Sells Competitor
-      </h1>
+      <SectionTitle
+        subheading={"Know Your Business"}
+        heading={"Sells Competitor"}
+      ></SectionTitle>
       <ResponsiveContainer width={350} height={200}>
         <AreaChart
           data={chart}

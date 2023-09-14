@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const DataInsightForm = () => {
   const { register, handleSubmit } = useForm();
@@ -250,7 +251,18 @@ const DataInsightForm = () => {
                 type="submit"
                 className="bg-red-800 hover:bg-purple-950 transition duration-300 text-white md:px-4 px-2 py-3 mt-4 rounded-lg  w-2/3"
               >
-                Submit
+                <motion.div
+                  className="box"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }} >
+
+                  Submit
+                </motion.div>
               </button>
             </div>
           </div>
