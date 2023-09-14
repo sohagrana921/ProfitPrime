@@ -32,6 +32,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage";
 import FreeDemo1 from "../pages/Home/FreeDemo/FreeDemo1";
 import LimitedHotelService from "../pages/Home/LimitedHotelService/LimitedHotelService";
+import PaidUser from "../Hooks/PaidUser";
 
 const router = createBrowserRouter([
   {
@@ -127,7 +128,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: <PaidUser><Dashboard></Dashboard></PaidUser>,
     children: [
       // Admin Works
       {
