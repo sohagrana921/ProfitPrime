@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Process = () => {
   return (
@@ -22,12 +23,14 @@ const Process = () => {
           damping: 17,
         }} >
 
-        <a
-          href="#contact"
-          className="px-4 py-2 mt-5 bg-red-800 hover:bg-purple-900  text-white rounded transition duration-300 uppercase"
-        >
-          Contact Us
-        </a>
+        <Link to={'/contact'}>
+          <button
+            href="#contact"
+            className="px-4 py-2 mt-5 bg-red-800 hover:bg-purple-900  text-white rounded transition duration-300 uppercase"
+          >
+            Contact Us
+          </button>
+        </Link>
       </motion.div>
     </div>
   );

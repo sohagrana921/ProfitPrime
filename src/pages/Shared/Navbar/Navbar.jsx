@@ -162,8 +162,8 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <img src={logo} alt="" className="h-10 w-10" />
-        <p className="btn btn-ghost ml-3 normal-case text-xl">Profit Prime</p>
+        <img src={logo} alt="" className="lg:h-10 h-5 w-5 lg:w-10" />
+        <p className="btn btn-ghost normal-case lg:text-xl">Profit Prime</p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -415,13 +415,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link
-          to="/free"
-          className="btn border-2 btn-sm hidden text-white hover:text-white hover:bg-red-950 bg-purple-950 rounded-full"
-        >
-          Free Trial
-        </Link>
-
+        
         <motion.div
           className="box"
           whileHover={{ scale: 1.1 }}
