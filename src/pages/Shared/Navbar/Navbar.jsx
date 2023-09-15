@@ -156,7 +156,9 @@ const Navbar = () => {
           </ul>
         </div>
         <img src={logo} alt="" className="lg:h-10 h-5 w-5 lg:w-10" />
-        <p className="btn btn-ghost normal-case lg:text-xl">Profit Prime</p>
+        <Link to="/" className="btn btn-ghost normal-case lg:text-xl">
+          Profit Prime
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

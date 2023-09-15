@@ -65,7 +65,7 @@ const OurProcess = () => {
             <FaArrowsAlt className="h-20 w-20 bg-red-800 mt-10 text-white p-4 rounded-lg mx-auto"></FaArrowsAlt>
 
             <h1
-              className="text-xl lg:text-2xluppercase font-bold mt-4 tracking-widest"
+              className="text-xl lg:text-2xl uppercase font-bold mt-4 tracking-widest"
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >

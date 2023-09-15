@@ -19,14 +19,13 @@ const DashHome = () => {
         console.error("Error fetching customer information:", error);
       });
   }, [email]);
-  
 
   return (
     <div className="flex justify-center w-full items-center h-screen">
       <SubscriptionCard
         companyName={customer?.name}
         planName={customer?.userRole}
-        subscriptionDate="Sep 8, 2023"
+        subscriptionDate="Sep 15, 2023"
         endDate=""
         imageUrl="https://via.placeholder.com/150"
       />
