@@ -42,6 +42,7 @@ const CustomerInformation = () => {
 
   const onSubmit = (data) => {
     const updatedUserData = {
+      name: defaultName,
       email: defaultEmail,
       address: data.address,
       website: data.website,
@@ -85,7 +86,7 @@ const CustomerInformation = () => {
                   type="text"
                   id="name"
                   {...register("name", { required: 0 })}
-                  defaultValue={defaultName} // Set default value for name
+                  defaultValue={defaultName}
                   disabled
                   className="w-full border border-gray-300 rounded-lg px-3 py-2 placeholder-gray-400 focus:outline-none focus:border-indigo-500"
                 />

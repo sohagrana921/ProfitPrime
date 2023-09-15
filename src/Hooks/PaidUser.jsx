@@ -1,21 +1,18 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const PaidUser = ({ children }) => {
+  const navigate = useNavigate();
   const { user, loading } = useContext(AuthContext);
   const [customer, setCustomer] = useState({});
   const email = user?.email;
   console.log(user?.email);
-
-
-
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`https://profit-prime-server.vercel.app/user/${email}`)
-    .then(res=>res.json())
-    .then(data=>setCustomer(data))
-  },[email])
-
+      .then((res) => res.json())
+      .then((data) => setCustomer(data));
+  }, [email]);
 
   console.log(customer);
 
@@ -27,15 +24,15 @@ const PaidUser = ({ children }) => {
     );
   }
 
-  if (customer?.userRole === 'Basic' || customer?.userRole === 'Prime') {
+  if (customer?.userRole === "Basic" || customer?.userRole === "Prime") {
     return children;
   }
-  
-  return (
-  <Navigate to="/pricing" />
-  
-  );
 
+  // return (
+  // <Navigate to="/pricing" />
+
+  // );
+  return navigate("/pricing");
 };
 
 export default PaidUser;

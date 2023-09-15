@@ -142,7 +142,7 @@ const Navbar = () => {
             </Link>
             {user ? (
               <>
-                <Link to="/dashboard/showhome">
+                <Link to="/dashboard">
                   <li>
                     <a className="hover:text-white hover:bg-red-950">
                       Dashboard
@@ -151,15 +151,7 @@ const Navbar = () => {
                 </Link>
               </>
             ) : (
-              <>
-                <Link to="/dashboard/showhome">
-                  <li>
-                    <a className="hover:text-white hidden hover:bg-red-900">
-                      Dashboard
-                    </a>
-                  </li>
-                </Link>
-              </>
+              <></>
             )}
           </ul>
         </div>
@@ -401,7 +393,7 @@ const Navbar = () => {
           >
             {user ? (
               <>
-                <Link to="/dashboard/showhome">
+                <Link to="/dashboard">
                   <li>
                     <a className="hover:text-white hover:bg-red-950">
                       Dashboard
@@ -410,21 +402,13 @@ const Navbar = () => {
                 </Link>
               </>
             ) : (
-              <>
-                <Link to="/dashboard/showhome">
-                  <li>
-                    <a className="hover:text-white hidden hover:bg-red-900">
-                      Dashboard
-                    </a>
-                  </li>
-                </Link>
-              </>
+              <></>
             )}
           </motion.div>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/free" className="btn btn-xs rounded-full">
+        <Link to="/free" className="btn btn-xs rounded-full mr-4 animate-pulse">
           Free Demo
         </Link>
         <motion.div

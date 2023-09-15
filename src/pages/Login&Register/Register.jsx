@@ -70,7 +70,7 @@ const Register = () => {
             <input
               type="text"
               {...register("name", { required: true })}
-              placeholder="Full Name"
+              placeholder="Company Name"
               className="input input-bordered"
             />
             {errors.name && (

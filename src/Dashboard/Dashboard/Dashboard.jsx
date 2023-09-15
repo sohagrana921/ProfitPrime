@@ -95,7 +95,7 @@ const Dashboard = () => {
                     <>
                       <li>
                         <NavLink
-                          to={"/dashboard/dataRevenue"}
+                          to={"/dashboard/dataInsight"}
                           className="hover:text-white hover:bg-red-950"
                         >
                           <FcDatabase /> Data Insight
@@ -206,8 +206,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/manageusers"}
@@ -225,8 +225,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/primeusers"}
@@ -244,8 +244,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/basicusers"}
@@ -266,11 +266,11 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
-                      to={"/dashboard/dataRevenue"}
+                      to={"/dashboard/dataInsight"}
                       className="hover:text-white hover:bg-red-950"
                     >
                       <FcDatabase /> Data Insight
@@ -285,8 +285,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/businessRevenue"}
@@ -304,8 +304,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/cosultingRevenue"}
@@ -323,8 +323,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/dashhome"}
@@ -342,8 +342,8 @@ const Dashboard = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <li>
                     <NavLink
                       to={"/dashboard/pay"}
@@ -366,8 +366,8 @@ const Dashboard = () => {
                 type: "spring",
                 stiffness: 400,
                 damping: 17,
-              }} >
-
+              }}
+            >
               <li>
                 <NavLink to={"/"} className="hover:text-white hover:bg-red-950">
                   <FaHome /> Home
@@ -382,8 +382,8 @@ const Dashboard = () => {
                 type: "spring",
                 stiffness: 400,
                 damping: 17,
-              }} >
-
+              }}
+            >
               {checkAdmin ? (
                 <>
                   <li>

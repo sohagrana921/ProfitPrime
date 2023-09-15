@@ -128,9 +128,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <PaidUser><Dashboard></Dashboard></PaidUser>,
+    element: (
+      <PaidUser>
+        <Dashboard></Dashboard>
+      </PaidUser>
+    ),
     children: [
       // Admin Works
+      {
+        path: "",
+        element: <BusinessRevenue></BusinessRevenue>,
+      },
       {
         path: "adminhome",
         element: <AdminHome></AdminHome>,
@@ -170,7 +178,7 @@ const router = createBrowserRouter([
         element: <CosultingRevenue></CosultingRevenue>,
       },
       {
-        path: "dataRevenue",
+        path: "dataInsight",
         element: <BusinessRevenue></BusinessRevenue>,
       },
       {
