@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
+  const [oldUser, setOldUser] = useState(false);
+  const { user} = useContext(AuthContext);
+  const email = user?.email;
+  // console.log(user?.email);
+  useEffect(() => {
+    if (!user) {
+      setOldUser(true);
+    } else {
+      fetch(`https://profit-prime-server.vercel.app/user/${email}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.userRole === "Basic" || data?.userRole === "Prime") {
+            setOldUser(true);
+          }
+        });
+    }
+  }, [email, user]);
+
 
   return (
     <div className="flex flex-col items-center mb-16 md:mb-32">
@@ -48,7 +67,8 @@ const Pricing = () => {
             to="/free"
             className="bg-red-800 hover:bg-purple-950 text-white py-2 px-4 rounded mt-2"
           >
-            Select
+            <button className={`${oldUser ? ' opacity-50 cursor-not-allowed' : ''}`}
+            disabled={oldUser}>Select</button>
           </Link>
         </div>
         <div className="bg-blue-400 rounded-lg shadow-lg p-6 w-64 m-3 hover:bg-purple-300 transition duration-300">
@@ -66,7 +86,8 @@ const Pricing = () => {
               }`}
               className="bg-red-800 hover:bg-purple-950 text-white py-2 px-4 rounded mt-2"
             >
-              Select
+              <button className={`${oldUser ? ' opacity-50 cursor-not-allowed' : ''}`}
+            disabled={oldUser}>Select</button>
             </Link>
           </div>
         </div>
@@ -85,7 +106,8 @@ const Pricing = () => {
               }`}
               className="bg-red-800 hover:bg-purple-950 text-white py-2 px-4 rounded mt-2"
             >
-              Select
+              <button className={`${oldUser ? ' opacity-50 cursor-not-allowed' : ''}`}
+            disabled={oldUser}>Select</button>
             </Link>
           </div>
         </div>
