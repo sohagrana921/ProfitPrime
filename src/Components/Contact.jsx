@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full my-container" id="contact">
+    <div className="h-full font-serif" id="contact">
       <div>
         <SectionTitle
           subheading={"Ask Questions"}

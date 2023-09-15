@@ -30,7 +30,7 @@ const Reviews = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className=" flex flex-col items-center md:mx-40" data-aos="fade-up"
+            <div className=" flex flex-col items-center lg:mx-40" data-aos="fade-up"
               data-aos-anchor-placement="top-bottom">
               <Rating style={{ maxWidth: 180 }} value={4} readOnly />
               <p className="my-4">
@@ -47,7 +47,7 @@ const Reviews = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className=" flex flex-col items-center md:mx-40" data-aos="fade-up"
+            <div className=" flex flex-col items-center lg:mx-40" data-aos="fade-up"
               data-aos-anchor-placement="top-bottom">
               <Rating style={{ maxWidth: 180 }} value={4.5} readOnly />
               <p className="my-4">
@@ -65,7 +65,7 @@ const Reviews = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className=" flex flex-col items-center md:mx-40">
+            <div className=" flex flex-col items-center lg:mx-40">
               <Rating style={{ maxWidth: 180 }} value={3} readOnly />
               <p className="my-4">
                 As a creative professional, I have benefited from ProfitPrimes
@@ -82,7 +82,7 @@ const Reviews = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className=" flex flex-col items-center md:mx-40">
+            <div className=" flex flex-col items-center lg:mx-40">
               <Rating style={{ maxWidth: 180 }} value={4.3} readOnly />
               <p className="my-4">
                 ProfitPrime has exceeded my expectations in revenue generation.

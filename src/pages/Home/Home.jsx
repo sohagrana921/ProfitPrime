@@ -1,5 +1,4 @@
 import Reviews from "../../Components/Review";
-import Contact from "../../Components/Contact";
 import Team from "../../Components/Team";
 import Customer from "./Customers/Customer";
 import AboutUs from "./AboutUs/AboutUs";
@@ -9,6 +8,7 @@ import Process from "./Process/Process";
 import { Helmet } from "react-helmet-async";
 import OurProcess from "./Process/OurProcess";
 import NewBanner from "./Banner/NewBanner";
+import Contact from "../../Components/Contact";
 
 const Home = () => {
   return (
@@ -22,10 +22,9 @@ const Home = () => {
       <WebData></WebData>
       <Reviews></Reviews>
       <Process></Process>
-      <Team></Team>
       <FAQuestion></FAQuestion>
       <OurProcess></OurProcess>
-      <Contact></Contact>
+      <Team></Team>
     </div>
   );
 };
