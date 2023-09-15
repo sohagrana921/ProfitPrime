@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-gradient-to-r from-purple-950 to-red-800 opacity-90 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
+    <div className="navbar bg-gradient-to-r from-purple-950 to-red-800 text-white font-bold fixed z-10 top-0 max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,7 +54,8 @@ const Navbar = () => {
                 type: "spring",
                 stiffness: 400,
                 damping: 17,
-              }} >
+              }}
+            >
               <Link to={"/"}>
                 <li>
                   <a className="hover:text-white hover:bg-red-950">Home</a>
@@ -175,7 +176,8 @@ const Navbar = () => {
               type: "spring",
               stiffness: 400,
               damping: 17,
-            }} >
+            }}
+          >
             <Link to={"/"}>
               <li>
                 <a className="hover:text-white hover:bg-red-950">Home</a>
@@ -192,7 +194,8 @@ const Navbar = () => {
                   type: "spring",
                   stiffness: 400,
                   damping: 17,
-                }} >
+                }}
+              >
                 Products
               </motion.div>
             </summary>
@@ -206,8 +209,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to={"/dataAnalysis"}>
                     <li className="hover:bg-red-900 p-2 rounded-lg">
                       Data Analysis & Insights
@@ -223,8 +226,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to={"/consulting"}>
                     <li className="hover:bg-red-900 p-2 rounded-lg">
                       Consulting Services
@@ -240,8 +243,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to={"/businessoption"}>
                     <li className="hover:bg-red-900 p-2 rounded-lg">
                       Business optimization
@@ -257,8 +260,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to={"/competitor"}>
                     <li className="hover:bg-red-900 p-2 rounded-lg">
                       Competitor Solution
@@ -276,7 +279,8 @@ const Navbar = () => {
               type: "spring",
               stiffness: 400,
               damping: 17,
-            }} >
+            }}
+          >
             {checkAdmin ? (
               <>
                 <Link to="/pricing">
@@ -308,7 +312,8 @@ const Navbar = () => {
                   type: "spring",
                   stiffness: 400,
                   damping: 17,
-                }} >
+                }}
+              >
                 Customers
               </motion.div>
             </summary>
@@ -322,8 +327,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to="/limitedHotelService">
                     <li className="hover:bg-red-900 p-2 rounded-lg">
                       Limited Service Hotel
@@ -339,8 +344,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to="/hybridcustomer">
                     <li className="my-2 hover:bg-red-900 p-2 rounded-lg">
                       Hybrid Accommodation
@@ -356,8 +361,8 @@ const Navbar = () => {
                     type: "spring",
                     stiffness: 400,
                     damping: 17,
-                  }} >
-
+                  }}
+                >
                   <Link to="/upscale">
                     <li className="my-2 hover:bg-red-900 p-2 rounded-lg">
                       Upscale & Luxury Hotel
@@ -376,7 +381,8 @@ const Navbar = () => {
               type: "spring",
               stiffness: 400,
               damping: 17,
-            }} >
+            }}
+          >
             <Link to={"/contact"}>
               <li>
                 <a className="hover:text-white hover:bg-red-950">Contact</a>
@@ -391,12 +397,15 @@ const Navbar = () => {
               type: "spring",
               stiffness: 400,
               damping: 17,
-            }} >
+            }}
+          >
             {user ? (
               <>
                 <Link to="/dashboard/showhome">
                   <li>
-                    <a className="hover:text-white hover:bg-red-950">Dashboard</a>
+                    <a className="hover:text-white hover:bg-red-950">
+                      Dashboard
+                    </a>
                   </li>
                 </Link>
               </>
@@ -415,7 +424,6 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        
         <motion.div
           className="box"
           whileHover={{ scale: 1.1 }}
@@ -424,8 +432,8 @@ const Navbar = () => {
             type: "spring",
             stiffness: 400,
             damping: 17,
-          }} >
-            
+          }}
+        >
           {user ? (
             <Link
               onClick={handleLogOut}

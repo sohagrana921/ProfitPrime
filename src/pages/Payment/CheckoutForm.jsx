@@ -142,7 +142,7 @@ const CheckoutForm = ({ pay, userRole }) => {
   };
 
   return (
-    <div>
+    <div className="flex justify-center mb-8">
       <form onSubmit={handleSubmit}>
         <CardElement
           options={{
@@ -185,8 +185,8 @@ const CheckoutForm = ({ pay, userRole }) => {
               type: "spring",
               stiffness: 400,
               damping: 17,
-            }} >
-
+            }}
+          >
             Pay
           </motion.div>
         </button>

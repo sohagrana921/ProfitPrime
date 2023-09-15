@@ -7,7 +7,7 @@ const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <div className="flex flex-col items-center mb-32">
+    <div className="flex flex-col items-center mb-16 md:mb-32">
       <Helmet>
         <title>ProfitPrime | Pricing</title>
       </Helmet>
@@ -27,22 +27,23 @@ const Pricing = () => {
           type: "spring",
           stiffness: 400,
           damping: 17,
-        }} >
-
+        }}
+      >
         <button
           onClick={() => setIsYearly(!isYearly)}
-          className={`py-2 px-4 rounded-full bg-red-800 hover:bg-purple-900  text-white${isYearly ? "bg-blue-400 text-white" : "bg-green-900 text-white"
-            } mb-4 hover:bg-green-700 hover:text-white transition duration-300 focus:outline-none`}
+          className={`py-2 px-4 rounded-full bg-red-800 hover:bg-purple-900  text-white${
+            isYearly ? "bg-blue-400 text-white" : "bg-green-900 text-white"
+          } mb-4 hover:bg-green-700 hover:text-white transition duration-300 focus:outline-none`}
         >
           {isYearly ? "Switch to Monthly" : "Switch to Yearly"}
         </button>
       </motion.div>
-      <div className="flex flex-col md:flex-row justify-center">
-        <div className="bg-yellow-200 rounded-lg shadow-lg p-6 w-64 m-4 hover:bg-purple-300 transition duration-300">
+      <div className="flex flex-col md:flex-row justify-center pl-4">
+        <div className="bg-yellow-200 rounded-lg shadow-lg p-6 w-64 m-3 hover:bg-purple-300 transition duration-300">
           <h2 className="text-xl text-red-800 font-semibold mb-4">Free Plan</h2>
           <p className="text-black mb-2">Access to demos</p>
           <p className="text-black mb-4">Free</p>
-          
+
           <Link
             to="/free"
             className="bg-red-800 hover:bg-purple-950 text-white py-2 px-4 rounded mt-2"
@@ -50,7 +51,7 @@ const Pricing = () => {
             Select
           </Link>
         </div>
-        <div className="bg-blue-400 rounded-lg shadow-lg p-6 w-64 m-4 hover:bg-purple-300 transition duration-300">
+        <div className="bg-blue-400 rounded-lg shadow-lg p-6 w-64 m-3 hover:bg-purple-300 transition duration-300">
           <h2 className="text-xl text-red-800 font-semibold mb-4 ">
             Basic Plan
           </h2>
@@ -60,15 +61,16 @@ const Pricing = () => {
           </p>
           <div className="mt-2">
             <Link
-              to={`/payment/${encodeURIComponent("Basic")}/${isYearly ? "yearly" : "monthly"
-                }`}
+              to={`/payment/${encodeURIComponent("Basic")}/${
+                isYearly ? "yearly" : "monthly"
+              }`}
               className="bg-red-800 hover:bg-purple-950 text-white py-2 px-4 rounded mt-2"
             >
               Select
             </Link>
           </div>
         </div>
-        <div className="bg-green-400 rounded-lg shadow-lg p-6 w-64 m-4 hover:bg-purple-300 transition duration-300">
+        <div className="bg-green-400 rounded-lg shadow-lg p-6 w-64 m-3 hover:bg-purple-300 transition duration-300">
           <h2 className="text-xl text-red-800 font-semibold mb-4">
             Prime Plan
           </h2>
@@ -78,8 +80,9 @@ const Pricing = () => {
           </p>
           <div className="mt-2">
             <Link
-              to={`/payment/${encodeURIComponent("Prime")}/${isYearly ? "yearly" : "monthly"
-                }`}
+              to={`/payment/${encodeURIComponent("Prime")}/${
+                isYearly ? "yearly" : "monthly"
+              }`}
               className="bg-red-800 hover:bg-purple-950 text-white py-2 px-4 rounded mt-2"
             >
               Select

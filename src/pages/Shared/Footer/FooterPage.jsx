@@ -20,7 +20,7 @@ const FooterPage = () => {
             </a>
             <a
               href="https://twitter.com/login?lang=en"
-              className="mr-6 text-neutral-600 dark:text-neutral-200 animate-pulse"
+              className="mr-6 text-white dark:text-neutral-200 animate-pulse"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,10 @@ const FooterPage = () => {
               </svg>
             </a>
 
-            <a href="https://www.instagram.com/" className="mr-6 animate-bounce">
+            <a
+              href="https://www.instagram.com/"
+              className="mr-6 animate-bounce"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -90,7 +93,7 @@ const FooterPage = () => {
               <p className="mb-4">
                 <a
                   href="/dataAnalysis"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-white dark:text-neutral-200"
                 >
                   Data Analysis & Insights
                 </a>
@@ -98,7 +101,7 @@ const FooterPage = () => {
               <p className="mb-4">
                 <a
                   href="/consulting"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-white dark:text-neutral-200"
                 >
                   Consulting Services
                 </a>
@@ -106,7 +109,7 @@ const FooterPage = () => {
               <p className="mb-4">
                 <a
                   href="/businessoption"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-white dark:text-neutral-200"
                 >
                   Business Optimization
                 </a>
@@ -114,7 +117,7 @@ const FooterPage = () => {
               <p>
                 <a
                   href="/competitor"
-                  className="text-neutral-600 dark:text-neutral-200"
+                  className="text-white dark:text-neutral-200"
                 >
                   Competitor Solution
                 </a>
@@ -126,29 +129,23 @@ const FooterPage = () => {
                 Useful links
               </h6>
               <p className="mb-4">
-                <a
-                  href="/pricing"
-                  className="text-neutral-600 dark:text-neutral-200"
-                >
+                <a href="/" className="text-white dark:text-neutral-200">
+                  Home
+                </a>
+              </p>
+              <p className="mb-4">
+                <a href="/pricing" className="text-white dark:text-neutral-200">
                   Pricing
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Settings
+                <a href="/free" className="text-white dark:text-neutral-200">
+                  Free Demo
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-white dark:text-neutral-200">
                   Orders
-                </a>
-              </p>
-              <p>
-                <a
-                  href="/contact"
-                  className="text-neutral-600 dark:text-neutral-200"
-                >
-                  Help
                 </a>
               </p>
             </div>
