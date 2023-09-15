@@ -237,7 +237,6 @@ const UpscaleCustomer = () => {
                   onClick={() => toggleMoreDetails(p.id)}
                   className="btn bg-red-800 hover:bg-purple-950 text-white animate-pulse"
                 >
-
                   <motion.div
                     className="box"
                     whileHover={{ scale: 1.1 }}

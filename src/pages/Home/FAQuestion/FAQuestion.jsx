@@ -30,7 +30,7 @@ const FAQuestion = () => {
         <div className="collapse collapse-plus bg-white mt-5" data-aos="zoom-in-up">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-xl font-medium">
-            What are some common features of revenue generation platforms?{" "}
+            What are some common features of revenue generation platforms?
           </div>
           <div className="collapse-content">
             <p>
