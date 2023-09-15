@@ -424,6 +424,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <Link to="/free" className="btn btn-xs rounded-full">
+          Free Demo
+        </Link>
         <motion.div
           className="box"
           whileHover={{ scale: 1.1 }}
