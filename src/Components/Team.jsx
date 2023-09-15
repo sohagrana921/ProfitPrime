@@ -16,22 +16,22 @@ const Team = () => {
         <div>
           <img src={image1} alt="" className="w-32 h-32 rounded-full mx-auto" data-aos="flip-right"/>
           <h1 className=" font-bold">Sohag Rana</h1>
-          <h2>Leader</h2>
+          <h2>Team Lead</h2>
         </div>
         <div>
           <img src={image2} alt="" className="w-32 h-32 rounded-full mx-auto" data-aos="flip-right"/>
           <h1 className="font-bold">Shohanur Rahman</h1>
-          <h2>Vice Leader</h2>
+          <h2>Team Member</h2>
         </div>
         <div>
           <img src={image3} alt="" className="w-32 h-32 rounded-full mx-auto" data-aos="flip-left"/>
           <h1 className="font-bold">Md Arafat Hossan</h1>
-          <h2>Member</h2>
+          <h2>Team Member</h2>
         </div>
         <div>
           <img src={image6} alt="" className="w-32 h-32 rounded-full mx-auto" data-aos="flip-left"/>
           <h1 className="font-bold">Md. Ashiqur Rahman Tonmoy</h1>
-          <h2>Member</h2>
+          <h2>Team Member</h2>
         </div>
       </div>
     </div>
