@@ -24,7 +24,11 @@ const PaidUser = ({ children }) => {
     );
   }
 
-  if (customer?.userRole === "Basic" || customer?.userRole === "Prime") {
+  if (
+    customer?.userRole === "Basic" ||
+    customer?.userRole === "Prime" ||
+    customer?.role === "admin"
+  ) {
     return children;
   }
 
