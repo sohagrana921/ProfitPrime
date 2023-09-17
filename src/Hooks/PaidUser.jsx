@@ -1,20 +1,22 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import useUsersInfo from "./useUsersInfo";
 
 const PaidUser = ({ children }) => {
   const navigate = useNavigate();
-  const { user, loading } = useContext(AuthContext);
-  const [customer, setCustomer] = useState({});
-  const email = user?.email;
-  console.log(user?.email);
-  useEffect(() => {
-    fetch(`https://profit-prime-server.vercel.app/user/${email}`)
-      .then((res) => res.json())
-      .then((data) => setCustomer(data));
-  }, [email]);
+  const { loading } = useContext(AuthContext);
+  // const [customer, setCustomer] = useState({});
+  // const email = user?.email;
+  // console.log(user?.email);
+  // useEffect(() => {
+  //   fetch(`https://profit-prime-server.vercel.app/user/${email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setCustomer(data));
+  // }, [email]);
 
-  console.log(customer);
+  // console.log(customer);
+  const [users] = useUsersInfo();
 
   if (loading) {
     return (
@@ -25,9 +27,9 @@ const PaidUser = ({ children }) => {
   }
 
   if (
-    customer?.userRole === "Basic" ||
-    customer?.userRole === "Prime" ||
-    customer?.role === "admin"
+    users?.userRole === "Basic" ||
+    users?.userRole === "Prime" ||
+    users?.role === "admin"
   ) {
     return children;
   }
