@@ -8,7 +8,6 @@ import Process from "./Process/Process";
 import { Helmet } from "react-helmet-async";
 import OurProcess from "./Process/OurProcess";
 import NewBanner from "./Banner/NewBanner";
-import Contact from "../../Components/Contact";
 
 const Home = () => {
   return (

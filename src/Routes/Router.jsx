@@ -136,10 +136,6 @@ const router = createBrowserRouter([
     children: [
       // Admin Works
       {
-        path: "",
-        element: <BusinessRevenue></BusinessRevenue>,
-      },
-      {
         path: "adminhome",
         element: <AdminHome></AdminHome>,
       },
