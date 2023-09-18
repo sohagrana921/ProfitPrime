@@ -142,7 +142,7 @@ const Navbar = () => {
             </Link>
             {user ? (
               <>
-                <Link to="/dashboard">
+                <Link to="/dashboard/showhome">
                   <li>
                     <a className="hover:text-white hover:bg-red-950">
                       Dashboard
@@ -395,7 +395,7 @@ const Navbar = () => {
           >
             {user ? (
               <>
-                <Link to="/dashboard">
+                <Link to="/dashboard/showhome">
                   <li>
                     <a className="hover:text-white hover:bg-red-950">
                       Dashboard
