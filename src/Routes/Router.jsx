@@ -33,6 +33,7 @@ import ErrorPage from "../Components/ErrorPage";
 import FreeDemo1 from "../pages/Home/FreeDemo/FreeDemo1";
 import LimitedHotelService from "../pages/Home/LimitedHotelService/LimitedHotelService";
 import PaidUser from "../Hooks/PaidUser";
+import Blogs from "../pages/Home/Blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -105,6 +106,10 @@ const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
+        path: "/blog",
+        element: <Blogs></Blogs>,
+      },
+      {
         path: "/info",
         element: <CustomerInformation />,
       },
@@ -135,10 +140,6 @@ const router = createBrowserRouter([
     ),
     children: [
       // Admin Works
-      {
-        path: "",
-        element: <BusinessRevenue></BusinessRevenue>,
-      },
       {
         path: "adminhome",
         element: <AdminHome></AdminHome>,

@@ -5,7 +5,6 @@ import OurProcess from "./OurProcess";
 describe("OurProcess", () => {
   it("must be this text", () => {
     render(<OurProcess></OurProcess>);
-    expect(
-      screen.getByText("Discussion & Planning")).toBeInTheDocument();
+    expect(screen.getByText("Discussion & Planning")).toBeInTheDocument();
   });
 });
