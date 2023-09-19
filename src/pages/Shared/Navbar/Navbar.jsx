@@ -393,6 +393,22 @@ const Navbar = () => {
               damping: 17,
             }}
           >
+            <Link to={"/blog"}>
+              <li>
+                <a className="hover:text-white hover:bg-red-950">Blogs</a>
+              </li>
+            </Link>
+          </motion.div>
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }}
+          >
             {user ? (
               <>
                 <Link to="/dashboard/showhome">
