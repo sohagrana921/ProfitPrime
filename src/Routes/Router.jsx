@@ -34,6 +34,7 @@ import FreeDemo1 from "../pages/Home/FreeDemo/FreeDemo1";
 import LimitedHotelService from "../pages/Home/LimitedHotelService/LimitedHotelService";
 import PaidUser from "../Hooks/PaidUser";
 import Blogs from "../pages/Home/Blogs/Blogs";
+import AddReview from "../Dashboard/Review/AddReview";
 
 const router = createBrowserRouter([
   {
@@ -165,6 +166,10 @@ const router = createBrowserRouter([
       {
         path: "showhome",
         element: <ShowHome></ShowHome>,
+      },
+      {
+        path: "review",
+        element: <AddReview></AddReview>,
       },
       {
         path: "help",

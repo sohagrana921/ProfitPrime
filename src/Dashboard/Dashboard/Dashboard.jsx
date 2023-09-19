@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FaBattleNet,
+  FaEdit,
   FaHandsHelping,
   FaHome,
   FaMoneyCheck,
@@ -131,6 +132,14 @@ const Dashboard = () => {
                           className="hover:text-white hover:bg-red-950"
                         >
                           <FaPaypal></FaPaypal> Payment History
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to={"/dashboard/review"}
+                          className="hover:text-white hover:bg-red-950"
+                        >
+                          <FaPaypal></FaPaypal> Add a review
                         </NavLink>
                       </li>
                       {checkAdmin ? (
@@ -350,6 +359,14 @@ const Dashboard = () => {
                       className="hover:text-white hover:bg-red-950"
                     >
                       <FaPaypal></FaPaypal> Payment History
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to={"/dashboard/review"}
+                      className="hover:text-white hover:bg-red-950"
+                    >
+                      <FaEdit></FaEdit> Add a review
                     </NavLink>
                   </li>
                 </motion.div>
