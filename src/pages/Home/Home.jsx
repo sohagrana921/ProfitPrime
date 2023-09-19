@@ -8,6 +8,7 @@ import Process from "./Process/Process";
 import { Helmet } from "react-helmet-async";
 import OurProcess from "./Process/OurProcess";
 import NewBanner from "./Banner/NewBanner";
+import Blogs from "./Blogs/Blogs";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <FAQuestion></FAQuestion>
       <OurProcess></OurProcess>
       <Team></Team>
+      <Blogs></Blogs>
     </div>
   );
 };
