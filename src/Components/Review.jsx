@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import SectionTitle from "../pages/Shared/SectionTitle/SectionTitle";
 import { useState } from "react";
@@ -44,7 +43,6 @@ const Reviews = () => {
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
               >
-                <Rating style={{ maxWidth: 180 }} value={4} readOnly />
                 <p className="my-4">{review?.quote}</p>
                 <h3 className="md:text-2xl text-purple-950 font-bold uppercase">
                   {review?.name}
