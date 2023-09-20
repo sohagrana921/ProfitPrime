@@ -55,7 +55,7 @@ const SubscriptionCard = ({
           {companyName ? companyName : "XY"}
         </Link>
       </div>
-      <div>
+      <div className=" justify-center items-center">
         <div>
           <Lottie animationData={anime} loop={true} />
         </div>
@@ -64,13 +64,13 @@ const SubscriptionCard = ({
             {planName} Plan
           </h2>
           <p className="mb-2 text-purple-950">
+               Time: {subscriptionDate} - {endDate}
             <span>
-              {subscriptionDate} - {endDate}
             </span>
           </p>
-          <p className="mb-2">
-            Time Remaining: {countdown.days} days, {countdown.hours} hours,{" "}
-            {countdown.minutes} minutes, {countdown.seconds} seconds
+          <p className="mb-2 text-red-800 font-bold">
+            <span>{countdown.days} days,</span> <span>{countdown.hours} hours,</span> <span>{countdown.minutes} minutes,</span> <span>{countdown.seconds} seconds</span> left
+
           </p>
         </div>
       </div>
