@@ -9,11 +9,13 @@ import { useEffect } from "react";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
+
   useEffect(() => {
     fetch("https://profit-prime-server.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
+  
   return (
     <div id="testimonials">
       <SectionTitle

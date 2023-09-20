@@ -23,8 +23,8 @@ const Home = () => {
       <Reviews></Reviews>
       <Process></Process>
       <FAQuestion></FAQuestion>
-      <OurProcess></OurProcess>
       <Team></Team>
+      <OurProcess></OurProcess>
       <Blogs></Blogs>
     </div>
   );
