@@ -1,8 +1,6 @@
 import { useState } from "react";
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import { motion } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../../../redux/features/counter/counterSlice";
 
 const AboutUs = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -11,30 +9,13 @@ const AboutUs = () => {
     setShowFullText(!showFullText);
   };
 
-  const count = useSelector(state => state.counter.value)
-  const dispatch = useDispatch()
-
   return (
     <div id="about">
       <SectionTitle
         subheading={"About Us"}
         heading={"What We do!!"}
       ></SectionTitle>
-      <div>
-      <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
+
       <div className="flex justify-center items-center my-container">
         <div className="container mx-auto md:flex items-center">
           <div className="md:w-full lg:px-5 lg:ml-10" data-aos="fade-right ">
