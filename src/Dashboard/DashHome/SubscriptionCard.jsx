@@ -42,11 +42,7 @@ const SubscriptionCard = ({
     };
   }, [endDate]);
 
-  if (planName == "Prime") {
-    endDate = "15 Sept 2024";
-  } else {
-    endDate = "15 Oct 2023";
-  }
+ 
 
   return (
     <div className="flex w-full flex-col items-center justify-center min-h-screen bg-base-100">
