@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FaBattleNet,
@@ -16,10 +16,37 @@ import { AiFillCaretRight } from "react-icons/ai";
 import useVerifyAdmin from "../../Hooks/useVerifyAdmin";
 import useUsersInfo from "../../Hooks/useUsersInfo";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [checkAdmin] = useVerifyAdmin();
   const [users] = useUsersInfo();
+  const [userRole, setUserRole] = useState(null);
+
+  useEffect(() => {
+    const storedUserRole = localStorage.getItem("userRole"); 
+    if (storedUserRole) {
+      setUserRole(storedUserRole);
+    } else {
+      if (users?.userRole === "Basic" || users?.userRole === "Prime" || users?.role === "admin") {
+        setUserRole(users.userRole);
+
+        localStorage.setItem("userRole", users.userRole); 
+      } else {
+        navigate("/pricing");
+      }
+    }
+  }, [users, navigate]);
+
+  if (!userRole) {
+    // User role hasn't been fetched yet, show a loading indicator or redirect to a loading page
+    return (
+      <div className="flex justify-center my-28">
+        <progress className="progress w-1/2"></progress>
+      </div>
+    );
+  }
 
   return (
     <div>
