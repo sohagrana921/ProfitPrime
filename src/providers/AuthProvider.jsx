@@ -38,6 +38,7 @@ const AuthProvider = ({ children }) => {
 
   const logOut = () => {
     setLoading(true);
+    localStorage.clear();
     return signOut(auth);
   };
   const updateUserProfile = (name) => {
