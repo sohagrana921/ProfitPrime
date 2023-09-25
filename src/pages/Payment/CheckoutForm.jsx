@@ -7,7 +7,7 @@ import axios from "axios";
 import PaymentSuccessModal from "./PaymentSuccessModal";
 import { motion } from "framer-motion";
 
-const CheckoutForm = ({ pay, userRole }) => {
+const CheckoutForm = ({ pay, userRole, validation }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setError] = useState("");
@@ -19,6 +19,7 @@ const CheckoutForm = ({ pay, userRole }) => {
 
   const price = parseFloat(pay).toFixed(2);
   const email = user?.email;
+  userRole= validation+userRole;
 
   useEffect(() => {
     if (price > 0) {
@@ -125,7 +126,6 @@ const CheckoutForm = ({ pay, userRole }) => {
               userRole,
             }
           );
-
           if (response.status === 200) {
             console.log("User role updated successfully");
             // Perform any additional actions or state updates as needed
@@ -136,6 +136,7 @@ const CheckoutForm = ({ pay, userRole }) => {
           console.error("Error updating user role:", error);
         }
       };
+      console.log(email,userRole);
 
       updateUserRole(email, userRole);
     }

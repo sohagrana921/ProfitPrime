@@ -16,14 +16,24 @@ const Pricing = () => {
       setOldUser(true);
     } else {
       fetch(`https://profit-prime-server.vercel.app/user/${email}`)
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return res.json();
+        })
         .then((data) => {
           if (data?.userRole === "Basic" || data?.userRole === "Prime") {
             setOldUser(true);
           }
+        })
+        .catch((error) => {
+          console.error('Error fetching user data:', error);
+          // Handle the error here, e.g., display an error message to the user
         });
     }
   }, [email, user]);
+  
   const navigate = useNavigate();
   const handleFree = () => {
     navigate("/free");
