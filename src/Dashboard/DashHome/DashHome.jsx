@@ -20,8 +20,8 @@ const DashHome = () => {
         setPayments(response.data[0]);
         console.log(response.data);
 
-        const paymentDate = new Date(payments.date);
-        if (customer?.userRole === "Prime") {
+        const paymentDate = new Date(payments?.date);
+        if (customer?.userRole === "yearlyPrime" || customer?.userRole === "yearlyBasic") {
           const oneYearLater = new Date(paymentDate);
           oneYearLater.setFullYear(oneYearLater.getFullYear() + 1);
           setEndDate(oneYearLater.toLocaleDateString());
@@ -34,7 +34,7 @@ const DashHome = () => {
       .catch((error) => {
         console.error("Error fetching payment history:", error);
       });
-  }, [customer?.userRole, email, payments.date]);
+  }, [customer?.userRole, email, payments?.date]);
 
 
 
@@ -43,7 +43,7 @@ const DashHome = () => {
     axios
       .get(`https://profit-prime-server.vercel.app/user/${email}`)
       .then((response) => {
-        setCustomer(response.data);
+        setCustomer(response?.data);
       })
       .catch((error) => {
         console.error("Error fetching customer information:", error);
@@ -55,7 +55,7 @@ const DashHome = () => {
       <SubscriptionCard
         companyName={customer?.name}
         planName={customer?.userRole}
-        subscriptionDate={new Date(payments.date).toLocaleDateString()}
+        subscriptionDate={new Date(payments?.date).toLocaleDateString()}
         endDate={endDate}
         imageUrl="https://via.placeholder.com/150"
       />

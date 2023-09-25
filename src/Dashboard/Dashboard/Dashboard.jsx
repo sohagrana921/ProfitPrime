@@ -29,7 +29,7 @@ const Dashboard = () => {
     if (storedUserRole) {
       setUserRole(storedUserRole);
     } else {
-      if (users?.userRole === "Basic" || users?.userRole === "Prime" || users?.role === "admin") {
+      if (users?.userRole === "yearlyBasic" ||users?.userRole === "monthlyBasic"||users?.userRole === "monthlyPrime" || users?.userRole === "yearlyPrime" || users?.role === "admin") {
         setUserRole(users.userRole);
 
         localStorage.setItem("userRole", users.userRole); 

@@ -35,7 +35,7 @@ const Payment = () => {
           <Lottie animationData={anime} loop={true} />
         </div>
         <Elements stripe={stripePromise}>
-          <CheckoutForm pay={paymentValue} userRole={plan} />
+          <CheckoutForm pay={paymentValue} userRole={plan} validation={billingOption} />
         </Elements>
       </div>
     </div>
