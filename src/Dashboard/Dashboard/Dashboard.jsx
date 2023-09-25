@@ -39,6 +39,18 @@ const Dashboard = () => {
     }
   }, [users, navigate]);
 
+  let planName='';
+
+  if (userRole === "yearlyBasic" || userRole === "monthlyBasic" ) {
+    // setPlan('Basic')
+    planName='Basic'
+  }
+  else {
+    // setPlan('Prime')
+    planName='Prime'
+  }
+  console.log(planName);
+
   if (!userRole) {
     // User role hasn't been fetched yet, show a loading indicator or redirect to a loading page
     return (
@@ -85,7 +97,7 @@ const Dashboard = () => {
                   <h1 className="text-center my-2 text-sm">{users.website}</h1>
                   <Link to={"/dashboard/profile"}>
                     <p className="text-center flex justify-center uppercase text-yellow-200 mb-2">
-                      {users.userRole}
+                      {planName}
                     </p>
                   </Link>
                   <h1 className="text-center text-xl tracking-widest uppercase text-yellow-200 font-bold mb-2">
@@ -223,7 +235,7 @@ const Dashboard = () => {
             <h1 className="text-center my-2 text-md text-">{users.website}</h1>
             <Link to={"/dashboard/profile"}>
               <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-yellow-200 mb-2 hover:underline">
-                {users.userRole}
+                {planName}
               </a>
             </Link>
             <h1 className="text-center text-2xl tracking-widest uppercase text-yellow-200 font-extrabold">
