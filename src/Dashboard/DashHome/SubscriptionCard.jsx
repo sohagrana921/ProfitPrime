@@ -42,7 +42,16 @@ const SubscriptionCard = ({
     };
   }, [endDate]);
 
- 
+  if (planName === "yearlyBasic" || planName === "monthlyBasic" ) {
+    // setPlan('Basic')
+    planName='Basic'
+  }
+  else {
+    // setPlan('Prime')
+    planName='Prime'
+  }
+
+
 
   return (
     <div className="flex w-full flex-col items-center justify-center min-h-screen bg-base-100">
@@ -60,7 +69,7 @@ const SubscriptionCard = ({
             {planName} Plan
           </h2>
           <p className="mb-2 text-purple-950">
-               Time: {subscriptionDate} - {endDate}
+            Time: {subscriptionDate} - {endDate}
             <span>
             </span>
           </p>
