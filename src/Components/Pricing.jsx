@@ -23,7 +23,7 @@ const Pricing = () => {
           return res.json();
         })
         .then((data) => {
-          if (data?.userRole === "Basic" || data?.userRole === "Prime") {
+          if (data?.userRole === "yearlyBasic" || data?.userRole === "yearlyPrime" || data?.userRole === "monthlyBasic" || data?.userRole === "monthlyPrime") {
             setOldUser(true);
           }
         })
