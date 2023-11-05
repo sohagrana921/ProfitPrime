@@ -25,29 +25,34 @@ const Dashboard = () => {
   const [userRole, setUserRole] = useState(null);
 
   useEffect(() => {
-    const storedUserRole = localStorage.getItem("userRole"); 
+    const storedUserRole = localStorage.getItem("userRole");
     if (storedUserRole) {
       setUserRole(storedUserRole);
     } else {
-      if (users?.userRole === "yearlyBasic" ||users?.userRole === "monthlyBasic"||users?.userRole === "monthlyPrime" || users?.userRole === "yearlyPrime" || users?.role === "admin") {
+      if (
+        users?.userRole === "yearlyBasic" ||
+        users?.userRole === "monthlyBasic" ||
+        users?.userRole === "monthlyPrime" ||
+        users?.userRole === "yearlyPrime" ||
+        users?.role === "admin"
+      ) {
         setUserRole(users.userRole);
 
-        localStorage.setItem("userRole", users.userRole); 
+        localStorage.setItem("userRole", users.userRole);
       } else {
         navigate("/pricing");
       }
     }
   }, [users, navigate]);
 
-  let planName='';
+  let planName = "";
 
-  if (userRole === "yearlyBasic" || userRole === "monthlyBasic" ) {
+  if (userRole === "yearlyBasic" || userRole === "monthlyBasic") {
     // setPlan('Basic')
-    planName='Basic'
-  }
-  else {
+    planName = "Basic";
+  } else {
     // setPlan('Prime')
-    planName='Prime'
+    planName = "Prime";
   }
   console.log(planName);
 
@@ -95,14 +100,17 @@ const Dashboard = () => {
                 >
                   <h1 className="text-center text-sm">{users.name}</h1>
                   <h1 className="text-center my-2 text-sm">{users.website}</h1>
-                  <Link to={"/dashboard/profile"}>
-                    <p className="text-center flex justify-center uppercase text-yellow-200 mb-2">
-                      {planName}
-                    </p>
-                  </Link>
-                  <h1 className="text-center text-xl tracking-widest uppercase text-yellow-200 font-bold mb-2">
-                    {users.role === "admin" ? <>Admin</> : <></>}
-                  </h1>
+                  {users.role === "admin" ? (
+                    <></>
+                  ) : (
+                    <>
+                      <Link to={"/dashboard/profile"}>
+                        <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-yellow-200 mb-2 hover:underline">
+                          {planName}
+                        </a>
+                      </Link>
+                    </>
+                  )}
 
                   {checkAdmin ? (
                     <>
@@ -233,11 +241,18 @@ const Dashboard = () => {
           <ul className="menu p-4 w-80 h-full bg-gradient-to-r from-purple-950 to-red-800 text-white text-xl">
             <h1 className="text-center text-md font-bold">{users.name}</h1>
             <h1 className="text-center my-2 text-md text-">{users.website}</h1>
-            <Link to={"/dashboard/profile"}>
-              <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-yellow-200 mb-2 hover:underline">
-                {planName}
-              </a>
-            </Link>
+            {users.role === "admin" ? (
+              <></>
+            ) : (
+              <>
+                <Link to={"/dashboard/profile"}>
+                  <a className="flex justify-center  text-2xl tracking-widest uppercase  font-extrabold text-yellow-200 mb-2 hover:underline">
+                    {planName}
+                  </a>
+                </Link>
+              </>
+            )}
+
             <h1 className="text-center text-2xl tracking-widest uppercase text-yellow-200 font-extrabold">
               {users.role === "admin" ? <>Admin</> : <></>}
             </h1>
